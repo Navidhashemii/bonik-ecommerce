@@ -1,0 +1,598 @@
+{
+    "products":[
+        {
+            "id": 1,
+            "image": "",
+            "name": "Tiny Square Shirt",
+            "price": 25, 
+            "star": 4,
+            "rate": 28,
+            "brand": "Zara",
+            "availability": true,
+            "seller": "Market Hall",
+            "discountPercentage": 0,
+            "categoryId": 1,
+            "description": {
+                "Model": "NC12008",
+                "Feature": "100% Cotton",
+                "Made in": "Turkey"
+            }
+        },
+        {
+            "id": 2,
+            "image": "",
+            "name": "Big Square Shirt",
+            "price": 25, 
+            "star": 4,
+            "rate": 8,
+            "brand": "Zara",
+            "availability": true,
+            "seller": "Market Hall",
+            "discountPercentage": 0,
+            "categoryId": 1,
+            "description": {
+                "Model": "NC12018",
+                "Feature": "100% Cotton",
+                "Made in": "Turkey"
+            }
+        },
+        {
+            "id": 3,
+            "image": "",
+            "name": "Simple Beige Shirt",
+            "price": 20, 
+            "star": 4,
+            "rate": 6,
+            "brand": "Mango",
+            "availability": true,
+            "seller": "Market Hall",
+            "discountPercentage": 5,
+            "categoryId": 1,
+            "description": {
+                "Model": "NC12001",
+                "Feature": "100% Wool",
+                "Made in": "Turkey"
+            }
+        },
+        {
+            "id": 4,
+            "image": "",
+            "name": "Tiny Square Shirt",
+            "price": 22, 
+            "star": 5,
+            "rate": 42,
+            "brand": "Mango",
+            "availability": true,
+            "seller": "Market Hall",
+            "discountPercentage": 0,
+            "categoryId": 1,
+            "description": {
+                "Model": "NC12078",
+                "Feature": "100% Cotton",
+                "Made in": "Turkey"
+            }
+        },
+        {
+            "id": 5,
+            "image": "",
+            "name": "White Shirt",
+            "price": 25, 
+            "star": 5,
+            "rate": 21,
+            "brand": "Nike",
+            "availability": true,
+            "seller": "Market Hall",
+            "discountPercentage": 0,
+            "categoryId": 1,
+            "description": {
+                "Model": "NC12108",
+                "Feature": "100% Cotton",
+                "Made in": "Turkey"
+            }
+        },
+        {
+            "id": 6,
+            "image": "",
+            "name": "Dark Green Poffer Jacket",
+            "price": 65, 
+            "star": 3,
+            "rate": 20,
+            "brand": "Zara",
+            "availability": true,
+            "seller": "Market Hall",
+            "discountPercentage": 20,
+            "categoryId": 2,
+            "description": {
+                "Model": "NC11108",
+                "Feature": "100% Wool",
+                "Made in": "Turkey"
+            }
+        },
+        {
+            "id": 7,
+            "image": "",
+            "name": "Yellow Poffer Jacket",
+            "price": 65, 
+            "star": 4,
+            "rate": 6,
+            "brand": "Zara",
+            "availability": true,
+            "seller": "Market Hall",
+            "discountPercentage": 15,
+            "categoryId": 2,
+            "description": {
+                "Model": "NC1208",
+                "Feature": "100% Wool",
+                "Made in": "Turkey"
+            }
+        },
+        {
+            "id": 8,
+            "image": "",
+            "name": "Biege Poffer Jacket",
+            "price": 55, 
+            "star": 5,
+            "rate": 31,
+            "brand": "Mango",
+            "availability": true,
+            "seller": "Market Hall",
+            "discountPercentage": 0,
+            "categoryId": 2,
+            "description": {
+                "Model": "NC12908",
+                "Feature": "100% Wool",
+                "Made in": "Turkey"
+            }
+        },
+        {
+            "id": 9,
+            "image": "",
+            "name": "Light Blue Poffer Jacket",
+            "price": 55, 
+            "star": 5,
+            "rate": 77,
+            "brand": "Mango",
+            "availability": true,
+            "seller": "Market Hall",
+            "discountPercentage": 0,
+            "categoryId": 2,
+            "description": {
+                "Model": "NC1108",
+                "Feature": "100% Wool",
+                "Made in": "Turkey"
+            }
+        },
+        {
+            "id": 10,
+            "image": "",
+            "name": "Black Poffer Jacket",
+            "price": 90, 
+            "star": 4,
+            "rate": 36,
+            "brand": "Nike",
+            "availability": true,
+            "seller": "Market Hall",
+            "discountPercentage": 5,
+            "categoryId": 2,
+            "description": {
+                "Model": "NC14108",
+                "Feature": "100% Wool",
+                "Made in": "Turkey"
+            }
+        },
+        {
+            "id": 11,
+            "image": "",
+            "name": "Green Single Coat",
+            "price": 140, 
+            "star": 4,
+            "rate": 10,
+            "brand": "Zara",
+            "availability": true,
+            "seller": "Market Hall",
+            "discountPercentage": 10,
+            "categoryId": 3,
+            "description": {
+                "Model": "NC94108",
+                "Feature": "Wool And Cotton",
+                "Made in": "Turkey"
+            }
+        },
+        {
+            "id": 12,
+            "image": "",
+            "name": "Dark Blue Single Coat",
+            "price": 140, 
+            "star": 5,
+            "rate": 12,
+            "brand": "Zara",
+            "availability": true,
+            "seller": "Market Hall",
+            "discountPercentage": 0,
+            "categoryId": 3,
+            "description": {
+                "Model": "NC95108",
+                "Feature": "Wool And Cotton",
+                "Made in": "Turkey"
+            }
+        },
+        {
+            "id": 13,
+            "image": "",
+            "name": "Dark Green Single Coat",
+            "price": 120, 
+            "star": 3,
+            "rate": 4,
+            "brand": "Mango",
+            "availability": true,
+            "seller": "Market Hall",
+            "discountPercentage": 50,
+            "categoryId": 3,
+            "description": {
+                "Model": "NC99108",
+                "Feature": "Wool And Cotton",
+                "Made in": "Turkey"
+            }
+        },
+        {
+            "id": 14,
+            "image": "",
+            "name": "Grey Single Coat",
+            "price": 120, 
+            "star": 4,
+            "rate": 18,
+            "brand": "Mango",
+            "availability": true,
+            "seller": "Market Hall",
+            "discountPercentage": 30,
+            "categoryId": 3,
+            "description": {
+                "Model": "NC96108",
+                "Feature": "Wool And Cotton",
+                "Made in": "Turkey"
+            }
+        },
+        {
+            "id": 15,
+            "image": "",
+            "name": "Dark Grey Single Coat",
+            "price": 200, 
+            "star": 5,
+            "rate": 20,
+            "brand": "Nike",
+            "availability": true,
+            "seller": "Market Hall",
+            "discountPercentage": 5,
+            "categoryId": 3,
+            "description": {
+                "Model": "NC98108",
+                "Feature": "Wool And Cotton",
+                "Made in": "Turkey"
+            }
+        },
+        {
+            "id": 16,
+            "image": "",
+            "name": "White-Green Sneakers",
+            "price": 120, 
+            "star": 5,
+            "rate": 40,
+            "brand": "Zara",
+            "availability": true,
+            "seller": "Market Hall",
+            "discountPercentage": 0,
+            "categoryId": 4,
+            "description": {
+                "Model": "NC100",
+                "Feature": "Leather",
+                "Made in": "Turkey"
+            }
+        },
+        {
+            "id": 17,
+            "image": "",
+            "name": "Black Sneakers",
+            "price": 120, 
+            "star": 5,
+            "rate": 44,
+            "brand": "Zara",
+            "availability": true,
+            "seller": "Market Hall",
+            "discountPercentage": 0,
+            "categoryId": 4,
+            "description": {
+                "Model": "NC101",
+                "Feature": "Leather",
+                "Made in": "Turkey"
+            }
+        },
+        {
+            "id": 18,
+            "image": "",
+            "name": "White Sneakers",
+            "price": 100, 
+            "star": 4,
+            "rate": 19,
+            "brand": "Mango",
+            "availability": true,
+            "seller": "Market Hall",
+            "discountPercentage": 0,
+            "categoryId": 4,
+            "description": {
+                "Model": "NC102",
+                "Feature": "Leather",
+                "Made in": "Turkey"
+            }
+        },
+        {
+            "id": 19,
+            "image": "",
+            "name": "Orange Sneakers",
+            "price": 100, 
+            "star": 5,
+            "rate": 40,
+            "brand": "Mango",
+            "availability": true,
+            "seller": "Market Hall",
+            "discountPercentage": 40,
+            "categoryId": 4,
+            "description": {
+                "Model": "NC103",
+                "Feature": "Leather",
+                "Made in": "Turkey"
+            }
+        },
+        {
+            "id": 20,
+            "image": "",
+            "name": "Blue Sneakers",
+            "price": 160, 
+            "star": 5,
+            "rate": 3,
+            "brand": "Nike",
+            "availability": true,
+            "seller": "Market Hall",
+            "discountPercentage": 0,
+            "categoryId": 4,
+            "description": {
+                "Model": "NC104",
+                "Feature": "Leather",
+                "Made in": "Turkey"
+            }
+        },
+        {
+            "id": 21,
+            "image": "",
+            "name": "Black Leather Belt",
+            "price": 80, 
+            "star": 2,
+            "rate": 16,
+            "brand": "Zara",
+            "availability": true,
+            "seller": "Market Hall",
+            "discountPercentage": 25,
+            "categoryId": 5,
+            "description": {
+                "Model": "NC2204",
+                "Feature": "Leather",
+                "Made in": "Turkey"
+            }
+        },
+        {
+            "id": 22,
+            "image": "",
+            "name": "Brown Leather-Wool Belt",
+            "price": 45, 
+            "star": 3,
+            "rate": 27,
+            "brand": "Zara",
+            "availability": true,
+            "seller": "Market Hall",
+            "discountPercentage": 5,
+            "categoryId": 5,
+            "description": {
+                "Model": "NC2204",
+                "Feature": "Leather And Wool",
+                "Made in": "Turkey"
+            }
+        },
+        {
+            "id": 23,
+            "image": "",
+            "name": "Dark Blue Leather-Wool Belt",
+            "price": 45, 
+            "star": 3,
+            "rate": 26,
+            "brand": "Mango",
+            "availability": true,
+            "seller": "Market Hall",
+            "discountPercentage": 5,
+            "categoryId": 5,
+            "description": {
+                "Model": "NC2284",
+                "Feature": "Leather And Wool",
+                "Made in": "Turkey"
+            }
+        },
+        {
+            "id": 24,
+            "image": "",
+            "name": "Dark Green Leather-Wool Belt",
+            "price": 45, 
+            "star": 1,
+            "rate": 4,
+            "brand": "Mango",
+            "availability": true,
+            "seller": "Market Hall",
+            "discountPercentage": 0,
+            "categoryId": 5,
+            "description": {
+                "Model": "NC2404",
+                "Feature": "Leather And Wool",
+                "Made in": "Turkey"
+            }
+        },
+        {
+            "id": 25,
+            "image": "",
+            "name": "Grey Leather-Wool Belt",
+            "price": 50, 
+            "star": 4,
+            "rate": 28,
+            "brand": "Nike",
+            "availability": true,
+            "seller": "Market Hall",
+            "discountPercentage": 0,
+            "categoryId": 5,
+            "description": {
+                "Model": "NC2704",
+                "Feature": "Leather And Wool",
+                "Made in": "Turkey"
+            }
+        },
+        {
+            "id": 26,
+            "image": "",
+            "name": "Black Hat",
+            "price": 20, 
+            "star": 5,
+            "rate": 78,
+            "brand": "Zara",
+            "availability": true,
+            "seller": "Market Hall",
+            "discountPercentage": 0,
+            "categoryId": 6,
+            "description": {
+                "Model": "NC304",
+                "Feature": "Wool And Cotton",
+                "Made in": "Turkey"
+            }
+        },
+        {
+            "id": 27,
+            "image": "",
+            "name": "Whitw Hat",
+            "price": 20, 
+            "star": 4,
+            "rate": 66,
+            "brand": "Zara",
+            "availability": true,
+            "seller": "Market Hall",
+            "discountPercentage": 0,
+            "categoryId": 6,
+            "description": {
+                "Model": "NC305",
+                "Feature": "Wool And Cotton",
+                "Made in": "Turkey"
+            }
+        },
+        {
+            "id": 28,
+            "image": "",
+            "name": "Brown Hat",
+            "price": 15, 
+            "star": 4,
+            "rate": 12,
+            "brand": "Mango",
+            "availability": true,
+            "seller": "Market Hall",
+            "discountPercentage": 0,
+            "categoryId": 6,
+            "description": {
+                "Model": "NC309",
+                "Feature": "Wool And Cotton",
+                "Made in": "Turkey"
+            }
+        },
+        {
+            "id": 29,
+            "image": "",
+            "name": "Brown Square Hat",
+            "price": 25, 
+            "star": 5,
+            "rate": 42,
+            "brand": "Mango",
+            "availability": true,
+            "seller": "Market Hall",
+            "discountPercentage": 0,
+            "categoryId": 6,
+            "description": {
+                "Model": "NC308",
+                "Feature": "Wool And Cotton",
+                "Made in": "Turkey"
+            }
+        },
+        {
+            "id": 30,
+            "image": "",
+            "name": "Black Net Hat",
+            "price": 28, 
+            "star": 4,
+            "rate": 92,
+            "brand": "Nike",
+            "availability": true,
+            "seller": "Market Hall",
+            "discountPercentage": 0,
+            "categoryId": 6,
+            "description": {
+                "Model": "NC300",
+                "Feature": "Wool And Cotton",
+                "Made in": "Turkey"
+            }
+        }
+    ],
+
+    "categories":[
+        {
+            "id": 1,
+            "name": "Shirts"
+        },
+        {
+            "id": 2,
+            "name": "Jackets"
+        },
+        {
+            "id": 3,
+            "name": "Coats"
+        },
+        {
+            "id": 4,
+            "name": "Shoes"
+        },
+        {
+            "id": 5,
+            "name": "Accessories"
+        },
+        {
+            "id": 6,
+            "name": "Hats"
+        }
+    ],
+
+    "comments":[
+        {
+            "id": 1,
+            "name": "David West",
+            "image": "",
+            "star": 4,
+            "date": "1 day ago",
+            "context": "The price was really reasonable with this high quality material."
+        },
+        {
+            "id": 2,
+            "name": "Mike Kenan",
+            "image": "",
+            "star": 5,
+            "date": "6 days ago",
+            "context": "I love this!!!"
+        },
+        {
+            "id": 3,
+            "name": "Ashley Tulio",
+            "image": "",
+            "star": 1,
+            "date": "2 weeks ago",
+            "context": "Very bad quality"
+        }
+    ]
+}
