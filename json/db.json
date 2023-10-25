@@ -388,7 +388,7 @@
             "brand": "Zara",
             "availability": true,
             "seller": "Market Hall",
-            "discountPercentage": 5,
+            "discountPercentage": 0,
             "categoryId": 5,
             "description": {
                 "Model": "NC2204",
