@@ -13,7 +13,7 @@ function Banner() {
         <Image
         src={baner1}
         fill
-        alt='dfkm'
+        alt='Banner'
         sizes='(max-width: 768px) 100vh, 700px'
         priority
         style={{
@@ -29,7 +29,7 @@ function Banner() {
               <Typography sx={{ fontSize:"16px", textAlign:"center", color:"red"}}>30% OFF</Typography>
            </Box>
            <Typography sx={{ textAlign:"center", fontSize:"20px"}}>Get free shipping on orders over $99.00</Typography>
-
+            <Button>Shop Now</Button>
         </Box>
     </Box>
   )
