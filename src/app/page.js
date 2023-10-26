@@ -1,5 +1,6 @@
 import { Box, Container } from "@mui/material";
 import TopBanners from "../components/TopBanners";
+import BenefitPart from "../components/BenefitPart";
 
 
 
@@ -8,6 +9,7 @@ export default function Home() {
     <Container sx={{marginTop:"15px"}} >
 
       <TopBanners/>
+      <BenefitPart/>
 
 
     </Container>
