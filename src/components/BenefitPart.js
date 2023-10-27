@@ -22,7 +22,7 @@ function BenefitPart() {
                 <LocalShippingOutlinedIcon sx={{fontSize:"50px"}}/>
                 <Box sx={{display:"flex", justifyContent:"center", alignItems:"flex-start", flexDirection:"column", marginLeft:"16px"}}>
                     <Typography sx={{fontSize:"18px"}}>Fast Delivery</Typography>
-                    <Typography sx={{fontSize:"18px", fontWeight:"400"}}>starts from $10</Typography>  
+                    <Typography sx={{fontSize:"17px"}}>starts from $10</Typography>  
                 </Box>
             </Paper>
         </Grid>
@@ -31,7 +31,7 @@ function BenefitPart() {
                 <PaidOutlinedIcon sx={{fontSize:"50px"}}/>
                 <Box sx={{display:"flex", justifyContent:"center", alignItems:"flex-start", flexDirection:"column", marginLeft:"16px"}}>
                     <Typography sx={{fontSize:"18px"}}>Money Guarantee</Typography>
-                    <Typography sx={{fontSize:"18px", fontWeight:"400"}}>7 Days Back</Typography>  
+                    <Typography sx={{fontSize:"17px"}}>7 Days Back</Typography>  
                 </Box>
             </Paper>
         </Grid>
@@ -40,7 +40,7 @@ function BenefitPart() {
                 <TimerOutlinedIcon sx={{fontSize:"50px"}}/>
                 <Box sx={{display:"flex", justifyContent:"center", alignItems:"flex-start", flexDirection:"column", marginLeft:"16px"}}>
                     <Typography sx={{fontSize:"18px"}}>365 Days</Typography>
-                    <Typography sx={{fontSize:"18px", fontWeight:"400"}}>For free return</Typography>  
+                    <Typography sx={{fontSize:"17px"}}>For free return</Typography>  
                 </Box>
             </Paper>
         </Grid>
@@ -49,7 +49,7 @@ function BenefitPart() {
                 <SecurityOutlinedIcon sx={{fontSize:"50px"}}/>
                 <Box sx={{display:"flex", justifyContent:"center", alignItems:"flex-start", flexDirection:"column", marginLeft:"16px"}}>
                     <Typography sx={{fontSize:"18px"}}>Payment</Typography>
-                    <Typography sx={{fontSize:"18px", fontWeight:"400"}}>Secure system</Typography>  
+                    <Typography sx={{fontSize:"17px"}}>Secure system</Typography>  
                 </Box>
             </Paper>
         </Grid>
