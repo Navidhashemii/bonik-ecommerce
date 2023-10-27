@@ -2,6 +2,7 @@ import { Box, Container } from "@mui/material";
 import TopBanners from "../components/TopBanners";
 import BenefitPart from "../components/BenefitPart";
 import { getLocalData } from '../../json/lib/localdata';
+import CategoryOptionList from "../components/CategoryOptions";
 
 
 export default async function Home() {
@@ -17,6 +18,7 @@ export default async function Home() {
 
       <TopBanners/>
       <BenefitPart/>
+      <CategoryOptionList data={data}/>
 
     </Container>
     
