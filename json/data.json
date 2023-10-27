@@ -576,32 +576,32 @@
         {
             "id": 1,
             "name": "Shirts",
-            "image": "/shirts/shirt2-1.jpg"
+            "image": "/categories/shirt.png"
         },
         {
             "id": 2,
             "name": "Jackets",
-            "image": "/jackets/jacket3-1.jpg"
+            "image": "/categories/jacket.png"
         },
         {
             "id": 3,
             "name": "Coats",
-            "image": "/coats/coat4-1.jpg"
+            "image": "/categories/coat.png"
         },
         {
             "id": 4,
             "name": "Shoes",
-            "image": "/shoes/shoes5-2.jpg"
+            "image": "/categories/shoes.png"
         },
         {
             "id": 5,
             "name": "Accessories",
-            "image": "/accessories/acc5-2.jpg"
+            "image": "/categories/acc.png"
         },
         {
             "id": 6,
             "name": "Hats",
-            "image": "/hats/hat4-1.jpg"
+            "image": "/categories/hat.png"
         }
     ],
 
