@@ -13,7 +13,8 @@ function LargeTopBanners({generic, img, available}) {
       width:"100%",
       maxWidth:"100%",
       aspectRatio:"70/45",
-      height:"500px" }}>
+      height:"500px",
+      zIndex:"-1"}}>
 
         <Image
           src={img}

@@ -22,7 +22,7 @@ function MainSwiper() {
       modules={[Pagination]}
       style={{
         "--swiper-pagination-bullet-inactive-opacity": "1",
-        "--swiper-pagination-bullet-horizontal-gap": "8px"
+        "--swiper-pagination-bullet-horizontal-gap": "8px",
       }}
     >
 

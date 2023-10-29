@@ -8,7 +8,8 @@ function SearchHeader() {
         <Box sx={{
         width:"100%",
         height:"60px",
-        backgroundColor:"white"}}>
+        backgroundColor:"white",
+        }}>
             <Box sx={{
             display: 'flex',
             justifyContent:"center",
