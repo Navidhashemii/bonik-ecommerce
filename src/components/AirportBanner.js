@@ -7,7 +7,7 @@ function AirportBanner() {
       <Box sx={{backgroundColor:"grey", width:"90%", textAlign:"center", padding:"26px", border:"1px solid white"}}>
         <Typography sx={{fontSize:"24px", fontWeight:"bold"}}>BLACK FRIDAY SALE!</Typography>
       </Box>
-      <div class="marquee">
+      <div className="marquee">
         <div>
           <span>PAY ONLY FOR YOUR LOVING CLOTHES</span>
         </div>
