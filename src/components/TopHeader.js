@@ -1,6 +1,25 @@
 import { Box, Typography } from "@mui/material"
+import DropDownTopHeader from "./DropDownTopHeader"
+import usa from '../assets/images/usa.png'
+import uk from '../assets/images/uk.png'
+import ind from '../assets/images/in.png'
 
 function TopHeader() {
+
+  const langs = [
+    {id: 1 , image: usa, name:"US"},
+    {id: 2 , image: uk, name:"UK"},
+    {id: 3 , image: ind, name:"IN"},
+  ]
+  const prices = [
+    {id: 1 , image: usa, name:"USD"},
+    {id: 2 , image: uk, name:"EUR"},
+    {id: 3 , image: ind, name:"INR"},
+  ]
+
+  const positionListPrices = {listStyle:"none",position:"absolute", top:"36px", left:"min( calc(100vw - 210px) , 1002px )", zIndex:"10",backgroundColor:"white", borderRadius:"10px", boxShadow:"-3px 5px 20px grey"}
+  const positionListLang = {listStyle:"none",position:"absolute", top:"36px", left:"min( calc(100vw - 130px) , 1002px )", zIndex:"10",backgroundColor:"white", borderRadius:"10px", boxShadow:"-3px 5px 20px grey"}
+
   return (
     <>
         <Box sx={{
@@ -11,7 +30,8 @@ function TopHeader() {
         display:"flex",
         justifyContent:"space-between",
         alignItems:"center",
-        padding:"0 16px"}} >
+        padding:"0 16px",
+        }} >
             <Box>
                 <Typography sx={{
                 fontSize:"24px",
@@ -20,21 +40,12 @@ function TopHeader() {
                 fontStyle:"italic"
                  }}>Bonik</Typography>
             </Box>
-            <Box sx={{display:"flex",flexDirection:"row"}}>
-              <Typography
-              variant="subtitle2"
-              sx={{
-              color:"white",
-              marginRight:"8px",
-              fontWeight:"100"
-              }}>EN</Typography>
-              <Typography
-              variant="subtitle2"
-              sx={{
-              color:"white",
-              fontWeight:"100"
-              }}>USD</Typography>
+            <Box sx={{display:"flex"}}>
+              <DropDownTopHeader list={positionListPrices} options={langs}/>
+              <DropDownTopHeader list={positionListLang} options={prices}/>
             </Box>
+            
+            
 
 
         </Box>   
