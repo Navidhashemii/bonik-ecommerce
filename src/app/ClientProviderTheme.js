@@ -17,6 +17,7 @@ const theme = createTheme({
         primary: "#434343",
         secondary: "#E0E0E0",
     },
+},
   
   typography: {
     fontFamily: "OpenSans",
@@ -56,7 +57,7 @@ const theme = createTheme({
     }
   }
 
-}});
+});
 
 const ClientProviderTheme = ({ children }) => {
     return (
