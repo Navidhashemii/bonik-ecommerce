@@ -1,7 +1,7 @@
 'use client'
-import LargeTopBanners from './LargeTopBanners';
-import largeBaner1 from '../assets/images/main-1.jpg'
-import largeBaner2 from '../assets/images/main-2.jpg'
+import LargeTopBanners from '../Large-Top-Banners/LargeTopBanners';
+import largeBaner1 from '../../../assets/images/main-1.jpg'
+import largeBaner2 from '../../../assets/images/main-2.jpg'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import {Pagination} from 'swiper/modules';
 import 'swiper/css';

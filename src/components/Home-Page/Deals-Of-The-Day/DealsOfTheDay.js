@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material"
-import CardSwiper from "./CardSwiper"
+import CardSwiper from "../Card-Swiper/CardSwiper"
 
 
 function DealsOfTheDay({data}) {

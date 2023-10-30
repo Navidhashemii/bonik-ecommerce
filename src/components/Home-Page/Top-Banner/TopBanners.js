@@ -1,6 +1,6 @@
-import smallBanner1 from '../assets/images/top-1.jpg'
-import smallBanner2 from '../assets/images/top-2.jpg'
-import MainSwiper from "../components/MainSwiper";
+import smallBanner1 from '../../../assets/images/top-1.jpg'
+import smallBanner2 from '../../../assets/images/top-2.jpg'
+import MainSwiper from "../Main-Swiper/MainSwiper";
 import Image from "next/image";
 import { Box, Button, Typography } from "@mui/material"
 

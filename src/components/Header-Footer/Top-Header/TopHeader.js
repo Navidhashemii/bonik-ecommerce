@@ -1,8 +1,8 @@
 import { Box, Typography } from "@mui/material"
-import DropDownTopHeader from "./DropDownTopHeader"
-import usa from '../assets/images/usa.png'
-import uk from '../assets/images/uk.png'
-import ind from '../assets/images/in.png'
+import DropdownTopHeader from "../../Home-Page/Dropdown-Top-Header/DropdownTopHeader"
+import usa from '../../../assets/images/usa.png'
+import uk from '../../../assets/images/uk.png'
+import ind from '../../../assets/images/in.png'
 
 function TopHeader() {
 
@@ -41,8 +41,8 @@ function TopHeader() {
                  }}>Bonik</Typography>
             </Box>
             <Box sx={{display:"flex"}}>
-              <DropDownTopHeader list={positionListPrices} options={langs}/>
-              <DropDownTopHeader list={positionListLang} options={prices}/>
+              <DropdownTopHeader list={positionListPrices} options={langs}/>
+              <DropdownTopHeader list={positionListLang} options={prices}/>
             </Box>
             
             

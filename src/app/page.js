@@ -1,10 +1,10 @@
 import { Box, Container } from "@mui/material";
-import TopBanners from "../components/TopBanners";
-import BenefitPart from "../components/BenefitPart";
+import TopBanners from "../components/Home-Page/Top-Banner/TopBanners";
+import BenefitPart from "../components/Home-Page/Benefit-Part/BenefitPart";
 import { getLocalData } from '../../json/lib/localdata';
-import CategoryOptionList from "../components/CategoryOptions";
-import AirportInfoBanner from "../components/AirportBanner";
-import DealsOfTheDay from "../components/DealsOfTheDay";
+import CategoryOptionList from "../components/Home-Page/Category-Options/CategoryOptions";
+import AirportInfoBanner from "../components/Home-Page/Airport-Banner/AirportBanner";
+import DealsOfTheDay from "../components/Home-Page/Deals-Of-The-Day/DealsOfTheDay";
 
 
 

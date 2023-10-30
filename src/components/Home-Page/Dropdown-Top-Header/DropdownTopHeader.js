@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 import ExpandMoreOutlinedIcon from '@mui/icons-material/ExpandMoreOutlined';
 
-function DropDownTopHeader({list, options}) {
+function DropdownTopHeader({list, options}) {
 
     const [open, setOpen] = useState(false)
     const [select, setSelect] = useState(options[0])
@@ -56,4 +56,4 @@ function DropDownTopHeader({list, options}) {
   )
 }
 
-export default DropDownTopHeader
+export default DropdownTopHeader
