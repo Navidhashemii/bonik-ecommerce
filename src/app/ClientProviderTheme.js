@@ -1,5 +1,5 @@
 'use client'
-import { createTheme, ThemeProvider} from "@mui/material";
+import { createTheme, ThemeProvider } from "@mui/material";
 const theme = createTheme({
   palette: {
 
@@ -58,13 +58,11 @@ const theme = createTheme({
 
 }});
 
-const Theme = ({ children }) => {
-  return (
-
-    <ThemeProvider theme={theme}>
-        {children}
-    </ThemeProvider>
-
+const ClientProviderTheme = ({ children }) => {
+    return (
+        <ThemeProvider theme={theme}>
+            {children}
+        </ThemeProvider>
     )
-};
-export default Theme;
+  };
+  export default ClientProviderTheme;
