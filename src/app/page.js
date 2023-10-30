@@ -4,6 +4,8 @@ import BenefitPart from "../components/BenefitPart";
 import { getLocalData } from '../../json/lib/localdata';
 import CategoryOptionList from "../components/CategoryOptions";
 import AirportInfoBanner from "../components/AirportBanner";
+import DealsOfTheDay from "../components/DealsOfTheDay";
+
 
 
 export default async function Home() {
@@ -21,6 +23,7 @@ export default async function Home() {
       <BenefitPart/>
       <CategoryOptionList data={data}/>
       <AirportInfoBanner/>
+      <DealsOfTheDay data={data}/>
       
 
     </Container>
