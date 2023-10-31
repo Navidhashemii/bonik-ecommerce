@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 
 function CategoryOptions({data}) {
-
+    
 const categories = data.categories
 
 
