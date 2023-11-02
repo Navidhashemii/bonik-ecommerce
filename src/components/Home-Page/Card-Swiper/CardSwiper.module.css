@@ -12,7 +12,21 @@
     text-align:center;
     margin-top:15px;
     padding:10px;
+    cursor: pointer;
+    overflow: hidden;
     aspect-ratio:1/1;
+}
+
+.cardContainer:hover{
+    border: 1px solid #7f7f7f;
+}
+
+.cardImage{
+    transition: transform 300ms;
+}
+
+.cardContainer:hover .cardImage{
+    transform: scale(1.1)
 }
 
 .cardName{
@@ -73,3 +87,38 @@
     border:1px solid #4a4a4a;
     margin-top:18px;
 }
+
+.button:hover{
+    background-color: #393939;
+    color: #f6f6f6;
+}
+
+.icon1{
+    color: #3c3c3c;
+    position: absolute;
+    right: -32px;
+    top: 6%;
+    transition: ease-in-out 200ms;
+}
+
+.cardContainer:hover .icon1{
+    transform: translateX(-42px);
+    transition: ease-in-out 300ms;
+}
+
+.icon2{
+    color: #3c3c3c;
+    position: absolute;
+    right: -32px;
+    top: 14%;
+    transition: ease-in-out 300ms;
+}
+
+.cardContainer:hover .icon2{
+    transform: translateX(-42px);
+    transition: ease-in-out 400ms;
+}
+
+
+
+
