@@ -5,6 +5,7 @@ import { getLocalData } from '../../json/lib/localdata';
 import CategoryOptionList from "../components/Home-Page/Category-Options/CategoryOptions";
 import AirportInfoBanner from "../components/Home-Page/Airport-Banner/AirportBanner";
 import DealsOfTheDay from "../components/Home-Page/Deals-Of-The-Day/DealsOfTheDay";
+import ComingSoonPart from "../components/Home-Page/Coming-Soon-part/ComingSoonPart";
 
 
 
@@ -24,6 +25,7 @@ export default async function Home() {
       <CategoryOptionList data={data}/>
       <AirportInfoBanner/>
       <DealsOfTheDay data={data}/>
+      <ComingSoonPart/>
       
 
     </Container>
