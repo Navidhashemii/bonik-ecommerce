@@ -1,0 +1,33 @@
+.mainContainer{
+   flex-grow: 1;
+   margin-top: 32px; 
+}
+
+.paperContainer{
+    height:100px;
+    display:flex;
+    justify-content:flex-start; 
+    align-items:center; 
+    padding:0 40px
+}
+
+.icon{
+    font-size: 50px;
+}
+
+.textContainer{
+    display:flex; 
+    justify-content:center; 
+    align-items:flex-start; 
+    flex-direction:column; 
+    margin-left:16px;
+}
+
+.title{
+    font-weight: 600;
+}
+
+.subTitle{
+    font-weight: 400;
+    color: #686868;
+}

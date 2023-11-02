@@ -1,12 +1,12 @@
 'use client'
-import LargeTopBanners from '../Large-Top-Banners/LargeTopBanners';
-import largeBaner1 from '../../../assets/images/main-1.jpg'
-import largeBaner2 from '../../../assets/images/main-2.jpg'
+import LargeTopBanners from './LargeTopBanners';
+import largeBaner1 from '../../../../assets/images/main-1.jpg'
+import largeBaner2 from '../../../../assets/images/main-2.jpg'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import {Pagination} from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import './MainSwiper.css';
+import './BannerSwiper.css';
 
 
 
@@ -15,11 +15,11 @@ import './MainSwiper.css';
 function MainSwiper() {
   return (
     <Swiper 
-      loop={true}
+      modules={[Pagination]}
       pagination={{
         clickable: true,
       }}
-      modules={[Pagination]}
+      loop={true}
       style={{
         "--swiper-pagination-bullet-inactive-opacity": "1",
         "--swiper-pagination-bullet-horizontal-gap": "8px",

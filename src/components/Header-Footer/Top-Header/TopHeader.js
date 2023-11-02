@@ -1,8 +1,11 @@
 import { Box, Typography } from "@mui/material"
-import DropdownTopHeader from "../../Home-Page/Dropdown-Top-Header/DropdownTopHeader"
+import DropdownTopHeader from "./DropdownTopHeader"
 import usa from '../../../assets/images/usa.png'
 import uk from '../../../assets/images/uk.png'
 import ind from '../../../assets/images/in.png'
+import styles from './TopHeader.module.css'
+import Image from "next/image"
+import logo from '../../../assets/images/logo.svg'
 
 function TopHeader() {
 
@@ -17,40 +20,21 @@ function TopHeader() {
     {id: 3 , image: ind, name:"INR"},
   ]
 
-  const positionListPrices = {listStyle:"none",position:"absolute", top:"36px", left:"min( calc(100vw - 210px) , 1002px )", zIndex:"10",backgroundColor:"white", borderRadius:"10px", boxShadow:"-3px 5px 20px grey"}
-  const positionListLang = {listStyle:"none",position:"absolute", top:"36px", left:"min( calc(100vw - 130px) , 1002px )", zIndex:"10",backgroundColor:"white", borderRadius:"10px", boxShadow:"-3px 5px 20px grey"}
-
   return (
-    <>
-        <Box sx={{
-        height:"42px",
-        width:"100%",
-        backgroundColor:"#0F3460",
-        overflow:"hidden",
-        display:"flex",
-        justifyContent:"space-between",
-        alignItems:"center",
-        padding:"0 16px",
-        }} >
-            <Box>
-                <Typography sx={{
-                fontSize:"24px",
-                color:"#E94560",
-                fontWeight:"bold",
-                fontStyle:"italic"
-                 }}>Bonik</Typography>
+        <Box bgcolor="headerFooter.main" className={styles.topHeaderContainer}>
+            <Box className={styles.logoImageContainer}>
+                <Image 
+                  src={logo}
+                  alt='Logo'
+                  width={80}
+                  height={100}
+                />
             </Box>
             <Box sx={{display:"flex"}}>
-              <DropdownTopHeader list={positionListPrices} options={langs}/>
-              <DropdownTopHeader list={positionListLang} options={prices}/>
+              <DropdownTopHeader langClass={true} options={langs}/>
+              <DropdownTopHeader langClass={false} options={prices}/>
             </Box>
-            
-            
-
-
         </Box>   
-    
-    </>
   )
 }
 

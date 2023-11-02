@@ -1,5 +1,5 @@
 import { Box, Container } from "@mui/material";
-import TopBanners from "../components/Home-Page/Top-Banner/TopBanners";
+import TopBanners from "../components/Home-Page/Top-Banners/TopBanners";
 import BenefitPart from "../components/Home-Page/Benefit-Part/BenefitPart";
 import { getLocalData } from '../../json/lib/localdata';
 import CategoryOptionList from "../components/Home-Page/Category-Options/CategoryOptions";

@@ -1,0 +1,46 @@
+.boxContainer{
+    position:relative;
+    width:100%;
+    max-width:100%;
+    min-height:250px;
+    margin-top:25px;
+    aspect-ratio:70/45;
+}
+
+.textContainer{
+    position: absolute;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text1{
+    font-weight: 400;
+    color: #454545;
+}
+
+.text2{
+    font-weight: 600;
+    color: #282828;
+    line-height: 20px;
+}
+
+.button{
+    font-size: 16px;
+    width:90px;
+    padding:0;
+    margin-top:25px;
+    color:#282828;
+    margin-left:-8px;
+}
+
+.button:hover{
+    color:#E94560;
+}
+
+.button:focus{
+    text-decoration: none;
+}

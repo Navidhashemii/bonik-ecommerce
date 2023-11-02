@@ -3,51 +3,54 @@ import { createTheme, ThemeProvider } from "@mui/material";
 const theme = createTheme({
   palette: {
 
+    common: {
+        white:"#fefefe"
+    },
+
     primary: {
-        main: "#E94560",
+        main: "#efefef",
     },
 
     secondary: {
+        main: "#E94560",
+        light: "#ed6d82",
+        dark: "#c83e55"
+    },
+
+    headerFooter: {
         main: "#0F3460",
         dark: "#0C2A4D"
     },
      
     background: {
-        default: "#F6F6F6",
+        default: "#f6f6f6",
         primary: "#434343",
-        secondary: "#E0E0E0",
+        secondary: "#1c1c1c",
     },
 },
   
   typography: {
     fontFamily: "OpenSans",
     h1: {
-        fontSize: "60px",
-        fontWeight: "800",
+        fontSize: "60px"
     },
     h2: {
-        fontSize: "30px",
-        fontWeight: "400",
+        fontSize: "30px"
     },
     h3: {
-        fontSize: "30px",
-        fontWeight: "100",
+        fontSize: "28px"
     },
     h4: {
-        fontSize: "24px",
-        fontWeight: "800",
+        fontSize: "26px",
     },
     h5: {
         fontSize: "24px",
-        fontWeight: "400",
     },
     h6: {
-        fontSize: "18px",
-        fontWeight: "400",
+        fontSize: "18px"
     },
     subtitle1: {
-        fontSize: "18px",
-        fontWeight: "100",
+        fontSize: "16px"
     },
     subtitle2: {
         fontSize: "12px",

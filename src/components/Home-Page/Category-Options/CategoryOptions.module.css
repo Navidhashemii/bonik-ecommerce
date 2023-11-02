@@ -1,0 +1,43 @@
+.grid{
+    margin-bottom: -24px;
+}
+
+.boxContainer{
+    position:relative;
+    width:100%;
+    margin-top:25px;
+    aspect-ratio:1/1;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.boxContainer:hover .button{
+    background-color: #1a1a1a;
+    color: rgb(237, 237, 237);
+    text-shadow: none;
+}
+
+.categoryImage{
+    transition: transform 400ms;
+}
+
+.boxContainer:hover .categoryImage{
+    transform: scale(1.1)
+}
+
+.button{
+    position:absolute;
+    border-radius: 0;
+    width:90%;
+    height:25%;
+    font-size:18px;
+    font-weight:600;
+    text-transform:capitalize;
+    text-shadow: rgb(255, 255, 255) 0 0 10px;
+    background-color: rgba(243, 243, 243, 0.385);
+    transform: translate(-50%, -50%);
+    color: black;
+    top: 82%;
+    left: 50%;
+}
+

@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/material"
 import CardSwiper from "../Card-Swiper/CardSwiper"
+import styles from './DealsOfTheDay.module.css'
 
 
 function DealsOfTheDay({data}) {
@@ -8,8 +9,8 @@ function DealsOfTheDay({data}) {
   const withDiscount = products.filter(({discount}) => discount)
 
   return (
-    <Box sx={{margin:"68px 0 30px 0"}}>
-        <Typography sx={{fontSize:"22px"}}>
+    <Box className={styles.container}>
+        <Typography variant="h5" className={styles.text}>
             Deals Of The Day
         </Typography>
         <CardSwiper data={withDiscount}/>

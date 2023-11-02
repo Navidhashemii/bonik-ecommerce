@@ -1,0 +1,67 @@
+.boxContainer{
+    background-color:#434343;
+    margin-top:65px;
+    width:100%;
+    height:auto; 
+    display:flex;
+    justify-content:space-between;
+    flex-direction:column;
+    align-items:center;
+    padding:0 0 24px 0;
+    outline:1px dashed #E0E0E0;
+    outline-offset:-5px;
+}
+
+.titleBox{
+    background-color:#E0E0E0;
+    width:90%;
+    text-align:center;
+    padding:26px 18px;
+    
+}
+
+.title{
+    font-weight:bold;
+    color: #131313;
+}
+.marquee {
+    height: 40px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-top: 24px;
+  }
+  
+  .marqueeContainer {
+    display: block;
+    width: 200%;
+    height: 30px;
+    position: absolute;
+    overflow: hidden;
+    animation: marquee 20s linear infinite;
+    
+  }
+  
+  .marqueeText {
+    float: left;
+    width: 100%;
+    font-weight: 600;
+    font-style: italic;
+    color: #fefefe;
+  }
+  
+  @keyframes marquee {
+    0% { left: 100%; }
+    100% { left: -200%; }
+  }
+
+  .button{
+    font-weight: 600;
+    background-color:white;
+    color:#0a0a0a;
+    border-radius:0;
+    width:128px;
+    height:44px;
+    margin-top: 18px;
+  }
+    
