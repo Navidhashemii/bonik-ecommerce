@@ -1,6 +1,5 @@
 import { Box, Typography } from '@mui/material'
 import Image from 'next/image'
-import React from 'react'
 import styles from './ComingSoonPart.module.css'
 
 function ComingSoonBanner({banner}) {

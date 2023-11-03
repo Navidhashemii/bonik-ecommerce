@@ -7,6 +7,7 @@ import AirportInfoBanner from "../components/Home-Page/Airport-Banner/AirportBan
 import DealsOfTheDay from "../components/Home-Page/Deals-Of-The-Day/DealsOfTheDay";
 import ComingSoonPart from "../components/Home-Page/Coming-Soon-part/ComingSoonPart";
 import Products from "../components/Home-Page/Products/Products";
+import MiddleBannerPart from "../components/Home-Page/Middle-Banners-Part/MiddleBannerPart";
 
 
 
@@ -30,7 +31,7 @@ export default async function Home() {
       <DealsOfTheDay data={data}/>
       <ComingSoonPart/>
       <Products data={data} category={categories[0]}/>
-      
+      <MiddleBannerPart/>
 
     </Container>
     
