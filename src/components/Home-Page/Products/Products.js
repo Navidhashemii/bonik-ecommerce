@@ -9,6 +9,8 @@ function Products({data, category}) {
 
   
   const [selectedBrand, setSelectedBrand] = useState('')
+  // const [active, setActive] = useState('')
+
   const brands = data.brands
   const products = data.products
 
@@ -45,7 +47,10 @@ function Products({data, category}) {
           
           <Box className={styles.buttonsContainer}>
             {brands.map(({id, name}) => (
-              <button onClick={() => handleBrand(name)} key={id} className={styles.brandButton}>
+              <button 
+                onClick={() => handleBrand(name)}
+                key={id}
+                className={`${styles.brandButton} ${selectedBrand === name ? styles.active : ''}`}>
                 {name}
               </button>
             ))}
