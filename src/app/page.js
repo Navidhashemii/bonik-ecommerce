@@ -33,6 +33,9 @@ export default async function Home() {
       <Products data={data} category={categories[0]}/>
       <MiddleBannerPart/>
       <Products data={data} category={categories[1]}/>
+      <Products data={data} category={categories[2]}/>
+      <Products data={data} category={categories[3]}/>
+
 
     </Container>
     
