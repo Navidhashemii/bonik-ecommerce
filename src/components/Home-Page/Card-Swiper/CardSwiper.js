@@ -18,11 +18,19 @@ import './CardSwiper.css'
 
 function CardSwiper({data}) {
 
-    const [liked, setLiked] = useState(false)
+    const [elements, setElements] = useState(data.map(item => ({ ...item, selected: false })));
 
-    const handleLike = () => setLiked(!liked)
+    const handleLike = (id) => {
+        const updatedElements = elements.map(element => {
+            if (element.id === id) {
+                return { ...element, selected: !element.selected };
+            }
+            return element;
+        });
+        setElements(updatedElements);
+    };
+    
 
-    const test = () => null
 
   return (
     <>
@@ -84,7 +92,7 @@ function CardSwiper({data}) {
                             variant="h6"
                             className={styles.price}
                         >
-                            {price}
+                            ${price.toFixed(2)}
                         </Typography>
 
                         }
@@ -102,17 +110,17 @@ function CardSwiper({data}) {
                         <Button className={styles.button}>
                             Add To Cart
                         </Button>
-                        <IconButton onClick={test}  className={styles.icon1}>
+                        <IconButton className={styles.icon1}>
                             <VisibilityOutlinedIcon/>
                         </IconButton>
                         
-                        {liked
+                        {elements.find(element => element.id === id).selected
                             ? 
-                            <IconButton  onClick={handleLike} className={styles.icon2}>
+                            <IconButton  onClick={() => handleLike(id)} className={styles.icon2}>
                                 <FavoriteIcon/>
                             </IconButton>
                             :
-                            <IconButton onClick={handleLike} className={styles.icon2}>
+                            <IconButton onClick={() => handleLike(id)} className={styles.icon2}>
                                 <FavoriteBorderOutlinedIcon />
                             </IconButton>
                         }

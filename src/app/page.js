@@ -1,4 +1,4 @@
-import { Box, Container } from "@mui/material";
+import { Container } from "@mui/material";
 import TopBanners from "../components/Home-Page/Top-Banners/TopBanners";
 import BenefitPart from "../components/Home-Page/Benefit-Part/BenefitPart";
 import { getLocalData } from '../../json/lib/localdata';
@@ -6,6 +6,7 @@ import CategoryOptionList from "../components/Home-Page/Category-Options/Categor
 import AirportInfoBanner from "../components/Home-Page/Airport-Banner/AirportBanner";
 import DealsOfTheDay from "../components/Home-Page/Deals-Of-The-Day/DealsOfTheDay";
 import ComingSoonPart from "../components/Home-Page/Coming-Soon-part/ComingSoonPart";
+import Products from "../components/Home-Page/Products/Products";
 
 
 
@@ -15,6 +16,8 @@ export default async function Home() {
   if (!data) {
     throw new Error("Failed trying to get data");
   }
+
+  const categories = data.categories
 
   
   return (
@@ -26,6 +29,7 @@ export default async function Home() {
       <AirportInfoBanner/>
       <DealsOfTheDay data={data}/>
       <ComingSoonPart/>
+      <Products data={data} category={categories[0]}/>
       
 
     </Container>

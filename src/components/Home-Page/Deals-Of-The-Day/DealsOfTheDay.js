@@ -4,9 +4,11 @@ import styles from './DealsOfTheDay.module.css'
 
 
 function DealsOfTheDay({data}) {
-
-  const products = data.products
-  const withDiscount = products.filter(({discount}) => discount)
+  
+  const product = data.products
+  const withDiscount = product.filter(({discount}) => discount)
+  
+  
 
   return (
     <Box className={styles.container}>
