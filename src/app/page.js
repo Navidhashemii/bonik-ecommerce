@@ -37,6 +37,9 @@ export default async function Home() {
       <Products data={data} category={categories[2]}/>
       <Products data={data} category={categories[3]}/>
       <GiftBanner/>
+      <Products data={data} category={categories[4]}/>
+      <Products data={data} category={categories[5]}/>
+
 
 
     </Container>
