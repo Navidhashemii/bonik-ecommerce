@@ -1,0 +1,15 @@
+.imageContainer{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxContainer{
+    height: 380px;
+}
+
+.swiperContainer{
+    background-color: #ffffff;
+}

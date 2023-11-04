@@ -9,6 +9,7 @@ import ComingSoonPart from "../components/Home-Page/Coming-Soon-part/ComingSoonP
 import Products from "../components/Home-Page/Products/Products";
 import MiddleBannerPart from "../components/Home-Page/Middle-Banners-Part/MiddleBannerPart";
 import GiftBanner from "../components/Home-Page/Gift-Banner/GiftBanner";
+import BrandsSwiper from "../components/Home-Page/Featured-Brands/BrandsSwiper";
 
 
 
@@ -39,7 +40,7 @@ export default async function Home() {
       <GiftBanner/>
       <Products data={data} category={categories[4]}/>
       <Products data={data} category={categories[5]}/>
-
+      <BrandsSwiper/>
 
 
     </Container>
