@@ -9,8 +9,8 @@ function BrandCard({image}) {
         <Image
             src={image}
             alt='brand'         
-            width={110}
-            height={60}
+            width={140}
+            height={80}
             
         />
     </Box>
