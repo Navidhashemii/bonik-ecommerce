@@ -77,7 +77,7 @@ function LargeTopBanners({generic, img, available}) {
                 variant='h2'
                 className={styles.comingSoon}
               >
-                Coming Soon...
+                Coming Soon
               </Typography>
 
             }
