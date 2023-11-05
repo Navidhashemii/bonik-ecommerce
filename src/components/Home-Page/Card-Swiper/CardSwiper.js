@@ -117,7 +117,7 @@ function CardSwiper({data}) {
                             <VisibilityOutlinedIcon/>
                         </IconButton>
                         
-                        {elements.find(element => element.id === id).selected
+                        {elements.find(element => element.id === id)?.selected
                             ? 
                             <IconButton  onClick={() => handleLike(id)} className={styles.icon2}>
                                 <FavoriteIcon/>

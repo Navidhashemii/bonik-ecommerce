@@ -10,6 +10,7 @@ import Products from "../components/Home-Page/Products/Products";
 import MiddleBannerPart from "../components/Home-Page/Middle-Banners-Part/MiddleBannerPart";
 import GiftBanner from "../components/Home-Page/Gift-Banner/GiftBanner";
 import BrandsSwiper from "../components/Home-Page/Featured-Brands/BrandsSwiper";
+import SuggestedProducts from "../components/Home-Page/Suggested-Products/SuggestedProducts";
 
 
 
@@ -17,7 +18,7 @@ export default async function Home() {
 
   const data = await getLocalData();
   if (!data) {
-    throw new Error("Failed trying to get data");
+    throw new Error("Failed to get data");
   }
 
   const categories = data.categories
@@ -41,6 +42,7 @@ export default async function Home() {
       <Products data={data} category={categories[4]}/>
       <Products data={data} category={categories[5]}/>
       <BrandsSwiper/>
+      <SuggestedProducts data={data}/>
 
 
     </Container>
