@@ -3,6 +3,7 @@ import './globals.css'
 import TopHeader from '../components/Header-Footer/Top-Header/TopHeader'
 import SearchHeader from '../components/Header-Footer/Search-Header/SearchHeader'
 import ClientProviderTheme from "./ClientProviderTheme";
+import Footer from '../components/Header-Footer/Footer/Footer';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
           <TopHeader/>
           <SearchHeader/>
           {children}
+          <Footer/>
         </body>
       </ClientProviderTheme>
     </html>

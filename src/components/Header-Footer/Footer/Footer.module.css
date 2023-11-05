@@ -1,0 +1,84 @@
+.footerContainer{
+    width: 100%;
+    height: auto;
+    background-color: #0F3460;
+    padding: 0 30px;
+    margin-top: 60px;
+}
+
+.mainText{
+    color: #bcbcbc;
+}
+
+.downloadButtonsContainer{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.downloadButton{
+    background-color: #0C2A4D;
+    padding: 8px 14px;
+    border-radius: 6px;
+    width: auto;
+}
+
+.buttonTextContainer{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.firstButtonText{
+    font-size: 9px;
+    font-weight: 800;
+}
+
+.secondButtonText{
+    font-weight: 800;
+    margin-top: -5px;
+}
+
+
+
+
+
+.infoContainer{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.LinksContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.infoTitle{
+    font-weight: 600;
+    color: #f3f3f3;
+    margin: 28px 0 10px 0;
+}
+
+.infoSubtitle{
+    color: #bcbcbc;
+    margin-top: 8px;
+}
+
+
+.iconsContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 15px 0 140px 0;
+}
+
+.icon{
+    margin-right: 12px;
+    
+}

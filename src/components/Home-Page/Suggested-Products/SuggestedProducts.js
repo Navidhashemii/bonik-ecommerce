@@ -30,11 +30,7 @@ function SuggestedProducts({data}) {
     } else {
     finalData
 }
-
-console.log(finalData)
-
    
-
   return (
     <Box className={styles.boxContainer}>
         <Typography
