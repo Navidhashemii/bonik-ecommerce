@@ -54,7 +54,7 @@ const theme = createTheme({
         fontSize: "16px"
     },
     subtitle2: {
-        fontSize: "12px",
+        fontSize: "14px",
     },
     button: {
         textTransform: "none"
