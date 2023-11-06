@@ -12,6 +12,7 @@
             "availability": true,
             "newArrival": false,
             "seller": "Market Hall",
+            "quantity": 0,
             "discount": 0,
             "categoryId": 1,
             "description": {
@@ -32,6 +33,7 @@
             "availability": true,
             "newArrival": false,
             "seller": "Market Hall",
+            "quantity": 0,
             "discount": 0,
             "categoryId": 1,
             "description": {
@@ -52,6 +54,7 @@
             "availability": true,
             "newArrival": false,
             "seller": "Market Hall",
+            "quantity": 0,
             "discount": 30,
             "categoryId": 1,
             "description": {
@@ -72,6 +75,7 @@
             "availability": true,
             "newArrival": false,
             "seller": "Market Hall",
+            "quantity": 0,
             "discount": 0,
             "categoryId": 1,
             "description": {
@@ -92,6 +96,7 @@
             "availability": true,
             "newArrival": true,
             "seller": "Market Hall",
+            "quantity": 0,
             "discount": 0,
             "categoryId": 1,
             "description": {
@@ -112,6 +117,7 @@
             "availability": true,
             "newArrival": true,
             "seller": "Market Hall",
+            "quantity": 0,
             "discount": 25,
             "categoryId": 2,
             "description": {
@@ -132,6 +138,7 @@
             "availability": true,
             "newArrival": true,
             "seller": "Market Hall",
+            "quantity": 0,
             "discount": 0,
             "categoryId": 2,
             "description": {
@@ -152,6 +159,7 @@
             "availability": true,
             "newArrival": false,
             "seller": "Market Hall",
+            "quantity": 0,
             "discount": 0,
             "categoryId": 2,
             "description": {
@@ -172,6 +180,7 @@
             "availability": true,
             "newArrival": false,
             "seller": "Market Hall",
+            "quantity": 0,
             "discount": 30,
             "categoryId": 2,
             "description": {
@@ -192,6 +201,7 @@
             "availability": true,
             "newArrival": false,
             "seller": "Market Hall",
+            "quantity": 0,
             "discount": 30,
             "categoryId": 2,
             "description": {
@@ -212,6 +222,7 @@
             "availability": true,
             "newArrival": true,
             "seller": "Market Hall",
+            "quantity": 0,
             "discount": 0,
             "categoryId": 3,
             "description": {
@@ -232,6 +243,7 @@
             "availability": true,
             "newArrival": true,
             "seller": "Market Hall",
+            "quantity": 0,
             "discount": 0,
             "categoryId": 3,
             "description": {
@@ -252,6 +264,7 @@
             "availability": true,
             "newArrival": false,
             "seller": "Market Hall",
+            "quantity": 0,
             "discount": 50,
             "categoryId": 3,
             "description": {
@@ -272,6 +285,7 @@
             "availability": true,
             "newArrival": false,
             "seller": "Market Hall",
+            "quantity": 0,
             "discount": 35,
             "categoryId": 3,
             "description": {
@@ -292,6 +306,7 @@
             "availability": true,
             "newArrival": true,
             "seller": "Market Hall",
+            "quantity": 0,
             "discount": 0,
             "categoryId": 3,
             "description": {
@@ -312,6 +327,7 @@
             "availability": true,
             "newArrival": false,
             "seller": "Market Hall",
+            "quantity": 0,
             "discount": 15,
             "categoryId": 4,
             "description": {
@@ -332,6 +348,7 @@
             "availability": true,
             "newArrival": false,
             "seller": "Market Hall",
+            "quantity": 0,
             "discount": 0,
             "categoryId": 4,
             "description": {
@@ -352,6 +369,7 @@
             "availability": true,
             "newArrival": false,
             "seller": "Market Hall",
+            "quantity": 0,
             "discount": 0,
             "categoryId": 4,
             "description": {
@@ -372,6 +390,7 @@
             "availability": true,
             "newArrival": false,
             "seller": "Market Hall",
+            "quantity": 0,
             "discount": 40,
             "categoryId": 4,
             "description": {
@@ -392,6 +411,7 @@
             "availability": true,
             "newArrival": false,
             "seller": "Market Hall",
+            "quantity": 0,
             "discount": 0,
             "categoryId": 4,
             "description": {
@@ -412,6 +432,7 @@
             "availability": true,
             "newArrival": false,
             "seller": "Market Hall",
+            "quantity": 0,
             "discount": 25,
             "categoryId": 5,
             "description": {
@@ -432,6 +453,7 @@
             "availability": true,
             "newArrival": true,
             "seller": "Market Hall",
+            "quantity": 0,
             "discount": 0,
             "categoryId": 5,
             "description": {
@@ -452,6 +474,7 @@
             "availability": true,
             "newArrival": true,
             "seller": "Market Hall",
+            "quantity": 0,
             "discount": 0,
             "categoryId": 5,
             "description": {
@@ -472,6 +495,7 @@
             "availability": true,
             "newArrival": true,
             "seller": "Market Hall",
+            "quantity": 0,
             "discount": 0,
             "categoryId": 5,
             "description": {
@@ -492,6 +516,7 @@
             "availability": true,
             "newArrival": true,
             "seller": "Market Hall",
+            "quantity": 0,
             "discount": 0,
             "categoryId": 5,
             "description": {
@@ -512,6 +537,7 @@
             "availability": true,
             "newArrival": false,
             "seller": "Market Hall",
+            "quantity": 0,
             "discount": 0,
             "categoryId": 6,
             "description": {
@@ -532,6 +558,7 @@
             "availability": true,
             "newArrival": false,
             "seller": "Market Hall",
+            "quantity": 0,
             "discount": 0,
             "categoryId": 6,
             "description": {
@@ -552,6 +579,7 @@
             "availability": true,
             "newArrival": false,
             "seller": "Market Hall",
+            "quantity": 0,
             "discount": 0,
             "categoryId": 6,
             "description": {
@@ -572,6 +600,7 @@
             "availability": true,
             "newArrival": false,
             "seller": "Market Hall",
+            "quantity": 0,
             "discount": 0,
             "categoryId": 6,
             "description": {
@@ -592,6 +621,7 @@
             "availability": true,
             "newArrival": false,
             "seller": "Market Hall",
+            "quantity": 0,
             "discount": 0,
             "categoryId": 6,
             "description": {
