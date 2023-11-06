@@ -30,12 +30,13 @@
 
 .cartCounter{
     background-color:#E94560;
+    font-weight: 600;
     position:absolute;
     top:2px;
-    right:0px;
+    right:5px;
     color:white;
-    width:20px;
-    height:20px;
+    width:24px;
+    height:24px;
     display:flex;
     align-items:center;
     justify-content:center;
