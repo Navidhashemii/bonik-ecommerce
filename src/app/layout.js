@@ -4,7 +4,7 @@ import TopHeader from '../components/Header-Footer/Top-Header/TopHeader'
 import SearchHeader from '../components/Header-Footer/Search-Header/SearchHeader'
 import ClientProviderTheme from "./ClientProviderTheme";
 import Footer from '../components/Header-Footer/Footer/Footer';
-import Sticktbar from '../components/Home-Page/Stickybar/Sticktbar';
+import Stickybar from '../components/Home-Page/Stickybar/Stickybar';
 import ClientProviderRedux from './ClientProviderRedux'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
             <SearchHeader/>
             {children}
             <Footer/>
-            <Sticktbar/>
+            <Stickybar/>
           </ClientProviderRedux>
         </body>
       </ClientProviderTheme>

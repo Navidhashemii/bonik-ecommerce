@@ -11,8 +11,12 @@ import LocalMallIcon from '@mui/icons-material/LocalMall';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import PersonIcon from '@mui/icons-material/Person';
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
 
-function Sticktbar() {
+function Stickybar() {
+    const cart = useSelector(state => state.cart.items);
+
+    const totalCount = cart.reduce((acc, item) => acc + item.quantity, 0);
 
     const [active, setActive] = useState('home')
 
@@ -42,9 +46,16 @@ function Sticktbar() {
             {active === 'cart' ?
             <LocalMallIcon className={styles.icon}/>
             :
-            <LocalMallOutlinedIcon className={styles.icon}/>
+            <LocalMallOutlinedIcon className={styles.icon} sx={{position:"relative"}}/>
             }
             Cart
+            {totalCount > 0 ? 
+            <Box className={styles.cartCounter}>
+                {totalCount}
+            </Box>
+            : 
+            null
+            }
         </Button>
         <Button onClick={() => handleActive('profile')} className={styles.barButton}>
             {active === 'profile' ?
@@ -59,4 +70,4 @@ function Sticktbar() {
   )
 }
 
-export default Sticktbar
+export default Stickybar
