@@ -1,6 +1,6 @@
 'use client'
 
-import { Box, Button } from '@mui/material'
+import { Badge, Box, Button } from '@mui/material'
 import styles from './Stickybar.module.css'
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import HomeIcon from '@mui/icons-material/Home';
@@ -44,18 +44,15 @@ function Stickybar() {
         </Button>
         <Button onClick={() => handleActive('cart')} className={styles.barButton}>
             {active === 'cart' ?
-            <LocalMallIcon className={styles.icon}/>
+            <Badge badgeContent={totalCount} color='secondary' max={99}>
+                <LocalMallIcon className={styles.icon}/>
+            </Badge>
             :
-            <LocalMallOutlinedIcon className={styles.icon} sx={{position:"relative"}}/>
+            <Badge badgeContent={totalCount} color='secondary' max={99}>
+                <LocalMallOutlinedIcon className={styles.icon}/>
+            </Badge>
             }
             Cart
-            {totalCount > 0 ? 
-            <Box className={styles.cartCounter}>
-                {totalCount}
-            </Box>
-            : 
-            null
-            }
         </Button>
         <Button onClick={() => handleActive('profile')} className={styles.barButton}>
             {active === 'profile' ?
