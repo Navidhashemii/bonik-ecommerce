@@ -19,6 +19,7 @@ function TopHeader() {
     {id: 2 , image: uk, name:"EUR"},
     {id: 3 , image: ind, name:"INR"},
   ]
+  
 
   return (
         <Box bgcolor="headerFooter.main" className={styles.topHeaderContainer}>

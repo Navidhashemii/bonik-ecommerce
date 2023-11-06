@@ -19,7 +19,7 @@ function MainSwiper() {
       pagination={{
         clickable: true,
       }}
-      loop={true}
+      
       style={{
         "--swiper-pagination-bullet-inactive-opacity": "1",
         "--swiper-pagination-bullet-horizontal-gap": "8px",

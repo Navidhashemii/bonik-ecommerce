@@ -6,7 +6,7 @@ import smallBanner2 from '../../../assets/images/top-2.jpg'
 
 function TopBanners() {
   return (
-    <>
+    <Box>
         <Box>
             <BannerSwiper/>
         </Box>
@@ -18,7 +18,7 @@ function TopBanners() {
         </Box>
 
             
-    </>
+    </Box>
   )
 }
 
