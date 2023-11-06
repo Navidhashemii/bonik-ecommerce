@@ -5,6 +5,7 @@ import SearchHeader from '../components/Header-Footer/Search-Header/SearchHeader
 import ClientProviderTheme from "./ClientProviderTheme";
 import Footer from '../components/Header-Footer/Footer/Footer';
 import Sticktbar from '../components/Home-Page/Stickybar/Sticktbar';
+import ClientProviderRedux from './ClientProviderRedux'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,11 +19,13 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <ClientProviderTheme>
         <body className={inter.className}>
-          <TopHeader/>
-          <SearchHeader/>
-          {children}
-          <Footer/>
-          <Sticktbar/>
+          <ClientProviderRedux>
+            <TopHeader/>
+            <SearchHeader/>
+            {children}
+            <Footer/>
+            <Sticktbar/>
+          </ClientProviderRedux>
         </body>
       </ClientProviderTheme>
     </html>

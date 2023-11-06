@@ -7,7 +7,7 @@ import styles from './TopHeader.module.css'
 import Image from "next/image"
 import logo from '../../../assets/images/logo.svg'
 
-function TopHeader() {
+function TopHeader() { 
 
   const langs = [
     {id: 1 , image: usa, name:"US"},
