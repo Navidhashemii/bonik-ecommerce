@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from "react";
-import { Box, Button, Divider, Typography, IconButton } from "@mui/material";
+import { Box, Button, Divider, Typography, IconButton, Link } from "@mui/material";
 import Rating from '@mui/material/Rating';
 import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
@@ -13,10 +13,19 @@ import styles from './CardSwiper.module.css'
 import 'swiper/css';
 import 'swiper/css/navigation';
 import './CardSwiper.css'
+import { useSelector, useDispatch } from 'react-redux';
+import { addToCart, removeFromCart, clearCart } from '../../../redux/cartSlice';
+import RemoveIcon from '@mui/icons-material/Remove';
+import DeleteIcon from '@mui/icons-material/Delete';
+import AddIcon from '@mui/icons-material/Add';
 
 
 
 function CardSwiper({data}) {
+
+    const cart = useSelector(state => state.cart.items);
+    const dispatch = useDispatch();
+    console.log(cart)
 
     const [elements, setElements] = useState(data.map(item => ({ ...item, selected: false })));
 
@@ -29,7 +38,20 @@ function CardSwiper({data}) {
         });
         setElements(updatedElements);
     };
+
+    const getProductQuantity = (id) => {
+        const productInCart = cart.find(item => item.id === id);
+        return productInCart ? productInCart.quantity : 0;
+    };
     
+
+    const handleAddToCart = (id, name) => {
+        dispatch(addToCart({ id, name }));
+    };
+
+    const handleRemoveFromCart = (id) => {
+        dispatch(removeFromCart(id));
+    };
 
 
   return (
@@ -40,7 +62,7 @@ function CardSwiper({data}) {
             spaceBetween={20}
             navigation={true}
         >
-            {data.map(({id, image1, name, price, star, rate, discount}) => (
+            {data.map(({id, image1, name, price, star, rate, discount, quantity}) => (
                 <SwiperSlide key={id}>
                     <Box className={styles.cardContainer}>
                         <Box>
@@ -110,9 +132,34 @@ function CardSwiper({data}) {
                             </Box>
                         </Box>
 
-                        <Button className={styles.button}>
+                        {getProductQuantity(id) > 0 ?
+                        <Box className={styles.quantityContainer}>
+                            <Box className={styles.quantityOptions}>
+                                {getProductQuantity(id) < 2
+                                ?
+                                <IconButton onClick={() => handleRemoveFromCart(id)}>
+                                    <DeleteIcon className={styles.quantityIcons}/>
+                                </IconButton>
+                                :
+                                <IconButton onClick={() => handleRemoveFromCart(id)}>
+                                    <RemoveIcon className={styles.quantityIcons}/>
+                                </IconButton>
+                                }
+                                <Typography variant="h6" sx={{color:"white"}}>
+                                    {getProductQuantity(id)}
+                                </Typography>
+                                <IconButton onClick={() => handleAddToCart(id, name)}>
+                                    <AddIcon className={styles.quantityIcons}/>
+                                </IconButton>
+                            </Box> 
+                        </Box>
+                    
+                        :
+                        <Button onClick={() => handleAddToCart(id, name)} className={styles.button}>
                             Add To Cart
                         </Button>
+                        }
+
                         <IconButton className={styles.icon1}>
                             <VisibilityOutlinedIcon/>
                         </IconButton>

@@ -123,6 +123,40 @@
     transition: ease-in-out 400ms;
 }
 
+.quantityContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 
 
+.quantityOptions{
+    width: 110px;
+    height: 38px;
+    display: flex;
+    margin-top: 8px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8px;
+    background-color: #393939;
+    border-radius: 8px;
+}
 
+.quantityIcons{
+    color: #f6f6f6;
+}
+
+.quantityIcons:hover{
+    color: #E94560;
+}
+
+.quantityText{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+}
