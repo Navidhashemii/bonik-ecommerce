@@ -25,7 +25,7 @@ function CardSwiper({data}) {
 
     const cart = useSelector(state => state.cart.items);
     const dispatch = useDispatch();
-    console.log(cart)
+    
 
     const [elements, setElements] = useState(data.map(item => ({ ...item, selected: false })));
 
@@ -45,8 +45,8 @@ function CardSwiper({data}) {
     };
     
 
-    const handleAddToCart = (id, name, price, image1) => {
-        dispatch(addToCart({ id, name , price, image1}));
+    const handleAddToCart = (id, name, price, image1, discount) => {
+        dispatch(addToCart({ id, name , price, image1, discount}));
     };
 
     const handleRemoveFromCart = (id) => {
@@ -145,17 +145,17 @@ function CardSwiper({data}) {
                                     <RemoveIcon className={styles.quantityIcons}/>
                                 </IconButton>
                                 }
-                                <Typography variant="h6" sx={{color:"white"}}>
+                                <Typography variant="h6" sx={{color:"black"}}>
                                     {getProductQuantity(id)}
                                 </Typography>
-                                <IconButton onClick={() => handleAddToCart(id, name)}>
+                                <IconButton onClick={() => handleAddToCart(id, name, price, image1, discount)}>
                                     <AddIcon className={styles.quantityIcons}/>
                                 </IconButton>
                             </Box> 
                         </Box>
                     
                         :
-                        <Button onClick={() => handleAddToCart(id, name, price, image1)} className={styles.button}>
+                        <Button onClick={() => handleAddToCart(id, name, price, image1, discount)} className={styles.button}>
                             Add To Cart
                         </Button>
                         }

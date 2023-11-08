@@ -141,12 +141,12 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 8px;
-    background-color: #393939;
+    background-color: #4a4a4a14;
     border-radius: 8px;
 }
 
 .quantityIcons{
-    color: #f6f6f6;
+    color: #252525;
 }
 
 .quantityIcons:hover{
