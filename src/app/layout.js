@@ -6,6 +6,7 @@ import ClientProviderTheme from "./ClientProviderTheme";
 import Footer from '../components/Header-Footer/Footer/Footer';
 import Stickybar from '../components/Home-Page/Stickybar/Stickybar';
 import ClientProviderRedux from './ClientProviderRedux'
+import { StyledEngineProvider } from '@mui/material';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,17 +18,21 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <ClientProviderTheme>
+      
         <body className={inter.className}>
           <ClientProviderRedux>
-            <TopHeader/>
-            <SearchHeader/>
-            {children}
-            <Footer/>
-            <Stickybar/>
+            <StyledEngineProvider injectFirst>
+              <ClientProviderTheme>
+                <TopHeader/>
+                <SearchHeader/>
+                  {children}
+                <Footer/>
+                <Stickybar/>
+              </ClientProviderTheme>
+            </StyledEngineProvider>
           </ClientProviderRedux>
         </body>
-      </ClientProviderTheme>
+      
     </html>
   )
 }

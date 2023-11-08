@@ -45,8 +45,8 @@ function CardSwiper({data}) {
     };
     
 
-    const handleAddToCart = (id, name) => {
-        dispatch(addToCart({ id, name }));
+    const handleAddToCart = (id, name, price, image1) => {
+        dispatch(addToCart({ id, name , price, image1}));
     };
 
     const handleRemoveFromCart = (id) => {
@@ -155,7 +155,7 @@ function CardSwiper({data}) {
                         </Box>
                     
                         :
-                        <Button onClick={() => handleAddToCart(id, name)} className={styles.button}>
+                        <Button onClick={() => handleAddToCart(id, name, price, image1)} className={styles.button}>
                             Add To Cart
                         </Button>
                         }
