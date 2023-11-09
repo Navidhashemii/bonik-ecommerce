@@ -1,6 +1,6 @@
 import { Box, Button, Divider, InputLabel, MenuItem, Select, TextField, Typography } from '@mui/material'
 import styles from './CartProductDetails.module.css'
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { useState } from 'react';
 
 
