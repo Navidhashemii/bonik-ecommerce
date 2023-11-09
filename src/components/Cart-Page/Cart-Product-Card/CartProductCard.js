@@ -1,3 +1,5 @@
+'use client'
+
 import { useSelector, useDispatch } from 'react-redux';
 import { addToCart, removeFromCart, clearCart } from '../../../redux/cartSlice';
 import { Box, IconButton, Typography } from '@mui/material';
@@ -27,6 +29,12 @@ function CartProductCard() {
   const handleRemoveFromCart = (id) => {
       dispatch(removeFromCart(id));
   };
+
+  const handleClearCart = () => {
+    dispatch(clearCart());
+};
+
+  
 
   return (
     <Box>
@@ -92,6 +100,27 @@ function CartProductCard() {
                 </Box>
             </Box>
         ))}
+
+        {cart.length > 0
+        
+        ? 
+
+        <IconButton onClick={handleClearCart} className={styles.clearBtn}>
+            <Typography className={styles.clearText}>
+                Clear Cart
+            </Typography>
+            <DeleteIcon className={styles.clearIcon}/>
+        </IconButton>
+
+        :
+
+        
+        <Box className={styles.emptyCart}>
+            <Typography variant='h2'>
+                Your cart is empty!
+            </Typography>
+        </Box>
+        }
     </Box>
   )
 }

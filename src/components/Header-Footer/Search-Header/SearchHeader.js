@@ -35,6 +35,7 @@ function SearchHeader() {
                 variant="outlined"
                 placeholder="Search and hit enter..."
                 className={styles.SearchInput}      
+                color='secondary'
                 InputProps={{
                 style: {borderRadius: "50px",height:"40px"},
                     startAdornment:
