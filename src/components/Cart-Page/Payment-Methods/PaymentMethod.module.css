@@ -1,0 +1,56 @@
+.boxContainer{
+    margin-top: 30px;
+}
+
+.methodContainer{
+    background-color: #ffffff;
+    width: 100%;
+    padding: 12px 8px ;
+    margin-bottom: 1px;
+}
+
+.radioBox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.paymentName{
+    font-weight: 600;
+    color: #434343;
+}
+
+.text{
+    margin: 20px 0 8px 0;
+    color: #3c3c3c;
+}
+
+.field{
+    width: 100%;
+}
+
+.backBtn{
+    width: 100%;
+    border: 1px solid #E94560;
+    color: #E94560;
+    margin-top: 28px;
+    font-weight: 600;
+}
+
+.payBtn{
+    width: 100%;
+    color: #ffffff;
+    background-color: #E94560;
+    margin-top: 16px;
+    font-weight: 600;
+}
+
+.backBtn:hover{
+    color: #ffffff;
+    background-color: #E94560;
+}
+
+.payBtn:hover {
+    color: #ffffff;
+    background-color: #E94560;
+}

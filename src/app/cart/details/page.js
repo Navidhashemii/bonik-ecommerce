@@ -17,7 +17,6 @@ export default function Details() {
                       <CartStepper steps={'details'} />
                       <CartTotalPayment/>
                       <Address />
-                      
                     </Container>
                 </ClientProviderTheme>
             </StyledEngineProvider>
