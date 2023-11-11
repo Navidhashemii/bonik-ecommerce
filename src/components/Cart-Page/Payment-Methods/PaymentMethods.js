@@ -1,10 +1,14 @@
 import { Box, Button, Divider, FormControlLabel, Radio, RadioGroup, TextField, Typography } from '@mui/material'
 import styles from './PaymentMethod.module.css'
 import { useState } from 'react'
+import LoadingButton from '@mui/lab/LoadingButton'
+import PaymentDone from './PaymentDone'
 
 function PaymentMethods() {
 
     const [value, setValue] = useState('credit')
+    const [loading, setLoading] = useState(false);
+    const [showPopUp, setShowPopUp] = useState(false)
 
     const handleChange = (e) => {
         setValue(e.target.value)
@@ -17,6 +21,17 @@ function PaymentMethods() {
         name: 'color-radio-button-demo',
         inputProps: { 'aria-label': item },
       });
+
+
+      function handleClick() {
+        setLoading(true);
+        setTimeout(() => {
+            setLoading(false)
+            setShowPopUp(true)
+        }, 2000)
+      }
+
+
 
   return (
     <Box className={styles.boxContainer}>
@@ -119,9 +134,22 @@ function PaymentMethods() {
         <Button className={styles.backBtn}>
             Back to checkout details
         </Button>
-        <Button className={styles.payBtn}>
-            Submit
-        </Button>
+
+        <LoadingButton
+          onClick={handleClick}
+          loading={loading}
+          loadingPosition="center"
+          variant="contained"
+          className={styles.payBtn}
+        >
+          Submit
+        </LoadingButton>
+        {showPopUp ? 
+        
+        <PaymentDone/>
+        :
+        null
+        }
     </Box>
   )
 }

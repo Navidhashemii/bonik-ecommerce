@@ -1,6 +1,5 @@
 import { Typography, Box } from '@mui/material'
 import styles from './CartStepper.module.css'
-import { useState } from 'react'
 
 function CartStepper({steps}) {
 

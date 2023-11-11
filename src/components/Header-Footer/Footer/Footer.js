@@ -1,4 +1,4 @@
-import { Box, Typography, Button } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import styles from './Footer.module.css'
 import Image from 'next/image'
 import logo from '../../../assets/images/logo.svg'
@@ -43,6 +43,7 @@ function Footer() {
                     alt='Logo'
                     width={100}
                     height={120}
+                    priority
                 />
                 <Typography variant='subtitle2' className={styles.mainText}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor libero id et, in gravida. Sit diam duis mauris nulla cursus. 

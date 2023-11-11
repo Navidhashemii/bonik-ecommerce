@@ -1,3 +1,5 @@
+'use client'
+
 import { Box, Button, Divider, TextField, Typography } from '@mui/material'
 import styles from './CartTotalPayment.module.css'
 import { useSelector } from 'react-redux';

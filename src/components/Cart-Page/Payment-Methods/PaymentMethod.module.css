@@ -37,20 +37,75 @@
     font-weight: 600;
 }
 
-.payBtn{
-    width: 100%;
-    color: #ffffff;
-    background-color: #E94560;
-    margin-top: 16px;
-    font-weight: 600;
-}
 
 .backBtn:hover{
     color: #ffffff;
     background-color: #E94560;
 }
 
-.payBtn:hover {
+.payBtn{
+    width: 100%;
     color: #ffffff;
     background-color: #E94560;
+    margin-top: 16px;
+    font-weight: 600;
+    box-shadow: none;
 }
+
+.payBtn:hover {
+    box-shadow: none;
+    background-color: #d17f8d;
+}
+
+.payBtn:active{
+    color: transparent;
+    background-color: transparent;
+}
+
+.doneBox{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 25%;
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 30px 15px;
+    z-index: 8;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 500px 100px #191919;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.textBox{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.doneTitle{
+    font-weight: 600;
+}
+
+.doneText{
+    margin-top: 12px;
+}
+
+.doneBtn{
+    width: 50%;
+    color: #ffffff;
+    background-color: #E94560;
+    margin-top: 16px;
+    font-weight: 600;
+    box-shadow: none;
+}
+
+.doneBtn:hover {
+    color: #ffffff;
+    background-color: #E94560;
+    box-shadow: none;
+}
+

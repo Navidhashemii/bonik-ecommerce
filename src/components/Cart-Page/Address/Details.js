@@ -1,11 +1,11 @@
-import { Box, Checkbox, MenuItem, Select, TextField, Typography } from '@mui/material'
+'use client'
+import { MenuItem, Select, TextField, Typography } from '@mui/material'
 import styles from './Address.module.css'
 import { useState } from 'react';
 
 function Details({address}) {
 
     const [country, setCountry] = useState('');
-    const [checked, setChecked] = useState();
 
     const handleCountry = (event) => {
         setCountry(event.target.value);
