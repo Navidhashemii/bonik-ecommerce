@@ -8,7 +8,7 @@ function PaymentMethods() {
 
     const [value, setValue] = useState('credit')
     const [loading, setLoading] = useState(false);
-    const [showPopUp, setShowPopUp] = useState(false)
+    const [showModal, setShowModal] = useState(false)
 
     const handleChange = (e) => {
         setValue(e.target.value)
@@ -27,7 +27,7 @@ function PaymentMethods() {
         setLoading(true);
         setTimeout(() => {
             setLoading(false)
-            setShowPopUp(true)
+            setShowModal(true)
         }, 2000)
       }
 
@@ -144,7 +144,7 @@ function PaymentMethods() {
         >
           Submit
         </LoadingButton>
-        {showPopUp ? 
+        {showModal ? 
         
         <PaymentDone/>
         :

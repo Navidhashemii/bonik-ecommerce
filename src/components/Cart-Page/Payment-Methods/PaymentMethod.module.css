@@ -62,23 +62,40 @@
     background-color: transparent;
 }
 
+
 .doneBox{
     position: fixed;
     top: 50%;
     left: 50%;
-    width: 80%;
-    height: 25%;
+    width: 100%;
+    height: 100%;
+    background-color: #1b1b1b54;
+    padding: 30px 15px;
+    z-index: 9;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.32);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(84, 84, 84, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4.9px);
+}
+
+.modal{
     background-color: #ffffff;
     border-radius: 16px;
-    padding: 30px 15px;
-    z-index: 8;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 0 500px 100px #191919;
+    z-index: 10;
+    width: 80%;
+    height: 24%;
+    padding: 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
 }
+
 .textBox{
     display: flex;
     justify-content: flex-start;
