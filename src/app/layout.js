@@ -1,3 +1,4 @@
+
 import { Inter } from 'next/font/google'
 import './globals.css'
 import TopHeader from '../components/Header-Footer/Top-Header/TopHeader'
@@ -8,6 +9,7 @@ import Stickybar from '../components/Home-Page/Stickybar/Stickybar';
 import ClientProviderRedux from './ClientProviderRedux'
 import { StyledEngineProvider } from '@mui/material';
 
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -16,6 +18,7 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+
   return (
     <html lang="en">
       
@@ -36,3 +39,4 @@ export default function RootLayout({ children }) {
     </html>
   )
 }
+

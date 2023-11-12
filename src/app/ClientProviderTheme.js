@@ -60,7 +60,7 @@ const theme = createTheme({
         textTransform: "none"
     }
   }
-
+  
 });
 
 const ClientProviderTheme = ({ children }) => {
