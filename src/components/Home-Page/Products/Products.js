@@ -9,7 +9,6 @@ function Products({data, category}) {
 
   
   const [selectedBrand, setSelectedBrand] = useState('')
-  // const [active, setActive] = useState('')
 
   const brands = data.brands
   const products = data.products

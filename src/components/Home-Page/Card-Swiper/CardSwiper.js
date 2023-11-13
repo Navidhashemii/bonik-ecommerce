@@ -14,20 +14,25 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import './CardSwiper.css'
 import { useSelector, useDispatch } from 'react-redux';
-import { addToCart, removeFromCart, clearCart } from '../../../redux/cartSlice';
+import { addToCart, removeFromCart } from '../../../redux/cartSlice';
 import RemoveIcon from '@mui/icons-material/Remove';
 import DeleteIcon from '@mui/icons-material/Delete';
 import AddIcon from '@mui/icons-material/Add';
+import CardViewModal from "./CardViewModal";
 
 
 
 function CardSwiper({data}) {
 
+    const [showModal, setShowModal] = useState(false)
+    const [targetId, setTargetId] = useState(null)
+    const [elements, setElements] = useState(data.map(item => ({ ...item, selected: false })));
+
+
     const cart = useSelector(state => state.cart.items);
     const dispatch = useDispatch();
     
 
-    const [elements, setElements] = useState(data.map(item => ({ ...item, selected: false })));
 
     const handleLike = (id) => {
         const updatedElements = elements.map(element => {
@@ -51,6 +56,12 @@ function CardSwiper({data}) {
 
     const handleRemoveFromCart = (id) => {
         dispatch(removeFromCart(id));
+    };
+
+
+    const handleModal = (id) => {
+        setShowModal(true)
+        setTargetId(id)
     };
 
 
@@ -122,7 +133,7 @@ function CardSwiper({data}) {
                             }
 
                             <Box className={styles.ratingContainer}>
-                                <Rating size="small" value={star}/>
+                                <Rating size="small" value={star} readOnly/>
                                 <Typography
                                     variant="subtitle2"
                                     className={styles.rateCount}
@@ -160,7 +171,7 @@ function CardSwiper({data}) {
                         </Button>
                         }
 
-                        <IconButton className={styles.icon1}>
+                        <IconButton onClick={() => handleModal(id)} className={styles.icon1}>
                             <VisibilityOutlinedIcon/>
                         </IconButton>
                         
@@ -179,6 +190,8 @@ function CardSwiper({data}) {
             ))}
             
         </Swiper>
+
+        {showModal && <CardViewModal data={data} targetId={targetId} setShowModal={setShowModal}/>}
 
     </>
 
