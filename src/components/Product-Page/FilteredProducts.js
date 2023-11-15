@@ -9,9 +9,10 @@ import RemoveIcon from '@mui/icons-material/Remove';
 import DeleteIcon from '@mui/icons-material/Delete';
 import AddIcon from '@mui/icons-material/Add';
 import { useRef } from 'react';
+import Link from 'next/link';
 
-function BrandBasedProducts({targetBrandBased}) {
-    const randomizedItems = useRef(targetBrandBased.sort(() => Math.random() - 0.5).slice(0,4))
+function FilteredProducts({filtered, brand}) {
+    const randomizedItems = useRef(filtered.sort(() => Math.random() - 0.5).slice(0,4))
 
     const cart = useSelector(state => state.cart.items);
     const dispatch = useDispatch();
@@ -30,61 +31,69 @@ function BrandBasedProducts({targetBrandBased}) {
     };
 
   return (
-    <Box className={styles.brandContainer}>
-        <Typography className={styles.brandTitle}>
-            More From {randomizedItems.current[0].brand.toUpperCase()}
-        </Typography>
+    <Box className={styles.filterContainer}>
+        {brand ? 
+            <Typography className={styles.filterTitle}>
+                More From {randomizedItems.current[0].brand.toUpperCase()}
+            </Typography>
+        :
+            <Typography className={styles.filterTitle}>
+                Related Products
+            </Typography>
+        }
         <Grid container spacing={3}>
             {randomizedItems.current.map(({id, name, star, image1, brand, price, discount}) => (
                 <Grid key={id} xs={12}>
-                    <Box className={styles.brandCard}>
-                        <Box className={styles.brandImgContainer}>
-                            <Image
-                                src={image1}
-                                alt={name}
-                                width={250}
-                                height={300}
-                                priority
-                            />
-                        </Box>
-                        <Typography className={styles.brandName}>
-                            {name}
-                        </Typography>
+                    <Box className={styles.filterCard}>
+                        <Link href={`/products/${id}`}>
+                            <Box className={styles.filterImgContainer}>
+                                <Image
+                                    src={image1}
+                                    alt={name}
+                                    width={250}
+                                    height={300}
+                                    priority
+                                />
+                            </Box>
+                            <Typography className={styles.filterName}>
+                                {name}
+                            </Typography>
+                        </Link>
                         <Rating value={star} size='small' readOnly/>
-                        <Typography variant='subtitle2' className={styles.brandBrand}>
+                        <Typography variant='subtitle2' className={styles.filterBrand}>
                             {brand}
                         </Typography>
                         <Box className={styles.brandPriceContainer}>
-                            <Box className={styles.brandPriceBox}>
+                            <Box className={styles.filterPriceBox}>
                                 {discount ? 
                                 <>
-                                <Typography color='secondary' variant='h6' className={styles.brandFinalPrice}>
+                                <Typography color='secondary' variant='h6' className={styles.filterFinalPrice}>
                                     ${Math.floor(price - ((price * discount) / 100)).toFixed(2)}
                                 </Typography>
-                                <Typography className={styles.brandBeforeDiscount}> 
+                                <Typography className={styles.filterBeforeDiscount}> 
                                     ${price.toFixed(2)}
                                 </Typography>
                                 </>
                                 :
-                                <Typography color='secondary' variant='h6' className={styles.brandFinalPrice}>
+                                <Typography color='secondary' variant='h6' className={styles.filterFinalPrice}>
                                     ${price.toFixed(2)}
                                 </Typography>
                                 }
                             </Box>
-                            <IconButton onClick={() => handleAddToCart(id, name, price, image1, discount)} color='secondary' className={styles.brandAddBtn}>
+                            <IconButton onClick={() => handleAddToCart(id, name, price, image1, discount)} color='secondary' className={styles.filterAddBtn}>
                                 <AddIcon/>
                             </IconButton>
                             {getProductQuantity(id) > 0 && 
-                            <Box className={styles.brandMoreBox}>
+                            <Box className={styles.filterMoreBox}>
                                 <Typography>
                                     {getProductQuantity(id)}
                                 </Typography>
                                 {getProductQuantity(id) < 2 ?
-                                    <IconButton onClick={() => handleRemoveFromCart(id)} color='secondary' className={styles.brandRemoveBtn}>
+                                    <IconButton onClick={() => handleRemoveFromCart(id)} color='secondary' className={styles.filterRemoveBtn}>
                                         <DeleteIcon/>
                                     </IconButton>
                                 :
-                                    <IconButton onClick={() => handleRemoveFromCart(id)} color='secondary' className={styles.brandRemoveBtn}>
+                                    <IconButton onClick={() => handleRemoveFromCart(id)} color='secondary' className={styles.filterRemoveBtn}>
                                         <RemoveIcon/>
                                     </IconButton>
                                 }
@@ -102,4 +111,4 @@ function BrandBasedProducts({targetBrandBased}) {
   )
 }
 
-export default BrandBasedProducts
+export default FilteredProducts

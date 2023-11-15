@@ -4,7 +4,8 @@ import { getLocalData } from '../../../../json/lib/localdata';
 import ProductDetails from '@/src/components/Global/Product-Details/ProductDetails';
 import ProductDescription from '@/src/components/Product-Page/ProductDescription';
 import FrequentlyProducts from '@/src/components/Product-Page/FrequentlyProducts';
-import BrandBasedProducts from '@/src/components/Product-Page/BrandBasedProducts';
+import FilteredProducts from '@/src/components/Product-Page/FilteredProducts';
+
 
 export default async function ProductPage({params}) {
 
@@ -17,14 +18,16 @@ export default async function ProductPage({params}) {
   const targetWithDiscount = withDiscount.filter(({id}) => id !== targetProductId)
   const brandBased = products.filter(({brand}) => brand === targetProduct.brand) 
   const targetBrandBased = brandBased.filter(({id}) => id !== targetProductId)
-  
+  const relatedProducts = products.filter(({categoryId}) => categoryId === targetProduct.categoryId)
+  const targetRelatedProducts = relatedProducts.filter(({id}) => id !== targetProductId)
 
   return (
     <Container sx={{marginTop:"15px"}}>
       <ProductDetails targetProduct={targetProduct} modal={false}/>
       <ProductDescription targetProduct={targetProduct} data={data}/>
       <FrequentlyProducts targetWithDiscount={targetWithDiscount}/>
-      <BrandBasedProducts targetBrandBased={targetBrandBased}/>
+      <FilteredProducts filtered={targetBrandBased} brand={true}/>
+      <FilteredProducts filtered={targetRelatedProducts} brand={false}/>
 
     </Container>
   )

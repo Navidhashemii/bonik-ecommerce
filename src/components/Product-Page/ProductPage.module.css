@@ -171,18 +171,18 @@
 
 
 
-.brandContainer{
+.filterContainer{
     width: 100%;
     margin-top: 110px;
 }
 
-.brandTitle{
+.filterTitle{
     font-weight: 800;
     font-size: 20px;
     margin-bottom: 32px;
 }
 
-.brandCard{
+.filterCard{
     position: relative;
     background-color: #ffffff;
     width: 100%;
@@ -195,25 +195,25 @@
     box-shadow: 0 0 5px rgba(26, 26, 26, 0.103);
 }
 
-.brandImgContainer{
+.filterImgContainer{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.brandName{
+.filterName{
     font-weight: 600;
     color: #393939;
     margin-bottom: 5px;
 }
 
-.brandBrand{
+.filterBrand{
     color: #737373;
     font-weight: 600;
     margin: 5px 0;
 }
 
-.brandPriceContainer{
+.filterPriceContainer{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -221,24 +221,24 @@
     width: 100%;
 }
 
-.brandPriceBox{
+.filterPriceBox{
     display: flex;
     flex-direction: row;
     align-items: flex-end;
 }
 
-.brandFinalPrice{
+.filterFinalPrice{
     font-weight:600;
 }
 
-.brandBeforeDiscount{
+.filterBeforeDiscount{
     text-decoration:line-through;
     text-decoration-color:#7f7f7f;
     color: #7f7f7f;
     margin-left: 8px;
 }
 
-.brandAddBtn{
+.filterAddBtn{
     position: absolute;
     border: 1px solid #e9456022;
     padding: 2px;
@@ -247,12 +247,12 @@
     right: 5%;
 }
 
-.brandAddBtn:hover{
+.filterAddBtn:hover{
     color: #ffffff;
     background-color: #E94560;
 }
 
-.brandRemoveBtn{
+.filterRemoveBtn{
     border: 1px solid #e9456022;
     padding: 2px;
     border-radius: 4px;
@@ -260,12 +260,12 @@
 
 }
 
-.brandRemoveBtn:hover{
+.filterRemoveBtn:hover{
     color: #ffffff;
     background-color: #E94560;
 }
 
-.brandMoreBox{
+.filterMoreBox{
     display: flex;
     justify-content: center;
     align-items: center;
