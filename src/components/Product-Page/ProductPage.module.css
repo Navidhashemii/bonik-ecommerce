@@ -87,3 +87,84 @@
 .cmBtn:hover{
     background-color: #c83e55;
 }
+
+.frqTitle{
+    margin: 32px 0;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.frqContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.frqCard{
+    width: 60%;
+    height: 250px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 8px 8px 8px;
+    box-shadow: 0 0 10px rgba(26, 26, 26, 0.202);
+}
+
+.frqImgContainer{
+    position: relative;
+    width: 95px;
+    height: 120px;
+}
+
+.frqName{
+    margin-top: 28px;
+    text-align: center;
+}
+
+.frqBeforeDiscount{
+    text-decoration:line-through;
+    text-decoration-color:#7f7f7f;
+    color: #7f7f7f;
+}
+
+.frqAfterDiscount{
+    font-weight:bold;
+}
+
+.frqSumupContainer{
+    border: 1px solid rgba(158, 158, 158, 0.42);
+    border-radius: 12px;
+    background-color: #e945600d;
+    width: 80%;
+    height: auto;
+    padding: 24px 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.frqSumup{
+    font-weight: 800;
+}
+
+.frqDiscount{
+    color: #7f7f7f;
+    margin-top: 4px;
+}
+
+.frqBtn{
+    background-color: #E94560;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 8px 24px;
+    margin-top: 12px;
+}
+
+.frqBtn:hover{
+    background-color: #c83e55;
+}
+

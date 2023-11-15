@@ -13,7 +13,7 @@ function CartProductCard() {
 
     const cart = useSelector(state => state.cart.items);
     const dispatch = useDispatch();
-    console.log(cart)
+    
     let finalPrice 
 
     const getProductQuantity = (id) => {

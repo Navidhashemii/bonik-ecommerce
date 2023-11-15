@@ -181,7 +181,7 @@
             "newArrival": false,
             "seller": "Market Hall",
             "quantity": 0,
-            "discount": 30,
+            "discount": 0,
             "categoryId": 2,
             "description": {
                 "model": "NC1108",
@@ -202,7 +202,7 @@
             "newArrival": false,
             "seller": "Market Hall",
             "quantity": 0,
-            "discount": 30,
+            "discount": 0,
             "categoryId": 2,
             "description": {
                 "model": "NC14108",
@@ -538,7 +538,7 @@
             "newArrival": false,
             "seller": "Market Hall",
             "quantity": 0,
-            "discount": 0,
+            "discount": 10,
             "categoryId": 6,
             "description": {
                 "model": "NC304",
@@ -601,7 +601,7 @@
             "newArrival": false,
             "seller": "Market Hall",
             "quantity": 0,
-            "discount": 0,
+            "discount": 35,
             "categoryId": 6,
             "description": {
                 "model": "NC308",
