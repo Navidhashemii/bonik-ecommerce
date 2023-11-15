@@ -11,7 +11,6 @@ import { useRef, useState } from 'react';
 function FrequentlyProducts({targetWithDiscount}) {
 
     const [addClicked, setAddClicked] = useState(false)
-    const cart = useSelector(state => state.cart.items);
     const dispatch = useDispatch();
 
     const randomizedItems = useRef(targetWithDiscount.sort(() => Math.random() - 0.5).slice(0,4))

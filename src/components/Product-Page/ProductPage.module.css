@@ -168,3 +168,109 @@
     background-color: #c83e55;
 }
 
+
+
+
+.brandContainer{
+    width: 100%;
+    margin-top: 110px;
+}
+
+.brandTitle{
+    font-weight: 800;
+    font-size: 20px;
+    margin-bottom: 32px;
+}
+
+.brandCard{
+    position: relative;
+    background-color: #ffffff;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0 16px 16px 16px;
+    box-shadow: 0 0 5px rgba(26, 26, 26, 0.103);
+}
+
+.brandImgContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brandName{
+    font-weight: 600;
+    color: #393939;
+    margin-bottom: 5px;
+}
+
+.brandBrand{
+    color: #737373;
+    font-weight: 600;
+    margin: 5px 0;
+}
+
+.brandPriceContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.brandPriceBox{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.brandFinalPrice{
+    font-weight:600;
+}
+
+.brandBeforeDiscount{
+    text-decoration:line-through;
+    text-decoration-color:#7f7f7f;
+    color: #7f7f7f;
+    margin-left: 8px;
+}
+
+.brandAddBtn{
+    position: absolute;
+    border: 1px solid #e9456022;
+    padding: 2px;
+    border-radius: 4px;
+    bottom: 4%;
+    right: 5%;
+}
+
+.brandAddBtn:hover{
+    color: #ffffff;
+    background-color: #E94560;
+}
+
+.brandRemoveBtn{
+    border: 1px solid #e9456022;
+    padding: 2px;
+    border-radius: 4px;
+    margin-bottom: 4px;
+
+}
+
+.brandRemoveBtn:hover{
+    color: #ffffff;
+    background-color: #E94560;
+}
+
+.brandMoreBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    position: absolute;
+    bottom: 12%;
+    right: 5%;
+}
