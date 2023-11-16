@@ -11,10 +11,10 @@ function TopBanners() {
             <BannerSwiper/>
         </Box>
         <Box>
-            <SmallTopBanner image={smallBanner1} newArrival={true}/>
+            <SmallTopBanner image={smallBanner1} newArrival={true} href={'#Shoes'}/>
         </Box>
         <Box>
-            <SmallTopBanner image={smallBanner2} newArrival={false}/>
+            <SmallTopBanner image={smallBanner2} newArrival={false} href={'#Hats'}/>
         </Box>
 
             

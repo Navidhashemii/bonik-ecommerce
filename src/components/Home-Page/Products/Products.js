@@ -30,8 +30,8 @@ function Products({data, category}) {
   return (
     <Box>
         <Box
-          bgcolor='background.white'
           className={styles.boxContainer}
+          id={category.name}
         >
           <Typography className={styles.product}>
             {category.name}

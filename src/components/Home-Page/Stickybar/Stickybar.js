@@ -10,52 +10,55 @@ import LocalMallOutlinedIcon from '@mui/icons-material/LocalMallOutlined';
 import LocalMallIcon from '@mui/icons-material/LocalMall';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import PersonIcon from '@mui/icons-material/Person';
-import { useState } from 'react';
 import { useSelector } from 'react-redux';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 function Stickybar() {
+
     const cart = useSelector(state => state.cart.items);
-
+    
     const totalCount = cart.reduce((acc, item) => acc + item.quantity, 0);
-
-    const [active, setActive] = useState('home')
-
-    const handleActive = (tag) => {
-        setActive(tag)
-    }
-
+    const pathName = usePathname()
+    const cartPaths = ['/cart', '/cart/details', '/cart/details/payment'];
   return (
     <Box className={styles.container}>
-        <Button onClick={() => handleActive('home')} className={styles.barButton}>
-            {active === 'home' ?
-            <HomeIcon className={styles.icon}/>
-            :
-            <HomeOutlinedIcon className={styles.icon}/>
-            }
-            Home
-        </Button>
-        <Button onClick={() => handleActive('category')} className={styles.barButton}>
-            {active === 'category' ?
-            <DashboardIcon className={styles.icon}/>
-            :
-            <DashboardOutlinedIcon className={styles.icon}/>
-            }
-            Category
-        </Button>
-        <Button onClick={() => handleActive('cart')} className={styles.barButton}>
-            {active === 'cart' ?
-            <Badge badgeContent={totalCount} color='secondary' max={99}>
-                <LocalMallIcon className={styles.icon}/>
-            </Badge>
-            :
-            <Badge badgeContent={totalCount} color='secondary' max={99}>
-                <LocalMallOutlinedIcon className={styles.icon}/>
-            </Badge>
-            }
-            Cart
-        </Button>
-        <Button onClick={() => handleActive('profile')} className={styles.barButton}>
-            {active === 'profile' ?
+        <Link href='/'>
+            <Button className={styles.barButton}>
+                {pathName === '/' ?
+                <HomeIcon className={styles.icon}/>
+                :
+                <HomeOutlinedIcon className={styles.icon}/>
+                }
+                Home
+            </Button>
+        </Link>
+        <Link href='/categories'>
+            <Button className={styles.barButton}>
+                {pathName === '/categories' ?
+                <DashboardIcon className={styles.icon}/>
+                :
+                <DashboardOutlinedIcon className={styles.icon}/>
+                }
+                Category
+            </Button>
+        </Link>
+        <Link href='/cart'>
+            <Button className={styles.barButton}>
+                {cartPaths.includes(pathName) ?
+                <Badge badgeContent={totalCount} color='secondary' max={99}>
+                    <LocalMallIcon className={styles.icon}/>
+                </Badge>
+                :
+                <Badge badgeContent={totalCount} color='secondary' max={99}>
+                    <LocalMallOutlinedIcon className={styles.icon}/>
+                </Badge>
+                }
+                Cart
+            </Button>
+        </Link>
+        <Button className={styles.barButton}>
+            {pathName === '/profile' ?
             <PersonIcon className={styles.icon}/>
             :
             <PersonOutlineOutlinedIcon  className={styles.icon}/>

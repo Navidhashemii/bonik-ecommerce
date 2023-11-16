@@ -1,5 +1,6 @@
 import { Box, Button, Divider, Typography } from '@mui/material'
 import styles from './PaymentMethod.module.css'
+import Link from 'next/link'
 
 function PaymentDone() {
   return (
@@ -13,9 +14,11 @@ function PaymentDone() {
                     Your orders are processing.
                 </Typography>
             </Box>
-            <Button className={styles.doneBtn}>
-                Done
-            </Button>
+            <Link href='/'>
+                <Button className={styles.doneBtn}>
+                    Done
+                </Button>
+            </Link>
         </Box>
     </Box>
   )

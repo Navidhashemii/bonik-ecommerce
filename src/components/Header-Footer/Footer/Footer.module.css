@@ -7,7 +7,7 @@
 }
 
 .mainText{
-    color: #bcbcbc;
+    color: #d2d2d2;
 }
 
 .downloadButtonsContainer{
@@ -25,7 +25,7 @@
 
 .buttonTextContainer{
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     justify-content: center;
     flex-direction: column;
     margin-left: 10px;
@@ -60,13 +60,18 @@
 
 .infoTitle{
     font-weight: 600;
-    color: #f3f3f3;
+    color: #f5f5f5;
     margin: 28px 0 10px 0;
 }
 
 .infoSubtitle{
-    color: #bcbcbc;
+    color: #d2d2d2;
     margin-top: 8px;
+    cursor: pointer;
+}
+
+.infoSubtitle:hover{
+    color: #ffffff;
 }
 
 
@@ -80,5 +85,5 @@
 
 .icon{
     margin-right: 12px;
-    
+    cursor: pointer;
 }

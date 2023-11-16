@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from "react";
-import { Box, Button, Divider, Typography, IconButton, Link } from "@mui/material";
+import { Box, Button, Divider, Typography, IconButton } from "@mui/material";
 import Rating from '@mui/material/Rating';
 import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
@@ -19,6 +19,7 @@ import RemoveIcon from '@mui/icons-material/Remove';
 import DeleteIcon from '@mui/icons-material/Delete';
 import AddIcon from '@mui/icons-material/Add';
 import CardViewModal from "./CardViewModal";
+import Link from "next/link";
 
 
 
@@ -76,72 +77,75 @@ function CardSwiper({data}) {
             {data.map(({id, image1, name, price, star, rate, discount, quantity}) => (
                 <SwiperSlide key={id}>
                     <Box className={styles.cardContainer}>
-                        <Box>
-                            <Image
-                                src={image1}
-                                alt={name}         
-                                width={200}
-                                height={270}
-                                className={styles.cardImage}
-                            />
-                            <Divider variant="middle"/>
-                            <Typography
-                                variant="subtitle1"
-                                className={styles.cardName}
-                            >
-                                {name}
-                            </Typography>
-                        </Box>
-                        <Box>
-                            {discount 
-
-                            ? 
-
+                        <Link href={`/products/${id}`}>
                             <Box>
-                                <Box
-                                    bgcolor="secondary.main"
-                                    className={styles.discountBox}
-                                >
-                                    {discount}%
-                                </Box>
-                                    
-                                <Typography
-                                    variant="h6"
-                                    color="secondary"
-                                    className={styles.afterDiscount}
-                                >
-                                    ${Math.floor(price - ((price * discount) / 100)).toFixed(2)}
-                                </Typography>
-
+                                <Image
+                                    src={image1}
+                                    alt={name}         
+                                    width={200}
+                                    height={270}
+                                    className={styles.cardImage}
+                                />
+                                <Divider variant="middle"/>
                                 <Typography
                                     variant="subtitle1"
-                                    className={styles.beforeDiscount}
+                                    className={styles.cardName}
+                                >
+                                    {name}
+                                </Typography>
+                            </Box>
+                            
+                            <Box>
+                                {discount 
+
+                                ? 
+
+                                <Box>
+                                    <Box
+                                        bgcolor="secondary.main"
+                                        className={styles.discountBox}
+                                    >
+                                        {discount}%
+                                    </Box>
+                                        
+                                    <Typography
+                                        variant="h6"
+                                        color="secondary"
+                                        className={styles.afterDiscount}
+                                    >
+                                        ${Math.floor(price - ((price * discount) / 100)).toFixed(2)}
+                                    </Typography>
+
+                                    <Typography
+                                        variant="subtitle1"
+                                        className={styles.beforeDiscount}
+                                    >
+                                        ${price.toFixed(2)}
+                                    </Typography>
+                                </Box>
+
+                                : 
+
+                                <Typography
+                                    variant="h6"
+                                    className={styles.price}
                                 >
                                     ${price.toFixed(2)}
                                 </Typography>
+
+                                }
+
+                                <Box className={styles.ratingContainer}>
+                                    <Rating size="small" value={star} readOnly/>
+                                    <Typography
+                                        variant="subtitle2"
+                                        className={styles.rateCount}
+                                    >
+                                        ({rate})
+                                    </Typography>
+                                </Box>
                             </Box>
-
-                            : 
-
-                            <Typography
-                                variant="h6"
-                                className={styles.price}
-                            >
-                                ${price.toFixed(2)}
-                            </Typography>
-
-                            }
-
-                            <Box className={styles.ratingContainer}>
-                                <Rating size="small" value={star} readOnly/>
-                                <Typography
-                                    variant="subtitle2"
-                                    className={styles.rateCount}
-                                >
-                                    ({rate})
-                                </Typography>
-                            </Box>
-                        </Box>
+                        </Link>
 
                         {getProductQuantity(id) > 0 ?
                         <Box className={styles.quantityContainer}>

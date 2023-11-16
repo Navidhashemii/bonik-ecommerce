@@ -4,6 +4,7 @@ import { Box, Button, Divider, InputLabel, MenuItem, Select, TextField, Typograp
 import styles from './CartProductDetails.module.css'
 import { useSelector } from 'react-redux';
 import { useState } from 'react';
+import Link from 'next/link';
 
 
 
@@ -104,9 +105,11 @@ function CartProductDetails() {
           Zip Code
       </Typography>
       <TextField id="outlined-basic" size='small' variant="outlined" className={styles.lastField} color='secondary'/>
-      <Button className={styles.checkoutBtn}>
-        Checkout Now
-      </Button>
+      <Link href='/cart/details'>
+        <Button className={styles.checkoutBtn}>
+          Checkout Now
+        </Button>
+      </Link>
     </Box>
 }
     </>

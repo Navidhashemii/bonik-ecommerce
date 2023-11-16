@@ -3,6 +3,7 @@
 import { Box, Typography, Button } from '@mui/material'
 import Image from 'next/image'
 import styles from './LargeTopBanners.module.css'
+import Link from 'next/link'
 
 function LargeTopBanners({generic, img, available}) {
   
@@ -62,14 +63,15 @@ function LargeTopBanners({generic, img, available}) {
             {available
 
             ? 
-
-              <Button 
-                variant='contained'
-                size='large'
-                className={styles.button}
-              >
-                Shop Now
-              </Button>
+              <Link href='./categories'>
+                <Button 
+                  variant='contained'
+                  size='large'
+                  className={styles.button}
+                >
+                  Shop Now
+                </Button>
+              </Link>
 
             :
 

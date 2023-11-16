@@ -1,8 +1,9 @@
 import Image from "next/image";
 import { Box, Button, Typography } from "@mui/material"
 import styles from './SmallTopBanner.module.css'
+import Link from "next/link";
 
-function SmallTopBanner({image, newArrival}) {
+function SmallTopBanner({image, newArrival, href}) {
   return (
 
     <>
@@ -59,14 +60,15 @@ function SmallTopBanner({image, newArrival}) {
                 </>
                     
                 }
-
-                <Button
-                    variant="text"
-                    size="small"
-                    className={styles.button}
-                >
-                    Shop Now
-                </Button>
+                <Link href={href}>
+                    <Button
+                        variant="text"
+                        size="small"
+                        className={styles.button}
+                    >
+                        Shop Now
+                    </Button>
+                </Link>
 
             </Box>
 

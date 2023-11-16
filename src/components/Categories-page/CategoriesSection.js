@@ -4,21 +4,30 @@ import { Box, Button, Typography } from '@mui/material'
 import styles from './Categories.module.css'
 import AppsIcon from '@mui/icons-material/Apps';
 import Image from 'next/image'
-import { useState } from 'react';
-import Grid from '@mui/material/Unstable_Grid2'; 
+import { useEffect, useState } from 'react';
+import Link from 'next/link';
 
 function CategoriesSection({data}) {
 
-  const [active, setActive] = useState(0)
-
   const categories = data.categories 
   const products = data.products 
+  
+  const [active, setActive] = useState(0)
+  
+  useEffect(() => {
+    const hashFrag = window.location.hash
+    const finalHash = Number(hashFrag.substring(1))
+    setActive(finalHash || 0)
+  }, []);
+  
+  
+  const categoryProducts = products.filter(({categoryId}) => categoryId === active)
+ 
 
   const handleActive = (id) => {
     setActive(id)
   }
 
-  const categoryProducts = products.filter(({categoryId}) => categoryId === active)
 
   return (
     <Box className={styles.boxContainer}>
@@ -37,40 +46,41 @@ function CategoriesSection({data}) {
 
         {active === 0 ?
         products.map(({id, name, image1}) => (
-
-          <Button key={id} className={styles.productItem}>
-            <Image
-              src={image1}
-              alt={name}
-              width={40}
-              height={50}
-            />
-            <Box className={styles.productItemText}>
-              <Typography className={styles.nameItem}>
-                {name}
-              </Typography>
-            </Box>
-          </Button>
+          <Link key={id} href={`/products/${id}`}>
+            <Button className={styles.productItem}>
+              <Image
+                src={image1}
+                alt={name}
+                width={40}
+                height={50}
+              />
+              <Box className={styles.productItemText}>
+                <Typography className={styles.nameItem}>
+                  {name}
+                </Typography>
+              </Box>
+            </Button>
+          </Link>
 
         )) 
         
         :
         categoryProducts.map(({id, name, image1}) => (
- 
-          <Button key={id} className={styles.productItem}>
-            <Image
-              src={image1}
-              alt={name}
-              width={40}
-              height={50}
-              />
-            <Box className={styles.productItemText}>
-              <Typography className={styles.nameItem}>
-                {name}
-              </Typography>
-            </Box>
-          </Button>
-
+          <Link key={id} href={`/products/${id}`}>
+            <Button className={styles.productItem}>
+              <Image
+                src={image1}
+                alt={name}
+                width={40}
+                height={50}
+                />
+              <Box className={styles.productItemText}>
+                <Typography className={styles.nameItem}>
+                  {name}
+                </Typography>
+              </Box>
+            </Button>
+          </Link>
         ))
         
       }

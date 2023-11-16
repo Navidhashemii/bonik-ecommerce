@@ -75,21 +75,28 @@
 
 .clearBtn{
     border-radius: 4px;
-    background-color: #e9456076;
+    background-color: #ffffff;
     margin-bottom: 20px;
     border-radius: 8px;
     padding: 6px 12px;
+    border: 1px solid #E94560;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 .clearText{
-    margin-right: 14px;
+    margin-right: 6px;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 16px;
     color: #252525;
 }
 
 .clearIcon{
     color: #252525;
+    width: 18px;
+    height: 18px;
 }
 
 .clearBtn:hover{
