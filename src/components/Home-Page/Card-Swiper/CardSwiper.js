@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from "react";
-import { Box, Button, Divider, Typography, IconButton } from "@mui/material";
+import { Box, Button, Divider, Typography, IconButton, Checkbox } from "@mui/material";
 import Rating from '@mui/material/Rating';
 import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
@@ -20,6 +20,8 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import AddIcon from '@mui/icons-material/Add';
 import CardViewModal from "./CardViewModal";
 import Link from "next/link";
+import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
+import Favorite from '@mui/icons-material/Favorite';
 
 
 
@@ -27,23 +29,11 @@ function CardSwiper({data}) {
 
     const [showModal, setShowModal] = useState(false)
     const [targetId, setTargetId] = useState(null)
-    const [elements, setElements] = useState(data.map(item => ({ ...item, selected: false })));
 
 
     const cart = useSelector(state => state.cart.items);
     const dispatch = useDispatch();
     
-
-
-    const handleLike = (id) => {
-        const updatedElements = elements.map(element => {
-            if (element.id === id) {
-                return { ...element, selected: !element.selected };
-            }
-            return element;
-        });
-        setElements(updatedElements);
-    };
 
     const getProductQuantity = (id) => {
         const productInCart = cart.find(item => item.id === id);
@@ -178,17 +168,8 @@ function CardSwiper({data}) {
                         <IconButton onClick={() => handleModal(id)} className={styles.icon1}>
                             <VisibilityOutlinedIcon/>
                         </IconButton>
+                        <Checkbox color="secondary" icon={<FavoriteBorder />} checkedIcon={<Favorite />} className={styles.icon2} />
                         
-                        {elements.find(element => element.id === id)?.selected
-                            ? 
-                            <IconButton  onClick={() => handleLike(id)} className={styles.icon2}>
-                                <FavoriteIcon/>
-                            </IconButton>
-                            :
-                            <IconButton onClick={() => handleLike(id)} className={styles.icon2}>
-                                <FavoriteBorderOutlinedIcon />
-                            </IconButton>
-                        }
                     </Box>
                 </SwiperSlide>
             ))}
