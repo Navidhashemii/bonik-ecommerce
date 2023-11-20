@@ -64,3 +64,14 @@
     color: #dadada;
     border-color: #dadada;
 }
+
+@media (min-width:780px){
+    .boxContainer{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .bannerContainer{
+        width: 49%;
+    }
+}

@@ -37,66 +37,71 @@ function CartProductCard() {
   
 
   return (
-    <Box>
+    <Box className={styles.mainContainer}>
         {cart.map(({id, name, image1, price, discount, quantity}) => (
             <Box key={id} className={styles.cardContainer}>
-                <Image
-                    src={image1}
-                    alt={name}
-                    width={180}
-                    height={230}
-                    priority
-                />
-
-                <Typography variant='h6' className={styles.cardName}>
-                  {name}
-                </Typography>
-
+                <Box>
+                    <Image
+                        src={image1}
+                        alt={name}
+                        width={180}
+                        height={210}
+                        priority
+                        className={styles.img}
+                    />
+                </Box>
                 <Box className={styles.bottomPart}>
-                    <Box className={styles.pricePart}>
-                        {discount
-                        ? 
-                        <Typography className={styles.price}>
-                            ${finalPrice = Math.floor(price - ((price * discount) / 100)).toFixed(2)} x {quantity}
-                        </Typography>
-                        :
-                        <Typography className={styles.price}>
-                            ${finalPrice = price.toFixed(2)} x {quantity}
-                        </Typography>
-                        }
-
-                        <Typography className={styles.finalPrice}>
-                            ${(finalPrice * quantity).toFixed(2)}
+                    <Box sx={{height:"10%"}}>
+                        <Typography variant='h6' className={styles.cardName}>
+                        {name}
                         </Typography>
                     </Box>
+                    <Box className={styles.detailsPart}>
+                        <Box className={styles.pricePart}>
+                            {discount
+                            ? 
+                            <Typography className={styles.price}>
+                                ${finalPrice = Math.floor(price - ((price * discount) / 100)).toFixed(2)} x {quantity}
+                            </Typography>
+                            :
+                            <Typography className={styles.price}>
+                                ${finalPrice = price.toFixed(2)} x {quantity}
+                            </Typography>
+                            }
 
-                  
-                    <Box className={styles.quantityOptions}>
-                        {getProductQuantity(id) < 2
+                            <Typography className={styles.finalPrice}>
+                                ${(finalPrice * quantity).toFixed(2)}
+                            </Typography>
+                        </Box>
 
-                        ?
+                    
+                        <Box className={styles.quantityOptions}>
+                            {getProductQuantity(id) < 2
 
-                        <IconButton onClick={() => handleRemoveFromCart(id)}>
-                            <DeleteIcon className={styles.quantityIcons}/>
-                        </IconButton>
+                            ?
 
-                        :
-                            
-                        <IconButton onClick={() => handleRemoveFromCart(id)}>
-                            <RemoveIcon className={styles.quantityIcons}/>
-                        </IconButton>
+                            <IconButton onClick={() => handleRemoveFromCart(id)}>
+                                <DeleteIcon className={styles.quantityIcons}/>
+                            </IconButton>
 
-                        }
+                            :
+                                
+                            <IconButton onClick={() => handleRemoveFromCart(id)}>
+                                <RemoveIcon className={styles.quantityIcons}/>
+                            </IconButton>
 
-                        <Typography variant="h6" sx={{color:"black"}}>
-                            {getProductQuantity(id)}
-                        </Typography>
+                            }
 
-                        <IconButton onClick={() => handleAddToCart(id, name, price, image1, discount)}>
-                            <AddIcon className={styles.quantityIcons}/>
-                        </IconButton>
+                            <Typography variant="h6" sx={{color:"black"}}>
+                                {getProductQuantity(id)}
+                            </Typography>
 
-                    </Box> 
+                            <IconButton onClick={() => handleAddToCart(id, name, price, image1, discount)}>
+                                <AddIcon className={styles.quantityIcons}/>
+                            </IconButton>
+
+                        </Box> 
+                    </Box>
                 </Box>
             </Box>
         ))}
@@ -116,7 +121,7 @@ function CartProductCard() {
 
         
         <Box className={styles.emptyCart}>
-            <Typography variant='h2'>
+            <Typography variant='h2' className={styles.emptyCartText}>
                 Your cart is empty!
             </Typography>
         </Box>

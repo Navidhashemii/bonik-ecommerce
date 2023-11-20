@@ -12,7 +12,7 @@ function CategoryOptions({data}) {
   return (
     <Grid container spacing={2} >
         {categories.map(({id, name, image}) => (
-            <Grid key={id} xs={6} className={styles.grid}>
+            <Grid key={id} xs={6} sm={4} md={3} lg={3} xl={2} className={styles.grid}>
                 <Link href={`/categories#${id}`}>
                     <Box className={styles.boxContainer}>
                         <Image 

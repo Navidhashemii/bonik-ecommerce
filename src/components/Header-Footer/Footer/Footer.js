@@ -35,29 +35,37 @@ function Footer() {
 
 
   return (
-    <Box className={styles.footerContainer}>
-        <Box>
-            <Box>
-                <Image
-                    src={logo}
-                    alt='Logo'
-                    width={100}
-                    height={120}
-                    priority
-                />
-                <Typography variant='subtitle2' className={styles.mainText}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor libero id et, in gravida. Sit diam duis mauris nulla cursus. 
-                    Erat et lectus vel ut sollicitudin elit at amet.
-                </Typography>
-                <Box className={styles.downloadButtonsContainer}>
-                    <DownloadButton data={dlButtons[0]}/>
-                    <DownloadButton data={dlButtons[1]}/>
+    <Box className={styles.footerMainContainer}>
+        <Box className={styles.footerInnerContainer}>
+            <Box className={styles.responsiveFlex}>
+                <Box className={styles.firstSection}>
+                    <Image
+                        src={logo}
+                        alt='Logo'
+                        width={100}
+                        height={120}
+                        priority
+                    />
+                    <Typography variant='subtitle2' className={styles.mainText}>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor libero id et, in gravida. Sit diam duis mauris nulla cursus. 
+                        Erat et lectus vel ut sollicitudin elit at amet.
+                    </Typography>
+                    <Box className={styles.downloadButtonsContainer}>
+                        <DownloadButton data={dlButtons[0]}/>
+                        <DownloadButton data={dlButtons[1]}/>
+                    </Box>
+                </Box>
+                <Box className={styles.secondSection}>
+                    <FooterLinks section={sections[0]}/>
                 </Box>
             </Box>
             <Box className={styles.infoContainer}>
-                <FooterLinks section={sections[0]}/>
-                <FooterLinks section={sections[1]}/>
-                <FooterContacts/>
+                <Box className={styles.sections}>
+                    <FooterLinks section={sections[1]}/>
+                </Box>
+                <Box className={styles.sections}>
+                    <FooterContacts/>
+                </Box>
             </Box>
             
 

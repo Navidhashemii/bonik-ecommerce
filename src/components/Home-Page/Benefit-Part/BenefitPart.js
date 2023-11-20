@@ -16,10 +16,10 @@ function BenefitPart() {
   return (
     <Box className={styles.mainContainer}>
         <Grid container >
-            <Grid xs={12}>
+            <Grid xs={12} md={6} xl={3}>
                 <Paper elevation={0} className={styles.paperContainer}>
                     <LocalShippingOutlinedIcon className={styles.icon}/>
-                    <Box className={styles.textContainer}>
+                    <Box className={`${styles.textContainer} ${styles.divider1}`}>
                         <Typography variant='h6' className={styles.title}>
                             Fast Delivery
                         </Typography>
@@ -27,12 +27,13 @@ function BenefitPart() {
                             starts from $10
                         </Typography>  
                     </Box>
+            <Box className={styles.divider1}/>
                 </Paper>
             </Grid>
-            <Grid xs={12}>
+            <Grid xs={12} md={6} xl={3}>
                 <Paper elevation={0} className={styles.paperContainer}>
                     <PaidOutlinedIcon className={styles.icon}/>
-                    <Box className={styles.textContainer}>
+                    <Box className={`${styles.textContainer} ${styles.divider2}`}>
                         <Typography variant='h6' className={styles.title}>
                         Money Guarantee
                         </Typography>
@@ -42,10 +43,10 @@ function BenefitPart() {
                     </Box>
                 </Paper>
             </Grid>
-            <Grid xs={12}>
+            <Grid xs={12} md={6} xl={3}>
                 <Paper elevation={0} className={styles.paperContainer}>
                     <TimerOutlinedIcon className={styles.icon}/>
-                    <Box className={styles.textContainer}>
+                    <Box className={`${styles.textContainer} ${styles.divider3}`}>
                         <Typography variant='h6' className={styles.title}>
                             365 Days
                         </Typography>
@@ -53,9 +54,10 @@ function BenefitPart() {
                             For free return
                         </Typography>  
                     </Box>
+                    <Box className={styles.divider2}/>
                 </Paper>
             </Grid>
-            <Grid xs={12}>
+            <Grid xs={12} md={6} xl={3}>
                 <Paper elevation={0} className={styles.paperContainer}>
                     <SecurityOutlinedIcon className={styles.icon}/>
                     <Box className={styles.textContainer}>

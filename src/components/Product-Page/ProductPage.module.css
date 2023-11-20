@@ -102,7 +102,7 @@
 }
 
 .frqCard{
-    width: 60%;
+    width: 100%;
     height: 250px;
     background-color: #ffffff;
     display: flex;
@@ -111,12 +111,6 @@
     align-items: center;
     padding: 0 8px 8px 8px;
     box-shadow: 0 0 10px rgba(26, 26, 26, 0.202);
-}
-
-.frqImgContainer{
-    position: relative;
-    width: 95px;
-    height: 120px;
 }
 
 .frqName{
@@ -139,12 +133,14 @@
     border-radius: 12px;
     background-color: #e945600d;
     width: 80%;
+    max-width: 350px;
     height: auto;
     padding: 24px 12px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    margin-top: 30px;
 }
 
 .frqSumup{
@@ -273,4 +269,29 @@
     position: absolute;
     bottom: 12%;
     right: 5%;
+}
+
+@media (min-width:700px){
+    .frqName{
+        margin-top: 28px;
+        text-align: center;
+        font-size: 14px;
+    }
+
+
+}
+
+
+@media (min-width:1200px){
+    .frqContainer{
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .frqSumupContainer{
+        margin: 0 0 0 16px;
+        max-width: 250px;
+    }
+
+    
 }

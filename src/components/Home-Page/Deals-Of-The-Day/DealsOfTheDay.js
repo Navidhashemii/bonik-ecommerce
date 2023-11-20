@@ -15,7 +15,7 @@ function DealsOfTheDay({data}) {
         <Typography variant="h5" className={styles.text}>
             Deals Of The Day
         </Typography>
-        <CardSwiper data={withDiscount}/>
+        <CardSwiper data={withDiscount} notCategoryBased={true}/>
 
     </Box>
   )

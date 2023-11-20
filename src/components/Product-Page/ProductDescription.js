@@ -20,7 +20,13 @@ function ProductDescription({targetProduct, data}) {
     <Box sx={{ width: '100%', marginTop:"64px" }}>
       <TabContext value={value}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-          <TabList onChange={handleChangeTab} aria-label="lab API tabs example" textColor='secondary' indicatorColor='secondary' sx={{fontSize:"24px"}}>
+          <TabList
+            onChange={handleChangeTab}
+            aria-label="lab API tabs example"
+            textColor='secondary'
+            indicatorColor='secondary'
+            sx={{fontSize:"24px"}}
+        >
             <Tab label="Description" value="1" sx={{fontSize:"16px", fontWeight:"600"}}/>
             <Tab label={`Review (${rate})`} value="2" sx={{fontSize:"16px", fontWeight:"600"}}/>
           </TabList>
@@ -55,6 +61,7 @@ function ProductDescription({targetProduct, data}) {
                                 alt={name}
                                 width={40}
                                 height={40}
+                                priority
                             />
                             <Box className={styles.profileTextContainer}>
                                 <Typography className={styles.cmName}>

@@ -43,7 +43,7 @@ function FilteredProducts({filtered, brand}) {
         }
         <Grid container spacing={3}>
             {randomizedItems.current.map(({id, name, star, image1, brand, price, discount}) => (
-                <Grid key={id} xs={12}>
+                <Grid key={id} xs={12} md={6} lg={4} xl={3}>
                     <Box className={styles.filterCard}>
                         <Link href={`/products/${id}`}>
                             <Box className={styles.filterImgContainer}>

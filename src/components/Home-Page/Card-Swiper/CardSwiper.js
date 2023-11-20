@@ -25,7 +25,7 @@ import Favorite from '@mui/icons-material/Favorite';
 
 
 
-function CardSwiper({data}) {
+function CardSwiper({data, notCategoryBased}) {
 
     const [showModal, setShowModal] = useState(false)
     const [targetId, setTargetId] = useState(null)
@@ -39,6 +39,39 @@ function CardSwiper({data}) {
         const productInCart = cart.find(item => item.id === id);
         return productInCart ? productInCart.quantity : 0;
     };
+
+    const breakPoints = notCategoryBased
+    ? 
+    {
+        500: {
+          slidesPerView: 2,
+        },
+        700: {
+            slidesPerView: 3,
+        },
+        900:{
+            slidesPerView: 4,
+        },
+        1200: {
+            slidesPerView: 5,
+        }
+    }
+    :
+    {
+        500: {
+          slidesPerView: 2,
+        },
+        700: {
+            slidesPerView: 3,
+        },
+        900: {
+            slidesPerView: 3,
+        },
+        1200: {
+            slidesPerView: 4,
+        }
+    };
+
     
 
     const handleAddToCart = (id, name, price, image1, discount) => {
@@ -50,30 +83,36 @@ function CardSwiper({data}) {
     };
 
 
-    const handleModal = (id) => {
+    const handleOpenModal = (id) => {
         setShowModal(true)
         setTargetId(id)
     };
 
+    const handleCloseModal = (value) => {
+        setShowModal(value)
+    }
+
 
   return (
-    <>
+    <Box className={!notCategoryBased && styles.mainContainer}>
         <Swiper
             modules={[ Navigation ]}
             className={styles.swiperStyles}
             spaceBetween={20}
             navigation={true}
+            slidesPerView={1}
+            breakpoints={breakPoints}
         >
-            {data.map(({id, image1, name, price, star, rate, discount, quantity}) => (
-                <SwiperSlide key={id}>
+            {data.map(({id, image1, name, price, star, rate, discount}) => (
+                <SwiperSlide key={id} style={{minWidth:'201px'}}>
                     <Box className={styles.cardContainer}>
                         <Link href={`/products/${id}`}>
                             <Box>
                                 <Image
                                     src={image1}
                                     alt={name}         
-                                    width={200}
-                                    height={270}
+                                    width={190}
+                                    height={240}
                                     className={styles.cardImage}
                                 />
                                 <Divider variant="middle"/>
@@ -165,7 +204,7 @@ function CardSwiper({data}) {
                         </Button>
                         }
 
-                        <IconButton onClick={() => handleModal(id)} className={styles.icon1}>
+                        <IconButton onClick={() => handleOpenModal(id)} className={styles.icon1}>
                             <VisibilityOutlinedIcon/>
                         </IconButton>
                         <Checkbox color="secondary" icon={<FavoriteBorder />} checkedIcon={<Favorite />} className={styles.icon2} />
@@ -176,9 +215,9 @@ function CardSwiper({data}) {
             
         </Swiper>
 
-        {showModal && <CardViewModal data={data} targetId={targetId} setShowModal={setShowModal}/>}
+        {showModal && <CardViewModal data={data} targetId={targetId} handleCloseModal={handleCloseModal}/>}
 
-    </>
+    </Box>
 
   )
 }

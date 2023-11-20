@@ -1,6 +1,6 @@
 .cardContainer{
     width: 100%;
-    height: 400px;
+    height: auto;
     background-color: #ffffff;
     margin: 20px 0;
     display: flex;
@@ -11,6 +11,10 @@
     padding: 15px 15px;
 }
 
+.bottomPart{
+    width: 100%;
+}
+
 .cardName{
     text-align: left;
     font-weight: 600;
@@ -18,7 +22,7 @@
     margin-top: 40px;
 }
 
-.bottomPart{
+.detailsPart{
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -79,7 +83,7 @@
     margin-bottom: 20px;
     border-radius: 8px;
     padding: 6px 12px;
-    border: 1px solid #E94560;
+    border: 1px solid #e945602a;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -106,12 +110,68 @@
 .emptyCart{
     width: 100%;
     height: 200px;
-    background-color: #e9456016;
+    background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 12px;
     margin: 40px 0;
-    border: 4px dotted #E94560;
+    border: 1px solid #ff002b4d;
 }
 
+
+
+@media (min-width:450px){
+  .cardContainer{
+    flex-direction: row;
+  }
+  .img{
+    width: 90px;
+    height: 120px;
+  }
+  .bottomPart{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    height: 100%;
+    margin-left: 20px;
+  }
+  .cardName{
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+  .pricePart{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .finalPrice{
+    margin: 0;
+  }
+}
+
+@media (min-width:600px){
+    .pricePart{
+        flex-direction: row;
+        align-items: center;
+      }
+      .finalPrice{
+        margin-left: 16px;
+        
+      }
+}
+
+@media (min-width:900px){
+    .mainContainer{
+        width: 100%;
+        margin-right: 5px;
+    }
+    .emptyCart{
+        height: 400px;
+    }
+    .emptyCartText{
+        font-size: 42px;
+        font-weight: 400;
+    }
+}
 

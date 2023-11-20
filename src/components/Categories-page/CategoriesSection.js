@@ -53,6 +53,7 @@ function CategoriesSection({data}) {
                 alt={name}
                 width={40}
                 height={50}
+                className={styles.img}
               />
               <Box className={styles.productItemText}>
                 <Typography className={styles.nameItem}>
@@ -73,6 +74,7 @@ function CategoriesSection({data}) {
                 alt={name}
                 width={40}
                 height={50}
+                className={styles.img}
                 />
               <Box className={styles.productItemText}>
                 <Typography className={styles.nameItem}>

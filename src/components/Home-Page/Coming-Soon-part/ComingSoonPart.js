@@ -4,6 +4,7 @@ import ComingSoonBanner from './ComingSoonBanner'
 import csbanner1 from '../../../assets/images/coming-soon1.jpg'
 import csbanner2 from '../../../assets/images/coming-soon2.jpg'
 import csbanner3 from '../../../assets/images/coming-soon3.jpg'
+import styles from './ComingSoonPart.module.css'
 
 
 function ComingSoonPart() {
@@ -15,7 +16,7 @@ function ComingSoonPart() {
     ]
 
   return (
-    <Box>
+    <Box className={styles.allBannersContainer}>
         <ComingSoonBanner banner={csBanners[0]}/>
         <ComingSoonBanner banner={csBanners[1]}/>
         <ComingSoonBanner banner={csBanners[2]}/>

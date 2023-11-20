@@ -1,7 +1,8 @@
 'use client'
-import { MenuItem, Select, TextField, Typography } from '@mui/material'
+import { Box, Button, MenuItem, Select, TextField, Typography } from '@mui/material'
 import styles from './Address.module.css'
 import { useState } from 'react';
+import Link from 'next/link';
 
 function Details({address}) {
 
@@ -13,8 +14,8 @@ function Details({address}) {
 
 
   return (
-    <>
-        
+    <Box className={styles.detailsContainer}>
+        <Box className={styles.column}>
         <Typography variant='subtitle2' className={styles.text}>
             Full Name
         </Typography>
@@ -34,7 +35,9 @@ function Details({address}) {
             Address 1
         </Typography>
         <TextField id="outlined-basic" type='email' size='small' variant="outlined" className={styles.field} color='secondary'/>
+        </Box>
 
+        <Box className={styles.column}>
         <Typography variant='subtitle2' className={styles.text}>
             Email Address
         </Typography>
@@ -68,8 +71,8 @@ function Details({address}) {
             Address 2
         </Typography>
         <TextField id="outlined-basic" size='small' variant="outlined" className={styles.field} color='secondary'/>
-
-    </>   
+        </Box>
+    </Box>
   )
 }
 

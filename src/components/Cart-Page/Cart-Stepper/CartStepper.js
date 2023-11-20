@@ -8,12 +8,12 @@ function CartStepper({steps}) {
         <Typography className={`${styles.step} ${styles.active}`}>
             1.Cart
         </Typography>
-        <Box className={styles.line}/>
-        <Typography className={`${styles.step} ${steps === 'details' || steps === 'payment' ? styles.active : ''}`}>
+        <Box className={`${styles.line} ${steps === 'details' || steps === 'payment' ? styles.active : '' }`}/>
+        <Typography className={`${styles.step} ${steps === 'details' || steps === 'payment' ? styles.active : '' }`}>
             2.Details
         </Typography>
-        <Box className={styles.line}/>
-        <Typography className={`${styles.step} ${steps === 'payment' ? styles.active : ''}`}>
+        <Box className={`${styles.line} ${steps === 'payment' ? styles.active : '' }`}/>
+        <Typography className={`${styles.step} ${steps === 'payment' ? styles.active : '' }`}>
             3.Payment
         </Typography>
     </Box>

@@ -1,12 +1,18 @@
 .swiperStyles{
     --swiper-navigation-color: #f6f6f6;
     --swiper-navigation-size: 20px;
+    
+    
+}
+
+.mainContainer{
+    width: 100%;
 }
 
 .cardContainer{
     position:relative;
     width:100%;
-    height:480px;
+    height:450px;
     background-color:#ffffff;
     display: flex;
     flex-direction: column;
@@ -14,7 +20,7 @@
     align-items: center;
     border-radius:4px;
     text-align:center;
-    margin-top:15px;
+    margin-top:40px;
     padding:10px;
     cursor: pointer;
     overflow: hidden;
@@ -285,4 +291,10 @@
 
 .modalActiveImg{
     border-color: #E94560;
+}
+
+@media (min-width:900px){
+    .mainContainer{
+        width: 75%;
+    }
 }

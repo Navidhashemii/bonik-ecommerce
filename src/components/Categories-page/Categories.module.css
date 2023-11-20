@@ -82,3 +82,25 @@
     box-shadow: none;
     border: none;
 }
+
+
+@media (min-width:700px){
+    .categoriesContainer{
+        width: 24%;
+    }
+    .productItem{
+        padding: 0 24px;
+    }
+    .productItemsContainer{
+        width: 76%;
+    }
+    .img{
+        width: 70px;
+        height: 80px;
+    }
+    .nameItem{
+        font-size: 22px;
+        margin-left: 20px;
+    }
+
+}

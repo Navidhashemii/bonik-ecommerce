@@ -2,6 +2,7 @@
     background-color: #ffffff;
     width: 100%;
     padding: 16px;
+    height: 100%;
 }
 
 .totalContiner{
@@ -84,3 +85,24 @@
     font-weight: 600;
     margin: 24px 0 10px 0;
 }
+
+.checkoutBtn:hover{
+    background-color: #be344b;
+    color: #ffffff;
+}
+
+@media (min-width:900px){
+  .mainPageContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .detailsContainer{
+    margin-top: 20px;
+    width: 100%;
+    margin-left: 5px;
+    border-radius: 8px;
+  }
+}
+
+

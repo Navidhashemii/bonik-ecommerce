@@ -46,6 +46,10 @@
     color: #E94560;
 }
 
+.mainContainer{
+    width: 100%;
+}
+
 .productImagesContainer{
     display: flex;
     width: 100%;
@@ -56,7 +60,17 @@
 }
 
 .productImage{
-    margin-top: 12px;
+    margin-top: 8px;
+}
+
+.mainImg{
+    height: auto;
+    width: auto;
+}
+
+.img{
+    height: auto;
+    width: auto;
 }
 
 .productImageBtn{
@@ -74,7 +88,8 @@
 }
 
 .productDetails{
-    margin-top: 40px;
+    position: relative;
+    margin-top: 30px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -89,7 +104,7 @@
 
 .productBrand{
     color: #464646;
-    margin-top: 24px;
+    margin-top: 20px;
 }
 
 .productSeller{
@@ -116,8 +131,8 @@
 }
 
 .productDiscountBox{
-    width:50px;
-    height:50px;
+    width:45px;
+    height:45px;
     color:#ececec;
     border-radius:50%;
     display:flex;
@@ -126,8 +141,8 @@
     font-size:16px;
     font-weight: 600;
     position:absolute;
-    top:27px;
-    left: 48px;
+    top:-464px;
+    left: -9px;
 }
 
 .productAfterDiscount{
@@ -159,10 +174,9 @@
 .quantityContainer{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
-
 
 .quantityOptions{
     width: 110px;
@@ -205,3 +219,110 @@
 .productButton:hover{
     background-color: #bf465a;
 }
+
+
+@media (min-width:700px){
+    .mainContainer{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-top: 20px;
+      
+    }
+    .mainImg{
+        width: 190px;
+        height: 230px;
+    }
+    .productImagesContainer{
+        width: 50%;
+        margin-top: 10px;
+       
+    }
+    .productBox{
+        height: 400px;
+    }
+    .productDetails{
+        margin: 0; 
+    }
+    .modalProductBox{
+        height: auto;
+        display: flex;
+        justify-content: center;
+        max-width: 950px;
+    }
+    .productDiscountBox{
+        top: -45px;
+        left: -25%;
+        height: 38px;
+        width: 38px;
+        font-size: 12px;
+    }
+    .productBottomPart{
+        margin-left: 20px;
+    }
+}
+
+@media (min-width:900px){
+    .mainImg{
+        width: 240px;
+        height: 300px;
+    }
+    .productBottomPart{
+        margin-left: 40px;
+        padding-left: 20px;
+    }
+    .productBox{
+        height: 500px;
+    }
+    .productDetails{
+        margin-top: 10px; 
+    }
+    .modalProductBox{
+        height: 530px;
+    }
+    .productName{
+        font-size: 30px;
+    }
+    .productBrand{
+        margin-top: 24px;
+        font-size: 18px;
+    }
+    .productSeller{
+        font-size: 18px;
+    }
+    .productRate{
+        margin-right: 4px;
+        font-size: 18px;
+    }
+    .productAfterDiscount{
+        margin-top:12px;
+        font-size: 38px;
+    }
+    
+    .productBeforeDiscount{
+        margin-top: 10px;
+        font-size: 24px;
+    }
+    .productPrice{
+        font-size: 34px;
+    }
+    .productStock{
+        margin: 16px 0 8px 0;
+        font-size: 18px;
+    }
+    .quantityOptions{
+        width: 140px;
+        height: 55px;
+    }
+    .productButton{
+        padding: 10px 38px;
+    }
+    .productImage{
+        margin-top: 30px;
+    }
+}
+
+
+
+

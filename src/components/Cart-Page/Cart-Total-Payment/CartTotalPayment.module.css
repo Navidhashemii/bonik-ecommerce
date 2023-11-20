@@ -1,5 +1,6 @@
 .boxContainer{
     width: 100%;
+    height: 100%;
     background-color: #ffffff;
     margin-top: 30px;
     padding: 20px 16px;
@@ -45,4 +46,11 @@
 .voucherBtn:hover{
     background-color: #E94560;
     color: #ffffff;
+}
+
+@media (min-width:1200px){
+    .boxContainer{
+        width: 25%;
+        margin-top: 20px;
+    }
 }

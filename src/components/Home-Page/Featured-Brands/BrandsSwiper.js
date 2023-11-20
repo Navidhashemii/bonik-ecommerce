@@ -6,6 +6,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import BrandCard from './BrandCard';
 import { Box, Typography } from '@mui/material';
+import { Autoplay } from 'swiper/modules';
 import brand1 from '../../../assets/images/brand1.jpg'
 import brand2 from '../../../assets/images/brand2.jpg'
 import brand3 from '../../../assets/images/brand3.jpg'
@@ -39,9 +40,25 @@ function BrandsSwiper() {
         </Typography>
         <Box className={styles.swiperContainer}>
             <Swiper
+                modules={[Autoplay]}
                 loop={true}
                 slidesPerView={2}
                 draggable={true}
+                autoplay={{
+                    delay: 1500,
+                    disableOnInteraction: false,
+                  }}
+                breakpoints={{
+                    600:{
+                        slidesPerView: 3,
+                    },
+                    900:{
+                        slidesPerView: 4,
+                    },
+                    1200:{
+                        slidesPerView: 5,
+                    }
+                }}
             >
                 
                 {brands.map(({id, image}) => (

@@ -5,8 +5,6 @@ import Link from "next/link";
 
 function SmallTopBanner({image, newArrival, href}) {
   return (
-
-    <>
         <Box className={styles.boxContainer}>
             <Image
                 src={image}
@@ -73,9 +71,6 @@ function SmallTopBanner({image, newArrival, href}) {
             </Box>
 
         </Box>
-    
-    </>
-    
   )
 }
 

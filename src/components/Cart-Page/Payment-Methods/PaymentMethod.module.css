@@ -29,6 +29,11 @@
     width: 100%;
 }
 
+.paypalField{
+    width: 100%;
+    max-width: 745px;
+}
+
 .backBtn{
     width: 100%;
     border: 1px solid #E94560;
@@ -47,6 +52,7 @@
     width: 100%;
     color: #ffffff;
     background-color: #E94560;
+    border: 1px solid #E94560;
     margin-top: 16px;
     font-weight: 600;
     box-shadow: none;
@@ -83,6 +89,7 @@
     border-radius: 16px;
     z-index: 10;
     width: 80%;
+    max-width: 800px;
     height: 24%;
     padding: 16px;
     display: flex;
@@ -107,12 +114,12 @@
 }
 
 .doneBtn{
-    width: 50%;
     color: #ffffff;
     background-color: #E94560;
     margin-top: 16px;
     font-weight: 600;
     box-shadow: none;
+    padding: 6px 42px;
 }
 
 .doneBtn:hover {
@@ -121,3 +128,53 @@
     box-shadow: none;
 }
 
+@media (min-width:700px){
+   .methodDetailsContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   }
+   .column{
+    width: 49%;
+   }
+   .btnsContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   }
+   .backBtn{
+    width: 100%;
+   }
+   .payBtn{
+    width: 49%;
+    margin-top: 28px;
+   }
+   .modal{
+    height: 34%;
+    padding: 32px;
+   }
+   .doneTitle{
+    font-size: 42px;
+   }
+   .doneText{
+    font-size: 24px;
+   }
+   .doneBtn{
+    font-size: 18px;
+    padding: 8px 64px;
+   }
+}
+
+@media (min-width:1200px){
+    .mainPageContainer{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .mainAddressContainer{
+        width: 72%;
+    }
+    .boxContainer{
+        margin-top: 20px;
+    }
+}

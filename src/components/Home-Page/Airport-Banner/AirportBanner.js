@@ -4,13 +4,14 @@ import styles from './AirportBanner.module.css'
 function AirportBanner() {
   return (
     <Box className={styles.boxContainer}>
+      
       <Box className={styles.titleBox}>
-
         <Typography variant='h3' className={styles.title}>
           BLACK FRIDAY SALE!
         </Typography>
-
+        <Box className={styles.skewBox}/>
       </Box>
+
       <Box className={styles.marquee}>
         <Box className={styles.marqueeContainer}>
           <Typography variant='h4' className={styles.marqueeText}>

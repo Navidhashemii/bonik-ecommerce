@@ -12,15 +12,13 @@ import { addToCart, removeFromCart } from '../../../redux/cartSlice';
 import { useState } from 'react';
 import ProductDetails from '../../Global/Product-Details/ProductDetails';
 
-function CardViewModal({data, targetId, setShowModal}) {
+function CardViewModal({data, targetId, handleCloseModal}) {
     
     const [targetProduct] = data.filter(({id}) => id === targetId)
 
-    
-
   return (
     <Box className={styles.modalContainer}>
-        <ProductDetails targetProduct={targetProduct} setShowModal={setShowModal} modal={true}/>
+        <ProductDetails targetProduct={targetProduct} handleCloseModal={handleCloseModal} modal={true}/>
     </Box>
   )
 }

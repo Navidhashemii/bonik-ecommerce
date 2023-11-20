@@ -1,6 +1,6 @@
 'use client'
 
-import { Box, Divider, Typography, Button } from '@mui/material'
+import { Box, Divider, Typography } from '@mui/material'
 import styles from './Products.module.css'
 import CardSwiper from '../Card-Swiper/CardSwiper'
 import { useState } from 'react'
@@ -28,7 +28,7 @@ function Products({data, category}) {
   
 
   return (
-    <Box>
+    <Box className={styles.container}>
         <Box
           className={styles.boxContainer}
           id={category.name}
@@ -58,7 +58,8 @@ function Products({data, category}) {
             </button>
           </Box>
         </Box>
-        <CardSwiper data={finalProduct}/>
+
+        <CardSwiper data={finalProduct} notCategoryBased={false}/>
 
     </Box>
   )

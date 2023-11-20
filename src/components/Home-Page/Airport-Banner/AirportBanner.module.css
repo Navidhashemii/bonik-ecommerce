@@ -13,17 +13,34 @@
 }
 
 .titleBox{
+    position: relative;
     background-color:#E0E0E0;
-    width:90%;
+    width:315px;
     text-align:center;
-    padding:26px 18px;
-    
+    padding:26px 10px;
+    z-index: 6;
+
 }
+
+.skewBox{
+  position: absolute;
+  background-color: #E0E0E0;
+  width: 60px;
+  height: 120px;
+  transform: skew(-30deg, 0);
+  right: -25px;
+  top: 0;
+  z-index: -1;
+  display: none;
+
+}
+  
 
 .title{
     font-weight:bold;
     color: #131313;
 }
+
 .marquee {
     height: 40px;
     width: 100%;
@@ -38,7 +55,7 @@
     height: 30px;
     position: absolute;
     overflow: hidden;
-    animation: marquee 20s linear infinite;
+    animation: marquee 24s linear infinite;
     
   }
   
@@ -64,4 +81,32 @@
     height:44px;
     margin-top: 18px;
   }
+
+  
+
+  @media (min-width:750px){
+    .boxContainer{
+      flex-direction: row;
+      padding: 0;
+      overflow: hidden;
+    }
     
+    .titleBox{
+      width: 710px;
+      height: 100%;
+      padding: 26px 4px;
+    }
+
+    .skewBox{
+      display: block;
+    }
+
+    .marquee{
+      margin-top: 5px;
+    }
+
+    .button{
+      margin: 0 14px 0 0;
+      width: 220px;
+    }
+}

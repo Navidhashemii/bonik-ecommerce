@@ -30,6 +30,7 @@
 
 .paymentContainer{
     width: 100%;
+    background-color: transparent;
 }
 
 .backBtn{
@@ -54,9 +55,45 @@
     font-weight: 600;
     margin-bottom: -10px;
     padding: 8px;
+    border: 1px solid #E94560;
 }
 
 .nextBtn:hover{
     background-color: #E94560;
     color: #ffffff;
+}
+
+@media (min-width:700px){
+  .detailsContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .column{
+    width: 49%;
+  }
+  .paymentContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .nextBtn{
+    width: 100%;
+  }
+  .backBtn{
+    width: 98%;
+  }
+}
+
+@media (min-width:1200px){
+    .mainPageContainer{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .mainAddressContainer{
+        width: 72%;
+    }
 }
