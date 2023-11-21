@@ -4,9 +4,7 @@ import styles from './CardSwiper.module.css'
 import ProductDetails from '../../Global/Product-Details/ProductDetails';
 
 function CardViewModal({data, targetId, handleCloseModal}) {
-    
-    const [targetProduct] = data.filter(({id}) => id === targetId)
-
+  const [targetProduct] = data.filter(({id}) => id === targetId)
   return (
     <Box className={styles.modalContainer}>
         <ProductDetails

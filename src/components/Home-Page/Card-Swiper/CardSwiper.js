@@ -29,36 +29,18 @@ function CardSwiper({data, notCategoryBased}) {
     const [targetId, setTargetId] = useState(null)
 
     const breakPoints = notCategoryBased
-    ? 
-    {
-        500: {
-          slidesPerView: 2,
-        },
-        700: {
-            slidesPerView: 3,
-        },
-        900:{
-            slidesPerView: 4,
-        },
-        1200: {
-            slidesPerView: 5,
+    ?   {
+            500: {slidesPerView: 2},
+            700: {slidesPerView: 3},
+            900:{slidesPerView: 4},
+            1200: {slidesPerView: 5}
         }
-    }
-    :
-    {
-        500: {
-          slidesPerView: 2,
-        },
-        700: {
-            slidesPerView: 3,
-        },
-        900: {
-            slidesPerView: 3,
-        },
-        1200: {
-            slidesPerView: 4,
-        }
-    };
+    :   {
+            500: {slidesPerView: 2},
+            700: {slidesPerView: 3},
+            900: {slidesPerView: 3},
+            1200: {slidesPerView: 4}
+        };
 
     const cart = useSelector(state => state.cart.items);
     const dispatch = useDispatch();
