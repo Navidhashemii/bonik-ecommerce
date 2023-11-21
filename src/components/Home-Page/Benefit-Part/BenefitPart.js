@@ -10,127 +10,69 @@ import styles from './BenefitPart.module.css'
 
 
 function BenefitPart() {
-  return (
-    <Box className={styles.mainContainer}>
-        <Grid container >
+    const benefitItems = [
+      {
+        icon: <LocalShippingOutlinedIcon className={styles.icon} />,
+        title: 'Fast Delivery',
+        subTitle: 'starts from $10',
+        divider: styles.divider1
+      },
+      {
+        icon: <PaidOutlinedIcon className={styles.icon} />,
+        title: 'Money Guarantee',
+        subTitle: '7 Days Back',
+        divider: styles.divider2
+      },
+      {
+        icon: <TimerOutlinedIcon className={styles.icon} />,
+        title: '365 Days',
+        subTitle: 'For free return',
+        divider: styles.divider3
+      },
+      {
+        icon: <SecurityOutlinedIcon className={styles.icon} />,
+        title: 'Payment',
+        subTitle: 'Secure system',
+        divider: ''
+      }
+    ];
+  
+    return (
+      <Box className={styles.mainContainer}>
+        <Grid container>
+          {benefitItems.map((item, index) => (
             <Grid
-                xs={12}
-                md={6}
-                xl={3}
+              key={index}
+              xs={12}
+              md={6}
+              xl={3}
             >
-                <Paper
-                    elevation={0}
-                    className={styles.paperContainer}
-                >
-                    <LocalShippingOutlinedIcon className={styles.icon}/>
-                    <Box className={`${styles.textContainer} ${styles.divider1}`}>
-                        <Typography
-                            variant='h6'
-                            className={styles.title}
-                        >
-                            Fast Delivery
-                        </Typography>
-
-                        <Typography
-                            variant='h6'
-                            className={styles.subTitle}
-                        >
-                            starts from $10
-                        </Typography>  
-                    </Box>
-
-                    <Box className={styles.divider1}/>
-                </Paper>
-
+              <Paper
+                elevation={0}
+                className={styles.paperContainer}
+              >
+                {item.icon}
+                <Box className={`${styles.textContainer} ${item.divider}`}>
+                  <Typography
+                    variant='h6'
+                    className={styles.title}
+                  >
+                    {item.title}
+                  </Typography>
+  
+                  <Typography
+                    variant='h6'
+                    className={styles.subTitle}
+                  >
+                    {item.subTitle}
+                  </Typography>
+                </Box>
+              </Paper>
             </Grid>
-
-            <Grid
-                xs={12} 
-                md={6}
-                xl={3}
-            >
-                <Paper
-                    elevation={0}
-                    className={styles.paperContainer}
-                >
-                    <PaidOutlinedIcon className={styles.icon}/>
-                    <Box className={`${styles.textContainer} ${styles.divider2}`}>
-                        <Typography
-                            variant='h6'
-                            className={styles.title}
-                        >
-                            Money Guarantee
-                        </Typography>
-
-                        <Typography
-                            variant='h6'
-                            className={styles.subTitle}
-                        >
-                            7 Days Back
-                        </Typography>  
-                    </Box>
-                </Paper>
-            </Grid>
-
-            <Grid
-                xs={12}
-                md={6}
-                xl={3}
-            >
-                <Paper
-                    elevation={0}
-                    className={styles.paperContainer}
-                >
-                    <TimerOutlinedIcon className={styles.icon}/>
-                    <Box className={`${styles.textContainer} ${styles.divider3}`}>
-                        <Typography
-                            variant='h6'
-                            className={styles.title}
-                        >
-                            365 Days
-                        </Typography>
-
-                        <Typography
-                            variant='h6' 
-                            className={styles.subTitle}
-                        >
-                            For free return
-                        </Typography>  
-                    </Box>
-                    <Box className={styles.divider2}/>
-                </Paper>
-            </Grid>
-            
-            <Grid 
-                xs={12}
-                md={6} 
-                xl={3}
-            >
-                <Paper
-                    elevation={0} 
-                    className={styles.paperContainer}
-                >
-                    <SecurityOutlinedIcon className={styles.icon}/>
-                    <Box className={styles.textContainer}>
-                        <Typography
-                            variant='h6'
-                            className={styles.title}
-                        >
-                            Payment
-                        </Typography>
-
-                        <Typography
-                            variant='h6'
-                            className={styles.subTitle}
-                        >
-                            Secure system
-                        </Typography>  
-                    </Box>
-                </Paper>
-            </Grid>
+          ))}
         </Grid>
-    </Box>
-  )
-}
+      </Box>
+    );
+  }
 
 export default BenefitPart

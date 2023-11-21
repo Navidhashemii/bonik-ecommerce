@@ -37,16 +37,16 @@
 
 @media (min-width:700px){
     .divider1{
-        border-right: 2px solid #dedede;
+        border-right: 1px solid #dedede;
     }
 
     .divider3{
-        border-right: 2px solid #dedede;
+        border-right: 1px solid #dedede;
     }
 }
 
 @media (min-width:1200px){
     .divider2{
-        border-right: 2px solid #dedede;
+        border-right: 1px solid #dedede;
     }
 }
