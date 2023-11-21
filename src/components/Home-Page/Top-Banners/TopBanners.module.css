@@ -1,0 +1,35 @@
+.allBannersContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.smallBannersContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 450px) {
+    .smallBannersContainer{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 1200px){
+    .allBannersContainer{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .smallBannersContainer{
+        flex-direction: column;
+    }
+    .smallBannersContainer{
+        width: 23%;
+        height: 100%;
+    }
+    .largeBannersContainer{
+        width: 75.5%;
+    }
+}

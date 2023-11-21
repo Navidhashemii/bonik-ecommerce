@@ -29,6 +29,16 @@ const theme = createTheme({
         black: "#1c1c1c",
     },
 },
+
+    breakpoints: {
+        values: {
+        xs: 0,
+        sm: 450,
+        md: 700,
+        lg: 900,
+        xl: 1200,
+    },
+  },
   
   typography: {
     fontFamily: "OpenSans",
@@ -60,7 +70,7 @@ const theme = createTheme({
         textTransform: "none"
     }
   }
-
+  
 });
 
 const ClientProviderTheme = ({ children }) => {

@@ -5,10 +5,15 @@
 .title{
     color: #1b1b1b;
     font-weight: 600;
-    margin-bottom: 20px;
+    
 }
 
-.buttonContainer1{
+.subTitle{
+    color: #575757;
+    margin-bottom: 16px;
+}
+
+.mainButtonsContainer{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,7 +36,7 @@
     background-color: #e9456011;
 }
 
-.buttonContainer2{
+.subButtonsContainer{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -59,4 +64,29 @@
     background-color: #e9456011;
     border-color: #E94560;
     color: #E94560;  
+}
+
+@media (min-width:750px){
+    .mainButtonsContainer{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .mainBtn{
+        width: 32%;
+    }
+    .subButtonsContainer{
+        width: 65%;
+    }
+}
+
+@media (min-width:1200px){
+    .titleBtnsContainer{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    .mainButtonsContainer{
+        width: 60%;
+    }
 }

@@ -1,0 +1,108 @@
+.detailsContainer{
+    background-color: #ffffff;
+    width: 100%;
+    padding: 16px;
+    height: 100%;
+}
+
+.totalContiner{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.totalText{
+    color: #787878;
+}
+
+.totalPrice{
+    font-weight: 600;
+}
+
+.additionalContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.title{
+    font-weight:600 ;
+}
+
+.redTitle{
+    font-size: 12px;
+    margin-left: 10px;
+    background-color: #ffcbd4b2;
+    color: #E94560;
+    padding: 3px 8px;
+}
+
+.largeField{
+    width: 100%;
+    margin: 15px 0; 
+}
+
+.field{
+    width: 100%;
+    margin: 15px 0;
+}
+
+.voucherBtn{
+    width: 100%;
+    color: #E94560;
+    border: 1px solid #E94560;
+    font-weight: 600;
+    margin-bottom: 28px;
+}
+
+.voucherBtn:hover{
+    background-color: #E94560;
+    color: #ffffff;
+}
+
+.title2{
+    font-weight:600 ;
+    margin-top: 24px;
+}
+
+.text{
+    margin: 20px 0 8px 0;
+    color: #3c3c3c;
+}
+
+.lastField{
+    width: 100%;
+}
+
+.checkoutBtn{
+    background-color: #E94560;
+    color: #ffffff;
+    width: 100%;
+    font-weight: 600;
+    margin: 24px 0 10px 0;
+}
+
+.checkoutBtn:hover{
+    background-color: #be344b;
+    color: #ffffff;
+}
+
+@media (min-width:900px){
+  .mainPageContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .detailsContainer{
+    margin-top: 20px;
+    width: 100%;
+    margin-left: 5px;
+    border-radius: 8px;
+  }
+}
+
+

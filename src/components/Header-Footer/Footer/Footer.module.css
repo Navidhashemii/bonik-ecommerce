@@ -1,13 +1,21 @@
-.footerContainer{
+.footerMainContainer{
     width: 100%;
     height: auto;
     background-color: #0F3460;
-    padding: 0 30px;
+    padding: 18px 0 50px 0;
     margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerInnerContainer{
+    max-width: 1200px;
+    padding: 0 20px;
 }
 
 .mainText{
-    color: #bcbcbc;
+    color: #d2d2d2;
 }
 
 .downloadButtonsContainer{
@@ -25,7 +33,7 @@
 
 .buttonTextContainer{
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     justify-content: center;
     flex-direction: column;
     margin-left: 10px;
@@ -40,10 +48,6 @@
     font-weight: 800;
     margin-top: -5px;
 }
-
-
-
-
 
 .infoContainer{
     margin-top: 10px;
@@ -60,15 +64,19 @@
 
 .infoTitle{
     font-weight: 600;
-    color: #f3f3f3;
+    color: #f5f5f5;
     margin: 28px 0 10px 0;
 }
 
 .infoSubtitle{
-    color: #bcbcbc;
+    color: #d2d2d2;
     margin-top: 8px;
+    cursor: pointer;
 }
 
+.infoSubtitle:hover{
+    color: #ffffff;
+}
 
 .iconsContainer{
     display: flex;
@@ -80,5 +88,69 @@
 
 .icon{
     margin-right: 12px;
-    
+    cursor: pointer;
+}
+
+
+@media (min-width:480px){
+    .downloadButtonsContainer{
+        flex-direction: column;
+        width: 85%;
+        max-width: 200px;
+    }
+    .downloadButton{
+        margin: 5px 5px;
+    }
+    .responsiveFlex{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .firstSection{
+        width: 48%;
+    }
+    .secondSection{
+        width: 48%;
+        margin-top: 16px;
+    }
+    .sections{
+        width: 48%;
+        margin-top: 16px;
+    }
+    .infoContainer{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+}
+
+@media (min-width:740px){
+    .downloadButtonsContainer{
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+        max-width: none;
+    }
+}
+
+@media (min-width:1200px){
+    .footerInnerContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .firstSection{
+        width: 59%;
+    }
+    .secondSection{
+        width: 38%;
+    }
+    .responsiveFlex{
+        width: 50%;
+    }
+    .infoContainer{
+        width: 50%;
+        margin: 0;
+    }
 }

@@ -1,24 +1,20 @@
 'use client'
 
-import { Box, Divider, Typography, Button } from '@mui/material'
+import { Box, Divider, Typography } from '@mui/material'
 import styles from './Products.module.css'
 import CardSwiper from '../Card-Swiper/CardSwiper'
 import { useState } from 'react'
 
 function Products({data, category}) {
 
-  
   const [selectedBrand, setSelectedBrand] = useState('')
-  // const [active, setActive] = useState('')
-
   const brands = data.brands
   const products = data.products
 
-
   const productCategory = products.filter(({categoryId}) => categoryId === category.id)
-
   const finalProduct = selectedBrand.length > 0 ?  productCategory.filter(({brand}) => brand === selectedBrand) : productCategory;
   
+
   const handleBrand = (name) => {
     setSelectedBrand(name)
   }
@@ -27,12 +23,11 @@ function Products({data, category}) {
     setSelectedBrand('')
   }
   
-
   return (
-    <Box>
+    <Box className={styles.container}>
         <Box
-          bgcolor='background.white'
           className={styles.boxContainer}
+          id={category.name}
         >
           <Typography className={styles.product}>
             {category.name}
@@ -59,7 +54,8 @@ function Products({data, category}) {
             </button>
           </Box>
         </Box>
-        <CardSwiper data={finalProduct}/>
+
+        <CardSwiper data={finalProduct} notCategoryBased={false}/>
 
     </Box>
   )

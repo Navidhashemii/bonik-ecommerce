@@ -16,9 +16,9 @@
             "discount": 0,
             "categoryId": 1,
             "description": {
-                "Model": "NC12008",
-                "Feature": "100% Cotton",
-                "Made in": "Turkey"
+                "model": "NC12008",
+                "feature": "100% Cotton",
+                "made": "Turkey"
             }
         },
         {
@@ -37,9 +37,9 @@
             "discount": 0,
             "categoryId": 1,
             "description": {
-                "Model": "NC12018",
-                "Feature": "100% Cotton",
-                "Made in": "Turkey"
+                "model": "NC12018",
+                "feature": "100% Cotton",
+                "made": "Turkey"
             }
         },
         {
@@ -58,9 +58,9 @@
             "discount": 30,
             "categoryId": 1,
             "description": {
-                "Model": "NC12001",
-                "Feature": "100% Wool",
-                "Made in": "Turkey"
+                "model": "NC12001",
+                "feature": "100% Wool",
+                "made": "Turkey"
             }
         },
         {
@@ -79,15 +79,15 @@
             "discount": 0,
             "categoryId": 1,
             "description": {
-                "Model": "NC12078",
-                "Feature": "100% Cotton",
-                "Made in": "Turkey"
+                "model": "NC12078",
+                "feature": "100% Cotton",
+                "made": "Turkey"
             }
         },
         {
             "id": 5,
             "image1": "/shirts/shirt5-1.png",
-            "image2": "/shirts/shirt5-1.png",
+            "image2": "/shirts/shirt5-2.png",
             "name": "White Shirt",
             "price": 55, 
             "star": 5,
@@ -100,9 +100,9 @@
             "discount": 0,
             "categoryId": 1,
             "description": {
-                "Model": "NC12108",
-                "Feature": "100% Cotton",
-                "Made in": "Turkey"
+                "model": "NC12108",
+                "feature": "100% Cotton",
+                "made": "Turkey"
             }
         },
         {
@@ -121,9 +121,9 @@
             "discount": 25,
             "categoryId": 2,
             "description": {
-                "Model": "NC11108",
-                "Feature": "100% Wool",
-                "Made in": "Turkey"
+                "model": "NC11108",
+                "feature": "100% Wool",
+                "made": "Turkey"
             }
         },
         {
@@ -142,9 +142,9 @@
             "discount": 0,
             "categoryId": 2,
             "description": {
-                "Model": "NC1208",
-                "Feature": "100% Wool",
-                "Made in": "Turkey"
+                "model": "NC1208",
+                "feature": "100% Wool",
+                "made": "Turkey"
             }
         },
         {
@@ -163,9 +163,9 @@
             "discount": 0,
             "categoryId": 2,
             "description": {
-                "Model": "NC12908",
-                "Feature": "100% Wool",
-                "Made in": "Turkey"
+                "model": "NC12908",
+                "feature": "100% Wool",
+                "made": "Turkey"
             }
         },
         {
@@ -181,12 +181,12 @@
             "newArrival": false,
             "seller": "Market Hall",
             "quantity": 0,
-            "discount": 30,
+            "discount": 0,
             "categoryId": 2,
             "description": {
-                "Model": "NC1108",
-                "Feature": "100% Wool",
-                "Made in": "Turkey"
+                "model": "NC1108",
+                "feature": "100% Wool",
+                "made": "Turkey"
             }
         },
         {
@@ -202,12 +202,12 @@
             "newArrival": false,
             "seller": "Market Hall",
             "quantity": 0,
-            "discount": 30,
+            "discount": 0,
             "categoryId": 2,
             "description": {
-                "Model": "NC14108",
-                "Feature": "100% Wool",
-                "Made in": "Turkey"
+                "model": "NC14108",
+                "feature": "100% Wool",
+                "made": "Turkey"
             }
         },
         {
@@ -226,9 +226,9 @@
             "discount": 0,
             "categoryId": 3,
             "description": {
-                "Model": "NC94108",
-                "Feature": "Wool And Cotton",
-                "Made in": "Turkey"
+                "model": "NC94108",
+                "feature": "Wool And Cotton",
+                "made": "Turkey"
             }
         },
         {
@@ -247,9 +247,9 @@
             "discount": 0,
             "categoryId": 3,
             "description": {
-                "Model": "NC95108",
-                "Feature": "Wool And Cotton",
-                "Made in": "Turkey"
+                "model": "NC95108",
+                "feature": "Wool And Cotton",
+                "made": "Turkey"
             }
         },
         {
@@ -268,9 +268,9 @@
             "discount": 50,
             "categoryId": 3,
             "description": {
-                "Model": "NC99108",
-                "Feature": "Wool And Cotton",
-                "Made in": "Turkey"
+                "model": "NC99108",
+                "feature": "Wool And Cotton",
+                "made": "Turkey"
             }
         },
         {
@@ -289,9 +289,9 @@
             "discount": 35,
             "categoryId": 3,
             "description": {
-                "Model": "NC96108",
-                "Feature": "Wool And Cotton",
-                "Made in": "Turkey"
+                "model": "NC96108",
+                "feature": "Wool And Cotton",
+                "made": "Turkey"
             }
         },
         {
@@ -310,9 +310,9 @@
             "discount": 0,
             "categoryId": 3,
             "description": {
-                "Model": "NC98108",
-                "Feature": "Wool And Cotton",
-                "Made in": "Turkey"
+                "model": "NC98108",
+                "feature": "Wool And Cotton",
+                "made": "Turkey"
             }
         },
         {
@@ -331,9 +331,9 @@
             "discount": 15,
             "categoryId": 4,
             "description": {
-                "Model": "NC100",
-                "Feature": "Leather",
-                "Made in": "Turkey"
+                "model": "NC100",
+                "feature": "Leather",
+                "made": "Turkey"
             }
         },
         {
@@ -352,9 +352,9 @@
             "discount": 0,
             "categoryId": 4,
             "description": {
-                "Model": "NC101",
-                "Feature": "Leather",
-                "Made in": "Turkey"
+                "model": "NC101",
+                "feature": "Leather",
+                "made": "Turkey"
             }
         },
         {
@@ -373,9 +373,9 @@
             "discount": 0,
             "categoryId": 4,
             "description": {
-                "Model": "NC102",
-                "Feature": "Leather",
-                "Made in": "Turkey"
+                "model": "NC102",
+                "feature": "Leather",
+                "made": "Turkey"
             }
         },
         {
@@ -394,9 +394,9 @@
             "discount": 40,
             "categoryId": 4,
             "description": {
-                "Model": "NC103",
-                "Feature": "Leather",
-                "Made in": "Turkey"
+                "model": "NC103",
+                "feature": "Leather",
+                "made": "Turkey"
             }
         },
         {
@@ -415,9 +415,9 @@
             "discount": 0,
             "categoryId": 4,
             "description": {
-                "Model": "NC104",
-                "Feature": "Leather",
-                "Made in": "Turkey"
+                "model": "NC104",
+                "feature": "Leather",
+                "made": "Turkey"
             }
         },
         {
@@ -436,9 +436,9 @@
             "discount": 25,
             "categoryId": 5,
             "description": {
-                "Model": "NC2204",
-                "Feature": "Leather",
-                "Made in": "Turkey"
+                "model": "NC2204",
+                "feature": "Leather",
+                "made": "Turkey"
             }
         },
         {
@@ -457,16 +457,16 @@
             "discount": 0,
             "categoryId": 5,
             "description": {
-                "Model": "NC2204",
-                "Feature": "Leather And Wool",
-                "Made in": "Turkey"
+                "model": "NC2204",
+                "feature": "Leather And Wool",
+                "made": "Turkey"
             }
         },
         {
             "id": 23,
             "image1": "/accessories/acc3-1.png",
             "image2": "/accessories/acc3-2.png",
-            "name": "Dark Blue Leather-Wool Belt",
+            "name": "Blue Leather-Wool Belt",
             "price": 50, 
             "star": 3,
             "rate": 26,
@@ -478,16 +478,16 @@
             "discount": 0,
             "categoryId": 5,
             "description": {
-                "Model": "NC2284",
-                "Feature": "Leather And Wool",
-                "Made in": "Turkey"
+                "model": "NC2284",
+                "feature": "Leather And Wool",
+                "made": "Turkey"
             }
         },
         {
             "id": 24,
             "image1": "/accessories/acc4-1.png",
             "image2": "/accessories/acc4-2.png",
-            "name": "Dark Green Leather-Wool Belt",
+            "name": "Green Leather-Wool Belt",
             "price": 50, 
             "star": 1,
             "rate": 4,
@@ -499,9 +499,9 @@
             "discount": 0,
             "categoryId": 5,
             "description": {
-                "Model": "NC2404",
-                "Feature": "Leather And Wool",
-                "Made in": "Turkey"
+                "model": "NC2404",
+                "feature": "Leather And Wool",
+                "made": "Turkey"
             }
         },
         {
@@ -520,9 +520,9 @@
             "discount": 0,
             "categoryId": 5,
             "description": {
-                "Model": "NC2704",
-                "Feature": "Leather And Wool",
-                "Made in": "Turkey"
+                "model": "NC2704",
+                "feature": "Leather And Wool",
+                "made": "Turkey"
             }
         },
         {
@@ -538,12 +538,12 @@
             "newArrival": false,
             "seller": "Market Hall",
             "quantity": 0,
-            "discount": 0,
+            "discount": 10,
             "categoryId": 6,
             "description": {
-                "Model": "NC304",
-                "Feature": "Wool And Cotton",
-                "Made in": "Turkey"
+                "model": "NC304",
+                "feature": "Wool And Cotton",
+                "made": "Turkey"
             }
         },
         {
@@ -562,9 +562,9 @@
             "discount": 0,
             "categoryId": 6,
             "description": {
-                "Model": "NC305",
-                "Feature": "Wool And Cotton",
-                "Made in": "Turkey"
+                "model": "NC305",
+                "feature": "Wool And Cotton",
+                "made": "Turkey"
             }
         },
         {
@@ -583,9 +583,9 @@
             "discount": 0,
             "categoryId": 6,
             "description": {
-                "Model": "NC309",
-                "Feature": "Wool And Cotton",
-                "Made in": "Turkey"
+                "model": "NC309",
+                "feature": "Wool And Cotton",
+                "made": "Turkey"
             }
         },
         {
@@ -601,12 +601,12 @@
             "newArrival": false,
             "seller": "Market Hall",
             "quantity": 0,
-            "discount": 0,
+            "discount": 35,
             "categoryId": 6,
             "description": {
-                "Model": "NC308",
-                "Feature": "Wool And Cotton",
-                "Made in": "Turkey"
+                "model": "NC308",
+                "feature": "Wool And Cotton",
+                "made": "Turkey"
             }
         },
         {
@@ -625,9 +625,9 @@
             "discount": 0,
             "categoryId": 6,
             "description": {
-                "Model": "NC300",
-                "Feature": "Wool And Cotton",
-                "Made in": "Turkey"
+                "model": "NC300",
+                "feature": "Wool And Cotton",
+                "made": "Turkey"
             }
         }
     ],
@@ -675,7 +675,7 @@
         {
             "id": 1,
             "name": "David West",
-            "image": "",
+            "image": "/comments/cm1.png",
             "star": 4,
             "date": "1 day ago",
             "context": "The price was really reasonable with this high quality material."
@@ -683,7 +683,7 @@
         {
             "id": 2,
             "name": "Mike Kenan",
-            "image": "",
+            "image": "/comments/cm2.png",
             "star": 5,
             "date": "6 days ago",
             "context": "I love this!!!"
@@ -691,7 +691,7 @@
         {
             "id": 3,
             "name": "Ashley Tulio",
-            "image": "",
+            "image": "/comments/cm3.png",
             "star": 1,
             "date": "2 weeks ago",
             "context": "Very bad quality"

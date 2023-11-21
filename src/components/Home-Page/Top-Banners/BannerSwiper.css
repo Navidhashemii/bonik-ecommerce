@@ -3,11 +3,9 @@
     height: 10px;
     text-align: center;
     line-height: 20px;
-
     background-color:transparent;
     outline: 1px solid #E94560;
     outline-offset: 4px;
-
   }
 
   .swiper-pagination-bullet-active {

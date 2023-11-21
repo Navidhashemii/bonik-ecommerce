@@ -17,13 +17,24 @@ function ComingSoonBanner({banner}) {
             sizes='(max-width: 768px) 100vh, 700px'
         />
         <Box className={styles.textContainer}>
-            <Typography variant='h6' className={`${styles.title1} ${whiteText}`}>
+            <Typography
+                variant='h6' 
+                className={`${styles.title1} ${whiteText}`}
+            >
                 Coming Soon
             </Typography>
-            <Typography variant='h6' className={`${styles.title2} ${whiteText}`}>
+
+            <Typography 
+                variant='h6' 
+                className={`${styles.title2} ${whiteText}`}
+            >
                 {text1}
             </Typography>
-            <Typography variant='subtitle1' className={`${styles.title3} ${whiteText}`}>
+
+            <Typography 
+                variant='subtitle1' 
+                className={`${styles.title3} ${whiteText}`}
+            >
                 {text2}
             </Typography>
         </Box>

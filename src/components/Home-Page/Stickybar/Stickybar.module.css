@@ -11,10 +11,7 @@
     z-index: 8;
     box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.082);
     padding: 5px;
-
 }
-
-
 
 .barButton{
     display: flex;
@@ -26,4 +23,10 @@
 .icon{
     color: #414141;
     font-size: 28px;
+}
+
+@media (min-width:900px){
+   .container{
+    display: none;
+   }
 }

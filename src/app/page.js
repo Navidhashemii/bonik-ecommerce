@@ -25,7 +25,13 @@ export default async function Home() {
 
   
   return (
-    <Container sx={{marginTop:"15px"}} >
+    <Container
+      sx={{
+        marginTop:"15px",
+        '@media screen and (min-width:900px)': {maxWidth: '1140px'},
+        '@media screen and (min-width:1200px)': {maxWidth: '1260px'}
+      }}
+    >
 
       <TopBanners/>
       <BenefitPart/>

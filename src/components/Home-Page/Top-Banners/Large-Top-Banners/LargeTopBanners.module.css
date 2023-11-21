@@ -2,8 +2,8 @@
     position:relative;
     width:100%;
     max-width:100%;
-    height:500px;
-    z-index:-1; 
+    height:520px;
+    z-index:1; 
     aspect-ratio:70/45;
 }
 
@@ -80,4 +80,16 @@
     margin-top: 40px;
     color: #E94560;
     font-weight: 600;
+}
+
+@media (min-width: 1200px){
+    .boxContainer{
+        height: 540px;
+    }
+}
+
+@media (min-width: 830px){
+    .textContainer{
+        align-items:flex-start;
+    }
 }

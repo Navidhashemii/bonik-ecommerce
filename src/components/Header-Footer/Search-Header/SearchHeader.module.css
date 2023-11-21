@@ -1,16 +1,27 @@
 .containerBox{
     width: 100%;
-    height: 60px;       
+    height: auto;       
     display: flex;
     justify-content:center;
     align-items:center;
     flex-direction: column;
-    z-index: 10;
+    z-index: 9;
+    padding: 12px 0;
+    
+}
+
+.innerContainer{
+    width: 100%;
+    max-width: 1240px;
+    padding: 0 16px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .layoutShift{
     width: 100%;
-    height: 60px;
+    height: 65px;
     display: none;
 }
 
@@ -19,11 +30,321 @@
 }
 
 .SearchInput{
-    width: 90%;    
+    width: 100%;
+    max-width: 670px;    
+}
+
+.searchIcon{
+    color: #848484;
+}
+
+.leftPart{
+    display: none;
+    position: relative;
+}
+
+.rightPart{
+    display: none;
+}
+
+.btnIcon1{
+    background-color: #f3f3f3;
+}
+
+.btnIcon2{
+    background-color: #f3f3f3;
+}
+
+.icons{
+    color: #0000009e;
+}
+
+.categoryContainerPart{
+    width: 100%;
+    height: 50px;
+    display: none;
+}
+
+.categoryInnerContainerPart{
+    width: 100%;
+    max-width: 1240px;
+    padding: 0 16px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+
+.arrowIcon{
+    margin-left: 120px;
+    width: 14px;
+    height: 14px;
+    transition: 200ms;
+}
+
+.arrowIconDown{
+    margin-left: 120px;
+    width: 14px;
+    height: 14px;
+    rotate: 90deg;
+    transition: 200ms;
+}
+
+.categoryBtnMenu{
+    box-shadow: none;
+    margin-bottom: 10px;
+    padding: 8px 30px 8px 20px;
+    background-color: #F6F9FC;
+    color: #575757;
+    font-weight: 600;
+}
+
+.categoryBtnMenu:hover{
+    background-color: #F6F9FC;
+    box-shadow: 0 0 5px #bebebe;
+}
+
+.menuDropDown{
+    width: 260px;
+    height: auto;
+    background-color: #ffffff;
+    z-index:8;
+    position: absolute;
+    top: 55px;
+    border-radius: 6px;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 10px #909090;
+}
+
+.menuBtns{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 16px;
+    color: #575757;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.menuBtns:hover{
+    background-color: #f9f9f9;
+}
+
+.categoryBtnIcon{
+    width: 30px;
+    height: 30px;
+    color: #848484;
+    margin-bottom: 10px;
 }
 
 .fixed{
     position: fixed;
     top: 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
 }
 
+.drawerMainContainer{
+    width: 100vw;
+    height: 100vh;
+    background-color: #0000008d;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: flex-end;   
+}
+
+
+.drawerContent{
+    width: 500px;
+    height: 100vh;
+    background-color: #fffbfb;
+    position: relative;
+}
+
+.drawerCartCountBox{
+    width: 100%;
+    border-bottom: 1px solid #d9d9d9;
+    padding: 28px;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0 3px 10px #4444442f;
+}
+
+.drawerCartIcon{
+    width: 36px;
+    height: 36px;
+    color: #6c6c6c;
+}
+
+.drawerCartCountText{
+    color: #535353;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.drawerCardsContainer{
+    height: auto;
+    max-height: 570px;
+    overflow: auto;
+}
+
+.drawerCard{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 8px 20px;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.drawerBtns{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+}
+
+.drawerCardIcon{
+    color: #E94560;
+}
+
+.drawerImgBox{
+    width: 120px;
+    margin-left: 40px;
+}
+
+.drawerCardDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.drawerCardDetailsName{
+    font-weight: 600;
+}
+
+.drawerCardDetailsPrice{
+    color: #7a7a7a;
+}
+
+.drawerCardDetailsFinalPrice{
+    color: #E94560;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+.bottomPart{
+    padding: 28px 24px 10px 24px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 -3px 10px #44444424;
+}
+
+.bottomPartClearBox{
+    background-color: #ededed;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.clearIcon{
+    width: 20px;
+    height: 20px;
+}
+
+.clearText{
+    font-size: 12px;
+}
+
+.bottomPartCartBtns{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    position: absolute;
+    bottom: 14px;
+    left: 24px;
+}
+
+.bottomPartBtn1{
+    background-color: #F6F9FC;
+    color: #E94560;
+    border: 1px solid #E94560;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 6px 36px;
+}
+
+.bottomPartBtn2{
+    background-color: #E94560;
+    color: #F6F9FC;
+    border: 1px solid #E94560;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 6px 36px;
+    margin-top: 10px;
+}
+
+.bottomPartBtn2:hover{
+    background-color: #bd354b;
+    color: #F6F9FC;
+}
+
+
+@media (min-width:900px){
+    .SearchInput{
+        max-width: 630px;
+    }
+    .innerContainer{
+        justify-content: space-between;
+        margin-top: 6px;
+    }
+    .leftPart{
+        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .rightPart{
+        display: block;
+    }
+    .categoryContainerPart{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .btnIcon2{
+        margin-left: 4px;
+    }
+    .layoutShift{
+        height: 85px;
+    }
+  }
+
+  @media (min-width:1000px){
+    .SearchInput{
+        max-width: 680px;
+    }
+    .btnIcon2{
+        margin-left: 24px;
+    }
+  }
+
+  @media (min-width:1200px){
+    .SearchInput{
+        max-width: 800px;
+    }
+    .btnIcon2{
+        margin-left: 32px;
+    }
+  }

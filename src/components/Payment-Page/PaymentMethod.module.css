@@ -1,0 +1,179 @@
+.boxContainer{
+    margin-top: 30px;
+}
+
+.methodContainer{
+    background-color: #ffffff;
+    width: 100%;
+    padding: 12px 8px ;
+    margin-bottom: 1px;
+}
+
+.radioBox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.paymentName{
+    font-weight: 600;
+    color: #434343;
+}
+
+.text{
+    margin: 20px 0 8px 0;
+    color: #3c3c3c;
+}
+
+.field{
+    width: 100%;
+}
+
+.paypalField{
+    width: 100%;
+    max-width: 745px;
+}
+
+.backBtn{
+    width: 100%;
+    border: 1px solid #E94560;
+    color: #E94560;
+    margin-top: 28px;
+    font-weight: 600;
+}
+
+
+.backBtn:hover{
+    color: #ffffff;
+    background-color: #E94560;
+}
+
+.payBtn{
+    width: 100%;
+    color: #ffffff;
+    background-color: #E94560;
+    border: 1px solid #E94560;
+    margin-top: 16px;
+    font-weight: 600;
+    box-shadow: none;
+}
+
+.payBtn:hover {
+    box-shadow: none;
+    background-color: #ae2d43;
+}
+
+.payBtn:active{
+    color: transparent;
+    background-color: transparent;
+}
+
+.doneBox{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: #1b1b1ba4;
+    padding: 30px 15px;
+    z-index: 9;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal{
+    background-color: #ffffff;
+    border-radius: 16px;
+    z-index: 10;
+    width: 80%;
+    max-width: 800px;
+    height: 24%;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.textBox{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.doneTitle{
+    font-weight: 600;
+}
+
+.doneText{
+    margin-top: 12px;
+}
+
+.doneBtn{
+    color: #ffffff;
+    background-color: #E94560;
+    margin-top: 16px;
+    font-weight: 600;
+    box-shadow: none;
+    padding: 6px 42px;
+}
+
+.doneBtn:hover {
+    color: #ffffff;
+    background-color: #b73147;
+    box-shadow: none;
+}
+
+@media (min-width:700px){
+   .methodDetailsContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   }
+   .column{
+    width: 49%;
+   }
+   .btnsContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   }
+   .backBtn{
+    width: 100%;
+   }
+   .payBtn{
+    width: 49%;
+    margin-top: 28px;
+   }
+   .modal{
+    height: 34%;
+    padding: 32px;
+   }
+   .doneTitle{
+    font-size: 42px;
+   }
+   .doneText{
+    font-size: 24px;
+   }
+   .doneBtn{
+    font-size: 18px;
+    padding: 8px 64px;
+   }
+}
+
+@media (min-width:1200px){
+    .mainPageContainer{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .mainAddressContainer{
+        width: 72%;
+    }
+    .boxContainer{
+        margin-top: 20px;
+    }
+}
