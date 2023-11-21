@@ -1,9 +1,10 @@
 import { Box, Container } from '@mui/material'
-import CartStepper from '@/src/components/Cart-Page/Cart-Stepper/CartStepper'
-import CartTotalPayment from '@/src/components/Cart-Page/Cart-Total-Payment/CartTotalPayment'
-import ShippingAddreess from '@/src/components/Cart-Page/Address/ShippingAddreess'
-import BillingAddress from '@/src/components/Cart-Page/Address/BillingAddress'
-import styles from '../../../components/Cart-Page/Address/Address.module.css' 
+import styles from '../../../components/Details-Page/Address.module.css' 
+import CartStepper from '@/src/components/Global/Cart-Stepper/CartStepper'
+import CartTotalPayment from '@/src/components/Global/Cart-Total-Payment/CartTotalPayment'
+import ShippingAddress from '@/src/components/Details-page/ShippingAddress'
+import BillingAddress from '@/src/components/Details-page/BillingAddress'
+
 
 
 export default function Details() {
@@ -17,12 +18,13 @@ export default function Details() {
     >
         <CartStepper steps={'details'} />
         <Box className={styles.mainPageContainer}>
-          <CartTotalPayment/>
-          <Box className={styles.mainAddressContainer}>
-            <ShippingAddreess/>
-            <BillingAddress/>
-          </Box>
+            <CartTotalPayment/>
+            <Box className={styles.mainAddressContainer}>
+                <ShippingAddress/>
+                <BillingAddress/>
+            </Box>
         </Box>
+
     </Container>
   )
 }

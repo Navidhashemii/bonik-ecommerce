@@ -2,7 +2,7 @@ import { Box, Typography } from '@mui/material'
 import styles from './Address.module.css'
 import Details from './Details'
 
-function ShippingAddreess() {
+function ShippingAddress() {
 
   return (
     <Box className={styles.boxContainer}>
@@ -14,4 +14,4 @@ function ShippingAddreess() {
   )
 }
 
-export default ShippingAddreess
+export default ShippingAddress

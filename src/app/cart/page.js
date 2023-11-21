@@ -1,8 +1,8 @@
 import { Box, Container } from "@mui/material";
 import CartProductCard from "../../components/Cart-Page/Cart-Product-Card/CartProductCard"
-import CartStepper from "@/src/components/Cart-Page/Cart-Stepper/CartStepper";
 import CartProductDetails from "@/src/components/Cart-Page/Cart-Product-Details/CartProductDetails";
 import styles from '../../components/Cart-Page/Cart-Product-Details/CartProductDetails.module.css'
+import CartStepper from "@/src/components/Global/Cart-Stepper/CartStepper";
 
 
 export default function Cart() {
@@ -15,7 +15,7 @@ export default function Cart() {
         '@media screen and (min-width:1200px)': {maxWidth: '1260px'}
       }}
     >
-        <CartStepper />
+        <CartStepper/>
         <Box className={styles.mainPageContainer}>
           <CartProductCard/>
           <CartProductDetails/>
