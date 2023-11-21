@@ -10,11 +10,12 @@ function SuggestedProducts({data}) {
 
     const products = data.products
     const [active, setActive] = useState('arrival')
+
     const handleClick = (name) => {
         setActive(name)
     }
 
-    let finalData = products.filter(({newArrival}) => newArrival)
+    let finalData = products.filter(({newArrival}) => newArrival);
     
     if (active === 'feedback') {
         finalData = products
@@ -41,7 +42,10 @@ function SuggestedProducts({data}) {
                 >
                     Suggested Products
                 </Typography>
-                <Typography variant="subtitle1" className={styles.subTitle}>
+                <Typography
+                    variant="subtitle1" 
+                    className={styles.subTitle}
+                >
                     All our new arrivals in a exclusive brand selection
                 </Typography>
             </Box>

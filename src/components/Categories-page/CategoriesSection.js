@@ -32,11 +32,20 @@ function CategoriesSection({data}) {
   return (
     <Box className={styles.boxContainer}>
       <Box className={styles.categoriesContainer}>
-        <Button onClick={() => handleActive(0)} variant="outlined" startIcon={<AppsIcon /> } className={`${styles.categoryBtn} ${active === 0 ? styles.active : ''} `}>
+        <Button 
+          onClick={() => handleActive(0)} 
+          variant="outlined" 
+          startIcon={<AppsIcon /> } 
+          className={`${styles.categoryBtn} ${active === 0 ? styles.active : ''} `}
+        >
           See All
         </Button>
         {categories.map(({id, name}) => (  
-            <Button key={id} onClick={() => handleActive(id)} className={`${styles.categoryBtn} ${active === id ? styles.active : ''}`}>
+            <Button 
+              key={id} 
+              onClick={() => handleActive(id)} 
+              className={`${styles.categoryBtn} ${active === id ? styles.active : ''}`}
+            >
                 {name}    
             </Button>
         ))}
@@ -46,7 +55,10 @@ function CategoriesSection({data}) {
 
         {active === 0 ?
         products.map(({id, name, image1}) => (
-          <Link key={id} href={`/products/${id}`}>
+          <Link 
+            key={id} 
+            href={`/products/${id}`}
+          >
             <Button className={styles.productItem}>
               <Image
                 src={image1}
@@ -67,7 +79,10 @@ function CategoriesSection({data}) {
         
         :
         categoryProducts.map(({id, name, image1}) => (
-          <Link key={id} href={`/products/${id}`}>
+          <Link 
+            key={id} 
+            href={`/products/${id}`}
+          >
             <Button className={styles.productItem}>
               <Image
                 src={image1}
@@ -84,9 +99,7 @@ function CategoriesSection({data}) {
             </Button>
           </Link>
         ))
-        
       }
-
       </Box>
     </Box>
   )

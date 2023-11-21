@@ -1,15 +1,19 @@
-import { Box, Button, Divider, FormControlLabel, Radio, RadioGroup, TextField, Typography } from '@mui/material'
+import { Box, Button, Divider, Radio, TextField, Typography } from '@mui/material'
 import styles from './PaymentMethod.module.css'
 import { useState } from 'react'
 import LoadingButton from '@mui/lab/LoadingButton'
 import PaymentDone from './PaymentDone'
 import Link from 'next/link'
+import { useDispatch } from 'react-redux';
+import { clearCart } from '../../redux/cartSlice';
 
 function PaymentMethods() {
 
     const [value, setValue] = useState('credit')
     const [loading, setLoading] = useState(false);
     const [showModal, setShowModal] = useState(false)
+
+    const dispatch = useDispatch();
 
     const handleChange = (e) => {
         setValue(e.target.value)
@@ -23,8 +27,8 @@ function PaymentMethods() {
         inputProps: { 'aria-label': item },
       });
 
-
       function handleClick() {
+        dispatch(clearCart());
         setLoading(true);
         setTimeout(() => {
             setLoading(false)
@@ -33,13 +37,18 @@ function PaymentMethods() {
       }
 
 
-
   return (
     <Box className={styles.boxContainer}>
         <Box className={styles.methodContainer}>
             <Box className={styles.radioBox}>
-                <Radio {...controlProps('credit')} color="secondary" />
-                <Typography variant='h6' className={styles.paymentName}>
+                <Radio
+                    {...controlProps('credit')}
+                    color="secondary" 
+                />
+                <Typography
+                    variant='h6'
+                    className={styles.paymentName}
+                >
                     Pay with credit card
                 </Typography>
             </Box>
@@ -104,8 +113,14 @@ function PaymentMethods() {
 
         <Box className={styles.methodContainer}>
             <Box className={styles.radioBox}>
-                <Radio {...controlProps('paypal')} color="secondary" />
-                <Typography variant='h6' className={styles.paymentName}>
+                <Radio
+                    {...controlProps('paypal')}
+                    color="secondary" 
+                />
+                <Typography
+                    variant='h6'
+                    className={styles.paymentName}
+                >
                     Pay with Paypal
                 </Typography>
             </Box>
@@ -132,8 +147,14 @@ function PaymentMethods() {
 
         <Box className={styles.methodContainer}>
             <Box className={styles.radioBox}>
-                <Radio {...controlProps('cash')} color="secondary" />
-                <Typography variant='h6' className={styles.paymentName}>
+                <Radio
+                    {...controlProps('cash')}
+                    color="secondary"
+                />
+                <Typography
+                    variant='h6' 
+                    className={styles.paymentName}
+                >
                     Cash on Delivery
                 </Typography>
             </Box>
@@ -155,8 +176,8 @@ function PaymentMethods() {
             Submit
             </LoadingButton>
         </Box>
-        {showModal ? 
-        
+        {showModal 
+        ? 
         <PaymentDone/>
         :
         null

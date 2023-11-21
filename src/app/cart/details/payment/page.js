@@ -1,6 +1,5 @@
 'use client'
 import { Container } from '@mui/system'
-import React from 'react'
 import styles from '../../../../components/Payment-Page/PaymentMethod.module.css'
 import { Box } from '@mui/material'
 import CartStepper from '@/src/components/Global/Cart-Stepper/CartStepper'

@@ -5,7 +5,6 @@
     aspect-ratio: 10/1; 
     overflow: hidden;
     margin-top: 50px;
-    
 }
 
 .image{
@@ -14,9 +13,7 @@
 }
 
 .dataContainer{
-    
     width: 90%;
-
 }
 
 .textContainer{
@@ -97,13 +94,9 @@
         aspect-ratio: 10/1; 
         overflow: hidden;
         margin-top: 50px;
-        
     }
-    
     .image{
         object-position: center;
         object-fit: fill;
     }
-
-    
 }

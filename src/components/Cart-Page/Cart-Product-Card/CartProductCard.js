@@ -53,7 +53,10 @@ function CartProductCard() {
                 </Box>
                 <Box className={styles.bottomPart}>
                     <Box sx={{height:"10%"}}>
-                        <Typography variant='h6' className={styles.cardName}>
+                        <Typography 
+                            variant='h6' 
+                            className={styles.cardName}
+                        >
                         {name}
                         </Typography>
                     </Box>
@@ -93,14 +96,16 @@ function CartProductCard() {
 
                             }
 
-                            <Typography variant="h6" sx={{color:"black"}}>
+                            <Typography 
+                                variant="h6" 
+                                sx={{color:"black"}}
+                            >
                                 {getProductQuantity(id)}
                             </Typography>
 
                             <IconButton onClick={() => handleAddToCart(id, name, price, image1, discount)}>
                                 <AddIcon className={styles.quantityIcons}/>
                             </IconButton>
-
                         </Box> 
                     </Box>
                 </Box>
@@ -108,21 +113,22 @@ function CartProductCard() {
         ))}
 
         {cart.length > 0
-        
         ? 
-
-        <IconButton onClick={handleClearCart} className={styles.clearBtn}>
+        <IconButton 
+            onClick={handleClearCart} 
+            className={styles.clearBtn}
+        >
             <Typography className={styles.clearText}>
                 Clear Cart
             </Typography>
             <DeleteIcon className={styles.clearIcon}/>
         </IconButton>
-
         :
-
-        
         <Box className={styles.emptyCart}>
-            <Typography variant='h2' className={styles.emptyCartText}>
+            <Typography 
+                variant='h2' 
+                className={styles.emptyCartText}
+            >
                 Your cart is empty!
             </Typography>
         </Box>

@@ -1,5 +1,4 @@
 'use client'
-
 import { Box, Typography, Button } from '@mui/material'
 import Image from 'next/image'
 import styles from './LargeTopBanners.module.css'
@@ -9,7 +8,6 @@ function LargeTopBanners({generic, img, available}) {
   
   return (
     <Box className={styles.boxContainer}>
-
         <Image
           src={img}
           fill
@@ -20,7 +18,6 @@ function LargeTopBanners({generic, img, available}) {
         />
 
         <Box className={styles.textContainer}>
-
           <Typography
             variant='h2'
             className={styles.title1}
@@ -36,7 +33,6 @@ function LargeTopBanners({generic, img, available}) {
           </Typography>
 
           <Box className={styles.subtitleContainer}>
-
             <Typography
               variant='h2'
               className={styles.subtitle1}
@@ -50,7 +46,6 @@ function LargeTopBanners({generic, img, available}) {
             >
               50% OFF
             </Typography>
-
           </Box>
 
           <Typography
@@ -61,7 +56,6 @@ function LargeTopBanners({generic, img, available}) {
           </Typography>
 
             {available
-
             ? 
               <Link href='./categories'>
                 <Button 
@@ -72,18 +66,14 @@ function LargeTopBanners({generic, img, available}) {
                   Shop Now
                 </Button>
               </Link>
-
             :
-
               <Typography
                 variant='h2'
                 className={styles.comingSoon}
               >
                 Coming Soon
               </Typography>
-
             }
-
         </Box>
     </Box>
   )

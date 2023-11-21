@@ -21,8 +21,6 @@
     .allBannersContainer{
         flex-direction: row;
         justify-content: space-between;
-     
-
     }
     .smallBannersContainer{
         flex-direction: column;

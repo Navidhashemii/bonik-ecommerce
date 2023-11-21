@@ -7,17 +7,14 @@ import { useState } from 'react'
 
 function Products({data, category}) {
 
-  
   const [selectedBrand, setSelectedBrand] = useState('')
-
   const brands = data.brands
   const products = data.products
 
-
   const productCategory = products.filter(({categoryId}) => categoryId === category.id)
-
   const finalProduct = selectedBrand.length > 0 ?  productCategory.filter(({brand}) => brand === selectedBrand) : productCategory;
   
+
   const handleBrand = (name) => {
     setSelectedBrand(name)
   }
@@ -26,7 +23,6 @@ function Products({data, category}) {
     setSelectedBrand('')
   }
   
-
   return (
     <Box className={styles.container}>
         <Box

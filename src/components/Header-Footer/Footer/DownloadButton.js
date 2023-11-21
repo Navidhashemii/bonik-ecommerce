@@ -17,7 +17,11 @@ function DownloadButton({data}) {
             <Typography className={styles.firstButtonText}>
                 {text1}
             </Typography>
-            <Typography variant='subtitle1' className={styles.secondButtonText}>
+            
+            <Typography
+                variant='subtitle1'
+                className={styles.secondButtonText}
+            >
                 {text2}
             </Typography>
         </Box>

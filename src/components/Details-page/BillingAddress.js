@@ -1,6 +1,6 @@
 'use client'
 import { Box, Checkbox, Typography, Button } from '@mui/material'
-import styles from './Address.module.css'
+import styles from './Details.module.css'
 import { useState } from 'react';
 import Details from './Details';
 import Link from 'next/link';
@@ -15,7 +15,10 @@ function BillingAddress() {
   return (
     <>
     <Box className={styles.boxContainer}>
-        <Typography variant='subtitle2' className={styles.title}>
+        <Typography 
+            variant='subtitle2' 
+            className={styles.title}
+        >
             Billing Address
         </Typography>
         
@@ -37,12 +40,18 @@ function BillingAddress() {
         }
     </Box>
     <Box className={styles.paymentContainer}>
-        <Link href='/cart' style={{width:"100%"}}>
+        <Link 
+            href='/cart' 
+            style={{width:"100%"}}
+        >
             <Button className={styles.backBtn}>
                 Back to Cart
             </Button>
         </Link>
-        <Link href='/cart/details/payment' style={{width:'100%'}}>
+        <Link 
+            href='/cart/details/payment' 
+            style={{width:'100%'}}
+        >
             <Button className={styles.nextBtn}>
                 Proceed to Payment
             </Button>

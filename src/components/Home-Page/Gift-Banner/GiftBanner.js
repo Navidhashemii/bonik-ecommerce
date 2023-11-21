@@ -16,9 +16,13 @@ function GiftBanner() {
         />
         <Box className={styles.dataContainer}>
             <Box className={styles.textContainer}>
-                <Typography variant="h2" className={styles.text1}>
-                    GIFT <span className={styles.red}>50% OFF</span> PERFECT STYLES
+                <Typography
+                    variant="h2"
+                    className={styles.text1}
+                >
+                    GIFT <span className={styles.red}> 50% OFF </span> PERFECT STYLES
                 </Typography>
+
                 <Typography className={styles.text2}>
                     Only until the end of this week
                 </Typography>
@@ -27,7 +31,6 @@ function GiftBanner() {
                 Discover Now
             </Button>
         </Box>
-
     </Box>
   )
 }

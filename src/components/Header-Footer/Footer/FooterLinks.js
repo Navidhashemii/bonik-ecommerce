@@ -8,22 +8,40 @@ function FooterLinks({section}) {
 
   return (
     <Box className={styles.LinksContainer}>
-        <Typography variant='h5' className={styles.infoTitle}>
+        <Typography 
+            variant='h5' 
+            className={styles.infoTitle}
+        >
             {title}
         </Typography>
-        <Link underline='none' className={styles.infoSubtitle}>
+        <Link 
+            underline='none' 
+            className={styles.infoSubtitle}
+        >
             {link1}
         </Link>
-        <Link underline='none' className={styles.infoSubtitle}>
+        <Link 
+            underline='none' 
+            className={styles.infoSubtitle}
+        >
             {link2}
         </Link>
-        <Link underline='none' className={styles.infoSubtitle}>
+        <Link 
+            underline='none' 
+            className={styles.infoSubtitle}
+        >
             {link3}
         </Link>
-        <Link underline='none' className={styles.infoSubtitle}>
+        <Link 
+            underline='none' 
+            className={styles.infoSubtitle}
+        >
             {link4}
         </Link>
-        <Link underline='none' className={styles.infoSubtitle}>
+        <Link 
+            underline='none' 
+            className={styles.infoSubtitle}
+        >
             {link5}
         </Link>
     </Box>

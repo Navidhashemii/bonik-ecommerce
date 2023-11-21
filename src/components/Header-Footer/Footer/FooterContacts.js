@@ -7,30 +7,40 @@ import gmail from '../../../assets/images/gmail.png'
 import linkedin from '../../../assets/images/linkedin.png'
 import twitter from '../../../assets/images/twitter.png'
 
+
+
+const images = [
+    {id: 1, img: facebook},
+    {id: 2, img: gmail},
+    {id: 3, img: linkedin},
+    {id: 4, img: twitter},
+]
+
+
 function FooterContacts() {
-    const images = [
-        {id: 1, img: facebook},
-        {id: 2, img: gmail},
-        {id: 3, img: linkedin},
-        {id: 4, img: twitter},
-    ]
   return (
     <Box>
-        <Typography variant='h5' className={styles.infoTitle}>
+        <Typography
+            variant='h5' 
+            className={styles.infoTitle}
+        >
             Contact Us
         </Typography>
         <Typography className={styles.infoSubtitle}>
-            70 Washington Square South, New York, NY 10012, United States
+            Isfahan, Iran
         </Typography>
         <Typography className={styles.infoSubtitle}>
-            Email: uilib.help@gmail.com
+            Email: Nhashemi007@yahoo.com
         </Typography>
         <Typography className={styles.infoSubtitle}>
-            Phone: +1 1123 456 780
+            Phone: +98 913 440 2027
         </Typography>
         <Box className={styles.iconsContainer}>
             {images.map(({id, img}) => (
-                <Box key={id} className={styles.icon}>
+                <Box 
+                    key={id} 
+                    className={styles.icon}
+                >
                     <Image
                         src={img}
                         alt='contact'
@@ -40,8 +50,6 @@ function FooterContacts() {
                 </Box>
             ))}
         </Box>
-        
-        
     </Box>
   )
 }

@@ -1,6 +1,6 @@
-import Image from "next/image";
 import { Box, Button, Typography } from "@mui/material"
 import styles from './SmallTopBanner.module.css'
+import Image from "next/image";
 import Link from "next/link";
 
 function SmallTopBanner({image, newArrival, href}) {
@@ -15,11 +15,8 @@ function SmallTopBanner({image, newArrival, href}) {
             />
 
             <Box className={styles.textContainer}>
-
                 {newArrival
-
                 ?
-
                 <>
                     <Typography
                         variant='subtitle1'
@@ -27,6 +24,7 @@ function SmallTopBanner({image, newArrival, href}) {
                     >
                         NEW ARRIVALS
                     </Typography>
+
                     <Typography
                         variant='h6'
                         className={styles.text2}
@@ -46,6 +44,7 @@ function SmallTopBanner({image, newArrival, href}) {
                     >
                         HIGH QUIALITY
                     </Typography>
+
                     <Typography 
                         variant='h6'
                         className={styles.text2}
@@ -54,7 +53,6 @@ function SmallTopBanner({image, newArrival, href}) {
                         <br/>
                         PRICE HATS
                     </Typography>
-                
                 </>
                     
                 }
@@ -67,9 +65,7 @@ function SmallTopBanner({image, newArrival, href}) {
                         Shop Now
                     </Button>
                 </Link>
-
             </Box>
-
         </Box>
   )
 }

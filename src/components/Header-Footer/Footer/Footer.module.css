@@ -49,10 +49,6 @@
     margin-top: -5px;
 }
 
-
-
-
-
 .infoContainer{
     margin-top: 10px;
     display: flex;
@@ -81,7 +77,6 @@
 .infoSubtitle:hover{
     color: #ffffff;
 }
-
 
 .iconsContainer{
     display: flex;

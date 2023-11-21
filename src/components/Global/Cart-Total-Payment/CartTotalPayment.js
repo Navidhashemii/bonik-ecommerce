@@ -19,7 +19,10 @@ function CartTotalPayment() {
             <Typography className={styles.text}>
                 Subtotal:
             </Typography>
-            <Typography variant='h6' className={styles.price}>
+            <Typography 
+                variant='h6' 
+                className={styles.price}
+            >
                 ${totalFinalPrices.toFixed(2)}
             </Typography>
         </Box>
@@ -27,7 +30,10 @@ function CartTotalPayment() {
             <Typography className={styles.text}>
                 Shipping:
             </Typography>
-            <Typography variant='h6' className={styles.price}>
+            <Typography
+                variant='h6' 
+                className={styles.price}
+            >
                 $14.00
             </Typography>
         </Box>
@@ -35,7 +41,10 @@ function CartTotalPayment() {
             <Typography className={styles.text}>
                 Tax:
             </Typography>
-            <Typography variant='h6' className={styles.price}>
+            <Typography 
+                variant='h6' 
+                className={styles.price}
+            >
                 $8.00
             </Typography>
         </Box>
@@ -43,19 +52,31 @@ function CartTotalPayment() {
             <Typography className={styles.text}>
                 Discount:
             </Typography>
-            <Typography variant='h6' className={styles.price}>
+            <Typography 
+                variant='h6' 
+                className={styles.price}
+            >
                 -
             </Typography>
         </Box>
         <Divider/>
-        <Typography variant='h4' className={styles.totalPrice}>
+        <Typography 
+            variant='h4' 
+            className={styles.totalPrice}
+        >
         ${(totalFinalPrices + 22).toFixed(2) }
         </Typography>
-        <TextField id="outlined-basic" size='small' label="Voucher" variant="outlined" className={styles.field} color='secondary'/>
+        <TextField 
+            id="outlined-basic" 
+            size='small' 
+            label="Voucher" 
+            color='secondary'
+            variant="outlined" 
+            className={styles.field} 
+        />
         <Button className={styles.voucherBtn}>
             Apply Voucher
         </Button>
-
     </Box>
   )
 }

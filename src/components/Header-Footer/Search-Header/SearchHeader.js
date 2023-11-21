@@ -1,5 +1,4 @@
 'use client'
-
 import { Badge, Box, Button, IconButton, TextField } from "@mui/material"
 import SearchOutlined from '@mui/icons-material/SearchOutlined';
 import InputAdornment from '@mui/material/InputAdornment';
@@ -72,11 +71,15 @@ function SearchHeader({data}) {
       setOpenDrawer(value)
     }
 
-
     return (
         <>
-        <Box className={`${styles.layoutShift} ${isScrolled ? styles.layoutShiftVisible : ''}`}/>
-        <Box bgcolor="common.white" className={`${styles.containerBox} ${isScrolled ? styles.fixed : ''}`}>
+        <Box 
+          className={`${styles.layoutShift} ${isScrolled ? styles.layoutShiftVisible : ''}`}
+        />
+        <Box 
+          bgcolor="common.white" 
+          className={`${styles.containerBox} ${isScrolled ? styles.fixed : ''}`}
+        >
           <Box className={styles.innerContainer}>
             <Box className={styles.leftPart}>
               <Link href='/'>
@@ -94,7 +97,10 @@ function SearchHeader({data}) {
                       <CategoryIcon className={styles.categoryBtnIcon}/>
                     </IconButton>
                     {isOpenMenuIcon && 
-                      <CategoryMenu categories={categories} handleMenu={handleMenuIcon}/>
+                      <CategoryMenu 
+                        categories={categories} 
+                        handleMenu={handleMenuIcon}
+                      />
                     }
                   </Box>
                 </ClickAwayListener>
@@ -121,8 +127,15 @@ function SearchHeader({data}) {
               <IconButton className={styles.btnIcon1}>
                 <PersonOutlineOutlinedIcon className={styles.icons}/>
               </IconButton>
-                <IconButton onClick={handleDrawer} className={styles.btnIcon2}>
-                  <Badge badgeContent={totalCount} color='secondary' max={99}>
+                <IconButton 
+                  onClick={handleDrawer} 
+                  className={styles.btnIcon2}
+                >
+                  <Badge 
+                    badgeContent={totalCount} 
+                    color='secondary' 
+                    max={99}
+                  >
                     <LocalMallOutlinedIcon className={styles.icons}/>
                   </Badge>
                 </IconButton>
@@ -131,7 +144,10 @@ function SearchHeader({data}) {
           </Box>
         </Box>
         {pathName !== '/categories' &&
-        <Box bgcolor="common.white" className={styles.categoryContainerPart}>
+        <Box 
+          bgcolor="common.white" 
+          className={styles.categoryContainerPart}
+        >
           <Box className={styles.categoryInnerContainerPart}>
               <ClickAwayListener onClickAway={handleClickAwayMenu}>
                 <Box>
@@ -139,13 +155,20 @@ function SearchHeader({data}) {
                     variant="contained"
                     onClick={handleMenu}
                     startIcon={<CategoryIcon />}
-                    endIcon={<ArrowForwardIosIcon className={isOpenMenu ? styles.arrowIconDown : styles.arrowIcon}/>}
+                    endIcon={
+                      <ArrowForwardIosIcon
+                        className={isOpenMenu ? styles.arrowIconDown : styles.arrowIcon}
+                      />
+                    }
                     className={styles.categoryBtnMenu}
                   >
                     Categories
                   </Button>
                   {isOpenMenu &&
-                    <CategoryMenu categories={categories} handleMenu={handleMenu}/>
+                    <CategoryMenu 
+                      categories={categories} 
+                      handleMenu={handleMenu}
+                    />
                   }
                 </Box>
               </ClickAwayListener>

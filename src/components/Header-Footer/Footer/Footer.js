@@ -10,30 +10,29 @@ import FooterContacts from './FooterContacts'
 
 
 
+const dlButtons = [
+    {image: google, text1: "Get It On", text2: "Google Play"},
+    {image: apple, text1: "Download On", text2: "App Store"}
+]
+
+const sections = [
+    {title: "About Us",
+    link1: "Careers",
+    link2: "Our Stories",
+    link3: "Our Cares",
+    link4: "Terms And Conditions",
+    link5:"Privacy Policy"},
+
+    {title: "Customer Care",
+    link1: "Help Center",
+    link2: "How To Buy",
+    link3: "Track Your Order",
+    link4: "Corporate & Bulk Purchasing",
+    link5:"Returns & Refunds"},
+]
+
+
 function Footer() {
-
-    const dlButtons = [
-        {image: google, text1: "Get It On", text2: "Google Play"},
-        {image: apple, text1: "Download On", text2: "App Store"}
-    ]
-
-    const sections = [
-        {title: "About Us",
-        link1: "Careers",
-        link2: "Our Stories",
-        link3: "Our Cares",
-        link4: "Terms And Conditions",
-        link5:"Privacy Policy"},
-
-        {title: "Customer Care",
-        link1: "Help Center",
-        link2: "How To Buy",
-        link3: "Track Your Order",
-        link4: "Corporate & Bulk Purchasing",
-        link5:"Returns & Refunds"},
-    ]
-
-
   return (
     <Box className={styles.footerMainContainer}>
         <Box className={styles.footerInnerContainer}>
@@ -46,9 +45,12 @@ function Footer() {
                         height={120}
                         priority
                     />
-                    <Typography variant='subtitle2' className={styles.mainText}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor libero id et, in gravida. Sit diam duis mauris nulla cursus. 
-                        Erat et lectus vel ut sollicitudin elit at amet.
+                    <Typography
+                        variant='subtitle2'
+                        className={styles.mainText}
+                    >
+                        "Discover the latest fashion trends at our online clothing store. Elevate your style with quality apparel,
+                         exceptional service, and irresistible deals. Shop now!"
                     </Typography>
                     <Box className={styles.downloadButtonsContainer}>
                         <DownloadButton data={dlButtons[0]}/>

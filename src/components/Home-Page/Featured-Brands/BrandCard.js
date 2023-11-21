@@ -11,7 +11,6 @@ function BrandCard({image}) {
             alt='brand'         
             width={140}
             height={80}
-            
         />
     </Box>
   )

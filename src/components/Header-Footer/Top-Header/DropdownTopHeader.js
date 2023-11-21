@@ -5,7 +5,6 @@ import {useState} from 'react'
 import { ClickAwayListener } from '@mui/base/ClickAwayListener';
 import Image from 'next/image';
 import styles from './TopHeader.module.css'
-
 import ExpandMoreOutlinedIcon from '@mui/icons-material/ExpandMoreOutlined';
 
 function DropdownTopHeader({langClass, options}) {
@@ -22,7 +21,6 @@ function DropdownTopHeader({langClass, options}) {
         setOpen(!open)
     }
     
-
     const handleClose = () => {
         setOpen(false)
     }
@@ -43,33 +41,35 @@ function DropdownTopHeader({langClass, options}) {
                 <ExpandMoreOutlinedIcon/>
             </Button>
 
-            {open ? (
-                    <List className={langClass ? styles.positionLangs : styles.positionPrices}>
-                        {options.map(({id, image, name}, index) => (
-                            <Box key={id}>
-                                <ListItem onClick={() => handleLang({name,id,image})} >
-                                    <Button className={styles.listButtons}>
-                                        <Image
-                                            src={image}
-                                            alt={name}
-                                            width={25}
-                                            height={25}
-                                            className={styles.listButtonsImage}
-                                        />
-                                        {name}
-                                    </Button>
-                                </ListItem>
+            {open
+            ?
+            <List 
+                className={langClass ? styles.positionLangs : styles.positionPrices}
+            >
+                {options.map(({id, image, name}, index) => (
+                    <Box key={id}>
+                        <ListItem onClick={() => handleLang({name,id,image})} >
+                            <Button className={styles.listButtons}>
+                                <Image
+                                    src={image}
+                                    alt={name}
+                                    width={25}
+                                    height={25}
+                                    className={styles.listButtonsImage}
+                                />
+                                {name}
+                            </Button>
+                        </ListItem>
 
-                                {index !== options.length - 1
-                                ?
-                                <Divider variant='middle'/>
-                                :
-                                null}
-
-                            </Box>
-                        ))}
-                    </List>
-            ) : null}
+                        {index !== options.length - 1
+                        ?
+                        <Divider variant='middle'/>
+                        :
+                        null}
+                    </Box>
+                ))}
+            </List>
+             : null}
         </Box>
     </ClickAwayListener>
   )

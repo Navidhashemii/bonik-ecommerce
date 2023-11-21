@@ -4,8 +4,6 @@ import { useState } from "react";
 import { Box, Button, Divider, Typography, IconButton, Checkbox } from "@mui/material";
 import Rating from '@mui/material/Rating';
 import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
-import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
-import FavoriteIcon from '@mui/icons-material/Favorite';
 import Image from "next/image";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
@@ -29,16 +27,6 @@ function CardSwiper({data, notCategoryBased}) {
 
     const [showModal, setShowModal] = useState(false)
     const [targetId, setTargetId] = useState(null)
-
-
-    const cart = useSelector(state => state.cart.items);
-    const dispatch = useDispatch();
-    
-
-    const getProductQuantity = (id) => {
-        const productInCart = cart.find(item => item.id === id);
-        return productInCart ? productInCart.quantity : 0;
-    };
 
     const breakPoints = notCategoryBased
     ? 
@@ -72,7 +60,13 @@ function CardSwiper({data, notCategoryBased}) {
         }
     };
 
+    const cart = useSelector(state => state.cart.items);
+    const dispatch = useDispatch();
     
+    const getProductQuantity = (id) => {
+        const productInCart = cart.find(item => item.id === id);
+        return productInCart ? productInCart.quantity : 0;
+    };
 
     const handleAddToCart = (id, name, price, image1, discount) => {
         dispatch(addToCart({ id, name , price, image1, discount}));
@@ -82,7 +76,6 @@ function CardSwiper({data, notCategoryBased}) {
         dispatch(removeFromCart(id));
     };
 
-
     const handleOpenModal = (id) => {
         setShowModal(true)
         setTargetId(id)
@@ -90,7 +83,7 @@ function CardSwiper({data, notCategoryBased}) {
 
     const handleCloseModal = (value) => {
         setShowModal(value)
-    }
+    };
 
 
   return (
@@ -104,7 +97,10 @@ function CardSwiper({data, notCategoryBased}) {
             breakpoints={breakPoints}
         >
             {data.map(({id, image1, name, price, star, rate, discount}) => (
-                <SwiperSlide key={id} style={{minWidth:'201px'}}>
+                <SwiperSlide
+                    key={id}
+                    style={{minWidth:'201px'}}
+                >
                     <Box className={styles.cardContainer}>
                         <Link href={`/products/${id}`}>
                             <Box>
@@ -126,9 +122,7 @@ function CardSwiper({data, notCategoryBased}) {
                             
                             <Box>
                                 {discount 
-
                                 ? 
-
                                 <Box>
                                     <Box
                                         bgcolor="secondary.main"
@@ -152,20 +146,21 @@ function CardSwiper({data, notCategoryBased}) {
                                         ${price.toFixed(2)}
                                     </Typography>
                                 </Box>
-
                                 : 
-
                                 <Typography
                                     variant="h6"
                                     className={styles.price}
                                 >
                                     ${price.toFixed(2)}
                                 </Typography>
-
                                 }
 
                                 <Box className={styles.ratingContainer}>
-                                    <Rating size="small" value={star} readOnly/>
+                                    <Rating
+                                        size="small"
+                                        value={star}
+                                        readOnly
+                                    />
                                     <Typography
                                         variant="subtitle2"
                                         className={styles.rateCount}
@@ -189,7 +184,10 @@ function CardSwiper({data, notCategoryBased}) {
                                     <RemoveIcon className={styles.quantityIcons}/>
                                 </IconButton>
                                 }
-                                <Typography variant="h6" sx={{color:"black"}}>
+                                <Typography
+                                    variant="h6"
+                                    sx={{color:"black"}}
+                                >
                                     {getProductQuantity(id)}
                                 </Typography>
                                 <IconButton onClick={() => handleAddToCart(id, name, price, image1, discount)}>
@@ -199,15 +197,26 @@ function CardSwiper({data, notCategoryBased}) {
                         </Box>
                     
                         :
-                        <Button onClick={() => handleAddToCart(id, name, price, image1, discount)} className={styles.button}>
+                        <Button
+                            onClick={() => handleAddToCart(id, name, price, image1, discount)}
+                            className={styles.button}
+                        >
                             Add To Cart
                         </Button>
                         }
 
-                        <IconButton onClick={() => handleOpenModal(id)} className={styles.icon1}>
+                        <IconButton
+                            onClick={() => handleOpenModal(id)}
+                            className={styles.icon1}
+                        >
                             <VisibilityOutlinedIcon/>
                         </IconButton>
-                        <Checkbox color="secondary" icon={<FavoriteBorder />} checkedIcon={<Favorite />} className={styles.icon2} />
+                        <Checkbox
+                            color="secondary"
+                            icon={<FavoriteBorder />}
+                            checkedIcon={<Favorite />}
+                            className={styles.icon2}
+                        />
                         
                     </Box>
                 </SwiperSlide>
@@ -215,10 +224,16 @@ function CardSwiper({data, notCategoryBased}) {
             
         </Swiper>
 
-        {showModal && <CardViewModal data={data} targetId={targetId} handleCloseModal={handleCloseModal}/>}
+        {showModal
+        &&
+            <CardViewModal
+                data={data}
+                targetId={targetId}
+                handleCloseModal={handleCloseModal}
+            />
+        }
 
     </Box>
-
   )
 }
 

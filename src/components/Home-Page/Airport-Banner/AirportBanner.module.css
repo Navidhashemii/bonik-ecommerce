@@ -19,22 +19,19 @@
     text-align:center;
     padding:26px 10px;
     z-index: 6;
-
 }
 
 .skewBox{
-  position: absolute;
-  background-color: #E0E0E0;
-  width: 60px;
-  height: 120px;
-  transform: skew(-30deg, 0);
-  right: -25px;
-  top: 0;
-  z-index: -1;
-  display: none;
-
+    position: absolute;
+    background-color: #E0E0E0;
+    width: 60px;
+    height: 120px;
+    transform: skew(-30deg, 0);
+    right: -25px;
+    top: 0;
+    z-index: -1;
+    display: none;
 }
-  
 
 .title{
     font-weight:bold;
@@ -47,32 +44,31 @@
     overflow: hidden;
     position: relative;
     margin-top: 24px;
-  }
+}
   
-  .marqueeContainer {
+.marqueeContainer {
     display: block;
     width: 200%;
     height: 30px;
     position: absolute;
     overflow: hidden;
-    animation: marquee 24s linear infinite;
-    
-  }
+    animation: marquee 24s linear infinite;    
+}
   
-  .marqueeText {
+.marqueeText {
     float: left;
     width: 100%;
     font-weight: 600;
     font-style: italic;
     color: #fefefe;
-  }
+}
   
-  @keyframes marquee {
+@keyframes marquee {
     0% { left: 100%; }
     100% { left: -200%; }
-  }
+}
 
-  .button{
+.button{
     font-weight: 600;
     background-color:white;
     color:#0a0a0a;
@@ -80,7 +76,7 @@
     width:128px;
     height:44px;
     margin-top: 18px;
-  }
+}
 
   
 
@@ -109,4 +105,4 @@
       margin: 0 14px 0 0;
       width: 220px;
     }
-}
+  }

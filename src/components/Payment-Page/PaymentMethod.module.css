@@ -60,14 +60,13 @@
 
 .payBtn:hover {
     box-shadow: none;
-    background-color: #d17f8d;
+    background-color: #ae2d43;
 }
 
 .payBtn:active{
     color: transparent;
     background-color: transparent;
 }
-
 
 .doneBox{
     position: fixed;
@@ -124,7 +123,7 @@
 
 .doneBtn:hover {
     color: #ffffff;
-    background-color: #E94560;
+    background-color: #b73147;
     box-shadow: none;
 }
 

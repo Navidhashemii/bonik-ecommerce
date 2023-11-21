@@ -8,8 +8,6 @@ import Link from 'next/link';
 
 
 
-
-
 function CartProductDetails() {
   
   const [country, setCountry] = useState('');
@@ -35,30 +33,60 @@ function CartProductDetails() {
     {cart.length > 0 && 
     <Box className={styles.detailsContainer}>
       <Box className={styles.totalContiner}>
-        <Typography variant='subtitle2' className={styles.totalText}>
+        <Typography 
+          variant='subtitle2' 
+          className={styles.totalText}
+        >
           Total:
         </Typography>
-        <Typography variant='h6' className={styles.totalPrice}>
+        <Typography 
+          variant='h6' 
+          className={styles.totalPrice}
+        >
           ${totalFinalPrices.toFixed(2)}
         </Typography>
       </Box>
+
       <Divider/>
+
       <Box className={styles.additionalContainer}>
-        <Typography variant='subtitle2' className={styles.title}>
+        <Typography
+          variant='subtitle2' 
+          className={styles.title}
+        >
           Additional Comments
         </Typography>
         <Typography className={styles.redTitle}>
           Note
         </Typography>
       </Box>
-      <TextField id="outlined-basic" size='small' variant="outlined" multiline rows={5} className={styles.largeField} color='secondary'/>
+      
+      <TextField
+        id="outlined-basic" 
+        size='small' 
+        variant="outlined" 
+        color='secondary'
+        multiline 
+        rows={5} 
+        className={styles.largeField} 
+      />
       <Divider/>
-      <TextField id="outlined-basic" size='small' label="Voucher" variant="outlined" className={styles.field} color='secondary'/>
+      <TextField
+        id="outlined-basic" 
+        size='small' 
+        label="Voucher" 
+        variant="outlined" 
+        color='secondary'
+        className={styles.field} 
+      />
       <Button className={styles.voucherBtn}>
         Apply Voucher
       </Button>
       <Divider/>
-      <Typography variant='subtitle2' className={styles.title2}>
+      <Typography
+        variant='subtitle2'
+        className={styles.title2}
+      >
         Shipping Info
       </Typography>
       <Typography className={styles.text}>
@@ -101,10 +129,18 @@ function CartProductDetails() {
           <MenuItem value={'ind1'}>North India</MenuItem>
           <MenuItem value={'ind2'}>South India</MenuItem>
         </Select>
+
       <Typography className={styles.text}>
           Zip Code
       </Typography>
-      <TextField id="outlined-basic" size='small' variant="outlined" className={styles.lastField} color='secondary'/>
+      <TextField
+        id="outlined-basic" 
+        size='small' 
+        variant="outlined" 
+        className={styles.lastField} 
+        color='secondary'
+      />
+
       <Link href='/cart/details'>
         <Button className={styles.checkoutBtn}>
           Checkout Now

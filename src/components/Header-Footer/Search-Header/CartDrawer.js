@@ -41,18 +41,28 @@ function CartDrawer({handleClickAwayDrawer}) {
   };
 
   return (
-    <Box className={styles.drawerMainContainer}>
-        <ClickAwayListener onClickAway={() => handleClickAwayDrawer(false)}>
+    <Box 
+        className={styles.drawerMainContainer}
+    >
+        <ClickAwayListener 
+            onClickAway={() => handleClickAwayDrawer(false)}
+        >
             <Box className={styles.drawerContent}>
                 <Box className={styles.drawerCartCountBox}>
                     <LocalMallOutlinedIcon className={styles.drawerCartIcon}/>
-                    <Typography variant='h6' className={styles.drawerCartCountText}>
+                    <Typography 
+                        variant='h6' 
+                        className={styles.drawerCartCountText}
+                    >
                         {totalCount} Items
                     </Typography>
                 </Box>
                 <Box className={styles.drawerCardsContainer}>
                     {cart.map(({id, name, image1, price, discount, quantity}) => (
-                        <Box key={id} className={styles.drawerCard}>
+                        <Box 
+                            key={id} 
+                            className={styles.drawerCard}
+                        >
                             <Box className={styles.drawerBtns}>
                                 {getProductQuantity(id) < 2
 
@@ -70,7 +80,10 @@ function CartDrawer({handleClickAwayDrawer}) {
 
                                 }
 
-                                <Typography variant="h6" sx={{color:"black"}}>
+                                <Typography 
+                                    variant="h6" 
+                                    sx={{color:"black"}}
+                                >
                                     {getProductQuantity(id)}
                                 </Typography>
 
@@ -87,35 +100,48 @@ function CartDrawer({handleClickAwayDrawer}) {
                                 />
                             </Box>
                             <Box className={styles.drawerCardDetails}>
-                                <Typography variant='h6' className={styles.drawerCardDetailsName}>
+                                <Typography 
+                                    variant='h6' 
+                                    className={styles.drawerCardDetailsName}
+                                >
                                     {name}
                                 </Typography>
                                 <Box className={styles.drawerCardDetailsPricePart}>
                                     {discount
                                     ? 
-                                    <Typography variant='subtitle2' className={styles.drawerCardDetailsPrice}>
+                                    <Typography 
+                                        variant='subtitle2' 
+                                        className={styles.drawerCardDetailsPrice}
+                                    >
                                         ${finalPrice = Math.floor(price - ((price * discount) / 100)).toFixed(2)} x {quantity}
                                     </Typography>
                                     :
-                                    <Typography variant='subtitle2' className={styles.drawerCardDetailsPrice}>
+                                    <Typography 
+                                        variant='subtitle2' 
+                                        className={styles.drawerCardDetailsPrice}
+                                    >
                                         ${finalPrice = price.toFixed(2)} x {quantity}
                                     </Typography>
                                     }
 
-                                    <Typography variant='h6' className={styles.drawerCardDetailsFinalPrice}>
+                                    <Typography 
+                                        variant='h6' 
+                                        className={styles.drawerCardDetailsFinalPrice}
+                                    >
                                         ${(finalPrice * quantity).toFixed(2)}
                                     </Typography>
                                 </Box>
                             </Box>
-
-
                         </Box>
                     ))}
                 </Box>
                 {cart.length > 0 
                 ?
                 <Box className={styles.bottomPart}>
-                    <Box onClick={handleClearCart} className={styles.bottomPartClearBox}>
+                    <Box 
+                        onClick={handleClearCart} 
+                        className={styles.bottomPartClearBox}
+                    >
                         <DeleteIcon className={styles.clearIcon}/>
                         <Typography className={styles.clearText}>
                             All
@@ -123,22 +149,26 @@ function CartDrawer({handleClickAwayDrawer}) {
                     </Box>
                     <Box className={styles.bottomPartCartBtns}>
                         <Link href='/cart'>
-                            <Button onClick={() => handleClickAwayDrawer(false)} className={styles.bottomPartBtn1}>
+                            <Button 
+                                onClick={() => handleClickAwayDrawer(false)} 
+                                className={styles.bottomPartBtn1}
+                            >
                                 View Cart
                             </Button>
                         </Link>
                         <Link href='/cart/details'>
-                            <Button onClick={() => handleClickAwayDrawer(false)} className={styles.bottomPartBtn2}>
+                            <Button 
+                                onClick={() => handleClickAwayDrawer(false)} 
+                                className={styles.bottomPartBtn2}
+                            >
                                 Checkout Now (${totalFinalPrices.toFixed(2)})
                             </Button>
                         </Link>
                     </Box>
                 </Box>
-
                 : 
                 null
                 }
-
             </Box>
         </ClickAwayListener>
     </Box>
