@@ -11,10 +11,11 @@ import AddIcon from '@mui/icons-material/Add';
 
 function CartProductCard() {
 
+    let finalPrice; 
+
     const cart = useSelector(state => state.cart.items);
     const dispatch = useDispatch();
     
-    let finalPrice 
 
     const getProductQuantity = (id) => {
       const productInCart = cart.find(item => item.id === id);

@@ -16,6 +16,7 @@ import { useSelector } from 'react-redux';
 import { ClickAwayListener } from '@mui/base/ClickAwayListener';
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import CartDrawer from "./CartDrawer";
 
 
 function SearchHeader({data}) {
@@ -23,6 +24,7 @@ function SearchHeader({data}) {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isOpenMenu, setIsOpenMenu] = useState(false);
     const [isOpenMenuIcon, setIsOpenMenuIcon] = useState(false);
+    const [openDrawer, setOpenDrawer] = useState(false);
 
     const pathName = usePathname()
 
@@ -62,7 +64,13 @@ function SearchHeader({data}) {
       setIsOpenMenuIcon(false)
     }
 
+    const handleDrawer = () => {
+      setOpenDrawer(true)
+    }
 
+    const handleClickAwayDrawer = (value) => {
+      setOpenDrawer(value)
+    }
 
 
     return (
@@ -113,18 +121,16 @@ function SearchHeader({data}) {
               <IconButton className={styles.btnIcon1}>
                 <PersonOutlineOutlinedIcon className={styles.icons}/>
               </IconButton>
-              <Link href='/cart'>
-                <IconButton className={styles.btnIcon2}>
+                <IconButton onClick={handleDrawer} className={styles.btnIcon2}>
                   <Badge badgeContent={totalCount} color='secondary' max={99}>
                     <LocalMallOutlinedIcon className={styles.icons}/>
                   </Badge>
                 </IconButton>
-              </Link>
             </Box>
 
           </Box>
         </Box>
-            {pathName !== '/categories' &&
+        {pathName !== '/categories' &&
         <Box bgcolor="common.white" className={styles.categoryContainerPart}>
           <Box className={styles.categoryInnerContainerPart}>
               <ClickAwayListener onClickAway={handleClickAwayMenu}>
@@ -145,8 +151,10 @@ function SearchHeader({data}) {
               </ClickAwayListener>
           </Box>
         </Box>
-            }
-        
+        }
+        {openDrawer && 
+          <CartDrawer handleClickAwayDrawer={handleClickAwayDrawer}/>
+        }
         </>
     
 
