@@ -4,7 +4,7 @@ import styles from './ComingSoonPart.module.css'
 
 function ComingSoonBanner({banner}) {
 
-    const {image, blackBg, text1, text2} = banner
+    const {image, blackBg, text1, text2} = banner;
     const whiteText = blackBg ? styles.whiteText : null; 
 
   return (

@@ -15,72 +15,42 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 function Stickybar() {
-
-    const cart = useSelector(state => state.cart.items);
+    const cart = useSelector((state) => state.cart.items);
     const totalCount = cart.reduce((acc, item) => acc + item.quantity, 0);
-    const pathName = usePathname()
-    const cartPaths = ['/cart', '/cart/details', '/cart/details/payment'];
-
-  return (
-    <Box className={styles.container}>
-        <Link href='/'>
-            <Button className={styles.barButton}>
-                {pathName === '/'
-                ?
-                <HomeIcon className={styles.icon}/>
-                :
-                <HomeOutlinedIcon className={styles.icon}/>
-                }
-                Home
-            </Button>
-        </Link>
-
-        <Link href='/categories'>
-            <Button className={styles.barButton}>
-                {pathName === '/categories'
-                ?
-                <DashboardIcon className={styles.icon}/>
-                :
-                <DashboardOutlinedIcon className={styles.icon}/>
-                }
-                Category
-            </Button>
-        </Link>
-
-        <Link href='/cart'>
-            <Button className={styles.barButton}>
-                {cartPaths.includes(pathName)
-                ?
-                <Badge
-                    badgeContent={totalCount}
-                    color='secondary' 
-                    max={99}
-                >
-                    <LocalMallIcon className={styles.icon}/>
-                </Badge>
-                :
-                <Badge
-                    badgeContent={totalCount}
-                    color='secondary'
-                    max={99}
-                >
-                    <LocalMallOutlinedIcon className={styles.icon}/>
-                </Badge>
-                }
-                Cart
-            </Button>
-        </Link>
-
+    const pathName = usePathname();
+  
+    const renderButton = (path, text, Icon, OutlinedIcon) => (
+      <Link href={path}>
         <Button className={styles.barButton}>
-            {pathName === '/profile' ?
-            <PersonIcon className={styles.icon}/>
-            :
-            <PersonOutlineOutlinedIcon  className={styles.icon}/>
-            }
-            Profile
+          {pathName === path ? (
+            <Badge badgeContent={totalCount} color="secondary" max={99}>
+              <Icon className={styles.icon} />
+            </Badge>
+          ) : (
+            <Badge badgeContent={totalCount} color="secondary" max={99}>
+              <OutlinedIcon className={styles.icon} />
+            </Badge>
+          )}
+          {text}
         </Button>
-    </Box>
-  )
-}
+      </Link>
+    );
+  
+    return (
+      <Box className={styles.container}>
+        {renderButton("/", "Home", HomeIcon, HomeOutlinedIcon)}
+        {renderButton("/categories", "Category", DashboardIcon, DashboardOutlinedIcon)}
+        {renderButton("/cart", "Cart", LocalMallIcon, LocalMallOutlinedIcon)}
+        <Button className={styles.barButton}>
+          {pathName === "/profile" ? (
+            <PersonIcon className={styles.icon} />
+          ) : (
+            <PersonOutlineOutlinedIcon className={styles.icon} />
+          )}
+          Profile
+        </Button>
+      </Box>
+    );
+  }
 
 export default Stickybar

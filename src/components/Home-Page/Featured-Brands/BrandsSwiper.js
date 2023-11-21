@@ -31,6 +31,19 @@ const brands = [
 ]
 
 function BrandsSwiper() {
+    const breakpoints = {
+        600: {
+          slidesPerView: 3,
+        },
+        900: {
+          slidesPerView: 4,
+        },
+        1200: {
+          slidesPerView: 5,
+        }
+      };
+
+
   return (
     <Box className={styles.boxContainer}>
         <Typography
@@ -43,24 +56,14 @@ function BrandsSwiper() {
         <Box className={styles.swiperContainer}>
             <Swiper
                 modules={[Autoplay]}
-                loop={true}
+                loop
                 slidesPerView={2}
                 draggable={true}
                 autoplay={{
                     delay: 1500,
                     disableOnInteraction: false,
                 }}
-                breakpoints={{
-                    600:{
-                        slidesPerView: 3,
-                    },
-                    900:{
-                        slidesPerView: 4,
-                    },
-                    1200:{
-                        slidesPerView: 5,
-                    }
-                }}
+                breakpoints={breakpoints}
             >
                 
                 {brands.map(({id, image}) => (

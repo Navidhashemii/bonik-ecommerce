@@ -6,12 +6,9 @@ import Link from 'next/link';
 
 
 function CategoryOptions({data}) {
-
-    const categories = data.categories
-
   return (
     <Grid container spacing={2} >
-        {categories.map(({id, name, image}) => (
+        {data.categories.map(({id, name, image}) => (
             <Grid
                 key={id} 
                 xs={6} 
