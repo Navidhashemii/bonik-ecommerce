@@ -84,7 +84,7 @@ function CardSwiper({data, notCategoryBased}) {
     const handleCloseModal = (value) => {
         setShowModal(value)
     };
-
+    
 
   return (
     <Box className={!notCategoryBased && styles.mainContainer}>
