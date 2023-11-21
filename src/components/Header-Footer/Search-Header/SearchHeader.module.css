@@ -7,6 +7,7 @@
     flex-direction: column;
     z-index: 9;
     padding: 12px 0;
+    
 }
 
 .innerContainer{
@@ -20,7 +21,7 @@
 
 .layoutShift{
     width: 100%;
-    height: 80px;
+    height: 65px;
     display: none;
 }
 
@@ -139,6 +140,7 @@
 .fixed{
     position: fixed;
     top: 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
 }
 
 .drawerMainContainer{
@@ -323,6 +325,9 @@
     }
     .btnIcon2{
         margin-left: 4px;
+    }
+    .layoutShift{
+        height: 85px;
     }
   }
 
