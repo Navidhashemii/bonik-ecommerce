@@ -3,15 +3,7 @@ const nextConfig = {
     experimental: {
         images: true,
       },
-      output: {
-        export: {
-          generate: {
-            '/products/[productId]': {
-              generateStaticParams: './pages/products/[productId].js',
-            },
-          },
-        },
-      },
+    output: 'export',
 }
 
 module.exports = nextConfig
