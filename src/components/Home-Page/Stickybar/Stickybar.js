@@ -23,13 +23,9 @@ function Stickybar() {
       <Link href={path}>
         <Button className={styles.barButton}>
           {pathName === path ? (
-            <Badge badgeContent={totalCount} color="secondary" max={99}>
               <Icon className={styles.icon} />
-            </Badge>
           ) : (
-            <Badge badgeContent={totalCount} color="secondary" max={99}>
               <OutlinedIcon className={styles.icon} />
-            </Badge>
           )}
           {text}
         </Button>
@@ -40,7 +36,21 @@ function Stickybar() {
       <Box className={styles.container}>
         {renderButton("/", "Home", HomeIcon, HomeOutlinedIcon)}
         {renderButton("/categories", "Category", DashboardIcon, DashboardOutlinedIcon)}
-        {renderButton("/cart", "Cart", LocalMallIcon, LocalMallOutlinedIcon)}
+        <Link href='/cart'>
+          <Button className={styles.barButton}>
+            {pathName === "/cart" ? (
+              <Badge badgeContent={totalCount} color="secondary" max={99}>
+                <LocalMallIcon className={styles.icon} />
+              </Badge>
+            ) : (
+              <Badge badgeContent={totalCount} color="secondary" max={99}>
+                <LocalMallOutlinedIcon className={styles.icon} />
+              </Badge>
+            )}
+            Cart
+          </Button>
+        </Link>
+
         <Button className={styles.barButton}>
           {pathName === "/profile" ? (
             <PersonIcon className={styles.icon} />
